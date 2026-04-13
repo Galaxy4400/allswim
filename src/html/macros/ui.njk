@@ -1,0 +1,66 @@
+{# ═══════════════════════════════════════════════════════════
+   BUTTON
+   Usage:  {{ button("Click me", "/path", "primary", "md") }}
+
+   variant:  primary | outline | ghost
+   size:     sm | md | lg
+═══════════════════════════════════════════════════════════ #}
+{% macro button(text, href="#", variant="primary", size="md") %}
+<a
+  href="{{ href }}"
+  class="
+    inline-flex items-center justify-center rounded-full font-semibold transition-all
+    {%- if variant == 'primary' %} bg-blue-600 text-white hover:bg-blue-700{%- endif %}
+    {%- if variant == 'outline' %} border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white{%- endif %}
+    {%- if variant == 'ghost' %} text-gray-700 hover:bg-gray-100{%- endif %}
+    {%- if size == 'sm' %} px-4 py-2 text-sm{%- endif %}
+    {%- if size == 'md' %} px-6 py-3 text-base{%- endif %}
+    {%- if size == 'lg' %} px-8 py-4 text-lg{%- endif %}
+  "
+>{{ text }}</a>
+{% endmacro %}
+
+
+{# ═══════════════════════════════════════════════════════════
+   CARD
+   Usage:  {{ card(title="Title", description="...", image="assets/img/photo.jpg") }}
+═══════════════════════════════════════════════════════════ #}
+{% macro card(title, description="", image="", link="#", linkText="Learn more") %}
+<div class="rounded-2xl border border-gray-100 bg-white shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+  {% if image %}
+    <img src="{{ image }}" alt="{{ title }}" class="w-full h-48 object-cover" />
+  {% endif %}
+  <div class="p-6">
+    <h3 class="text-lg font-bold text-gray-900 mb-2">{{ title }}</h3>
+    {% if description %}
+      <p class="text-sm text-gray-500 mb-4">{{ description }}</p>
+    {% endif %}
+    <a
+      href="{{ link }}"
+      class="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-700 transition-colors"
+    >
+      {{ linkText }} →
+    </a>
+  </div>
+</div>
+{% endmacro %}
+
+
+{# ═══════════════════════════════════════════════════════════
+   BADGE
+   Usage:  {{ badge("New", "blue") }}
+
+   color:  blue | green | red | yellow | gray
+═══════════════════════════════════════════════════════════ #}
+{% macro badge(text, color="blue") %}
+<span
+  class="
+    inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold
+    {%- if color == 'blue' %} bg-blue-100 text-blue-700{%- endif %}
+    {%- if color == 'green' %} bg-green-100 text-green-700{%- endif %}
+    {%- if color == 'red' %} bg-red-100 text-red-700{%- endif %}
+    {%- if color == 'yellow' %} bg-yellow-100 text-yellow-700{%- endif %}
+    {%- if color == 'gray' %} bg-gray-100 text-gray-700{%- endif %}
+  "
+>{{ text }}</span>
+{% endmacro %}

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs cat:*)",
+      "Bash(npm install:*)",
+      "Bash(npm view:*)",
+      "Bash(npx gulp:*)"
+    ]
+  }
+}

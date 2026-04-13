@@ -2,39 +2,57 @@ import gulp from 'gulp';
 import { path } from './gulp/config/path.js';
 import { plugins } from './gulp/config/plugins.js';
 
-// global process
 global.app = {
   isBuild: process.argv.includes('--build'),
   isDev: !process.argv.includes('--build'),
-  imgNames: process.env.npm_config_img?.split(',').map((s) => s.trim()) || null,
-  path: path,
-  gulp: gulp,
-  plugins: plugins,
+  path,
+  gulp,
+  plugins,
 };
 
-// Импорт задач
 import { reset } from './gulp/tasks/reset.js';
-import { resetcss } from './gulp/tasks/resetcss.js';
+import { html } from './gulp/tasks/html.js';
+import { styles } from './gulp/tasks/styles.js';
+import { scripts } from './gulp/tasks/scripts.js';
+import { images } from './gulp/tasks/images.js';
 import { fonts } from './gulp/tasks/fonts.js';
 import { fontscss } from './gulp/tasks/fontscss.js';
-import { tailwind } from './gulp/tasks/tw.js';
-import { imagesResponsive } from './gulp/tasks/imagesResponsive.js';
 import { svg } from './gulp/tasks/svg.js';
 
-// Наблюдатель за изменениями в файлах
-function watcher() {
-  gulp.watch([path.watch.pages, path.watch.css, path.watch.components], gulp.series(tailwind));
+function server(done) {
+  app.plugins.browsersync.init({
+    server: { baseDir: path.buildFolder },
+    notify: false,
+    port: 3000,
+  });
+  done();
 }
 
-// Построение сценариев выполнения задач
-const dev = gulp.series(resetcss, tailwind, watcher);
-const build = gulp.series(reset, fonts, fontscss, tailwind, svg, imagesResponsive);
-const buildimg = gulp.series(imagesResponsive);
+const reload = (done) => {
+  app.plugins.browsersync.reload();
+  done();
+};
 
-// Экспорт сценариев для добавления в скрипт в package.json
-export { dev };
-export { build };
-export { buildimg };
+function watcher() {
+  gulp.watch(path.watch.html, gulp.series(html, reload));
+  gulp.watch(path.watch.css, gulp.series(styles, reload));
+  gulp.watch(path.watch.js, gulp.series(scripts, reload));
+  gulp.watch(path.watch.images, gulp.series(images, reload));
+  gulp.watch(path.watch.svg, gulp.series(svg, reload));
+}
 
-// Выполнение сценария по умолчанию
+export const dev = gulp.series(
+  reset,
+  gulp.parallel(html, styles, scripts, images, svg),
+  server,
+  watcher,
+);
+
+export const build = gulp.series(
+  reset,
+  fonts,
+  fontscss,
+  gulp.parallel(html, styles, scripts, images, svg),
+);
+
 gulp.task('default', dev);

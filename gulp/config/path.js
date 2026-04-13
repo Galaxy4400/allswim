@@ -1,48 +1,32 @@
-import * as nodePath from 'path';
-
-const rootFolder = nodePath.basename(nodePath.resolve());
 const buildFolder = './dist';
-const assetsFolder = './dist/assets';
 const srcFolder = './src';
-const modulesFolder = './node_modules';
 
 export const path = {
   build: {
-    js: `${assetsFolder}/js/`,
-    css: `${assetsFolder}/css/`,
-    img: `${assetsFolder}/img/`,
-    imgf: `${assetsFolder}/img/formats/`,
-    imgr: `${assetsFolder}/img/responsive/`,
-    svg: `${assetsFolder}/img/svg/`,
-    fonts: `${assetsFolder}/fonts/`,
     html: `${buildFolder}/`,
+    css: `${buildFolder}/assets/css/`,
+    js: `${buildFolder}/assets/js/`,
+    images: `${buildFolder}/assets/img/`,
+    fonts: `${buildFolder}/assets/fonts/`,
+    svg: `${buildFolder}/assets/svg/`,
   },
   src: {
-    js: `${assetsFolder}/js/*.js`,
-    img: `${srcFolder}/img/*.*`,
-    imgf: `${srcFolder}/img/formats/**/*.{jpg,jpeg,png}`,
-    imgr: `${srcFolder}/img/responsive/**/*.{jpg,jpeg,png}`,
-    svg: `${srcFolder}/img/svg/*.svg`,
+    html: `${srcFolder}/html/pages/**/*.njk`,
+    htmlRoot: `${srcFolder}/html`,
     css: `${srcFolder}/css/tailwind.css`,
+    js: `${srcFolder}/scripts/**/*.js`,
+    images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,avif}`,
     fonts: `${srcFolder}/fonts/*.ttf`,
-    fontsw: `${srcFolder}/fonts/*.{woff,woff2}`,
-  },
-  modules: {
-    alpine: `${modulesFolder}/alpinejs/dist/cdn.min.js`,
-    intlTelMain: `${modulesFolder}/intl-tel-input/build/js/intlTelInput.min.js`,
-    intlTelUtils: `${modulesFolder}/intl-tel-input/build/js/utils.js`,
-    intlTelCss: `${modulesFolder}/intl-tel-input/build/css/intlTelInput.css`,
+    svg: `${srcFolder}/assets/svg/*.svg`,
   },
   watch: {
-    pages: `${buildFolder}/pages/**/*.php`,
-    components: `${buildFolder}/components/**/*.php`,
-    css: `${srcFolder}/css/*.css`,
+    html: `${srcFolder}/html/**/*.njk`,
+    css: `${srcFolder}/css/**/*.css`,
+    js: `${srcFolder}/scripts/**/*.js`,
+    images: `${srcFolder}/assets/images/**/*`,
+    svg: `${srcFolder}/assets/svg/*.svg`,
   },
-  clean: assetsFolder,
-  cleanCss: `${assetsFolder}/css`,
-  cleanRespImg: `${assetsFolder}/img/responsive`,
-  buildFolder: buildFolder,
-  assetsFolder: assetsFolder,
-  srcFolder: srcFolder,
-  rootFolder: rootFolder,
+  clean: buildFolder,
+  buildFolder,
+  srcFolder,
 };
