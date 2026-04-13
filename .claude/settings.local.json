@@ -4,7 +4,8 @@
       "Bash(xargs cat:*)",
       "Bash(npm install:*)",
       "Bash(npm view:*)",
-      "Bash(npx gulp:*)"
+      "Bash(npx gulp:*)",
+      "Bash(npx prettier:*)"
     ]
   }
 }
