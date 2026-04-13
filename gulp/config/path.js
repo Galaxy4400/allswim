@@ -11,8 +11,7 @@ export const path = {
     svg: `${buildFolder}/assets/svg/`,
   },
   src: {
-    html: `${srcFolder}/html/pages/**/*.njk`,
-    htmlRoot: `${srcFolder}/html`,
+    html: `${srcFolder}/html/**/*.html`,
     css: `${srcFolder}/css/tailwind.css`,
     js: `${srcFolder}/scripts/**/*.js`,
     images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,avif}`,
@@ -20,7 +19,7 @@ export const path = {
     svg: `${srcFolder}/assets/svg/*.svg`,
   },
   watch: {
-    html: `${srcFolder}/html/**/*.njk`,
+    html: `${srcFolder}/html/**/*.html`,
     css: `${srcFolder}/css/**/*.css`,
     js: `${srcFolder}/scripts/**/*.js`,
     images: `${srcFolder}/assets/images/**/*`,

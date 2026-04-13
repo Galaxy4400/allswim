@@ -1,6 +1,6 @@
 @import 'tailwindcss';
 
-@source '../html/**/*.njk';
+@source '../html/**/*.html';
 @source '../scripts/**/*.js';
 
 @import './intlTelInput.min';
