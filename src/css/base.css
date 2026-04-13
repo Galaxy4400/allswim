@@ -1,0 +1,41 @@
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-body flex min-h-screen flex-col pt-[60px] text-sm leading-[1.4] font-medium text-black md:pt-[70px] md:text-base;
+  }
+
+  main {
+    @apply flex grow flex-col overflow-hidden;
+  }
+
+  h1 {
+    @apply font-special text-[42px] leading-[1.2] md:text-[66px];
+  }
+
+  h2 {
+    @apply font-special text-[32px] leading-[1.2] md:text-[46px];
+  }
+
+  h3 {
+    @apply font-special text-lg leading-[1.2] md:text-2xl;
+  }
+
+  a {
+    @apply hover:text-secondary-light transition-colors;
+  }
+
+  picture img {
+    @apply relative w-full;
+  }
+
+  svg {
+    @apply max-h-full max-w-full;
+  }
+
+  mark {
+    @apply text-primary bg-transparent;
+  }
+}

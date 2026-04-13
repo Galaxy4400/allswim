@@ -1,0 +1,85 @@
+@theme {
+  --font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-special: 'Epilogue', Montserrat, ui-sans-serif, sans-serif;
+
+  --color-primary-lightest: #f9fafb;
+  --color-primary-lighter: #edf5ff;
+  --color-primary-light: #dbeafe;
+  --color-primary: #155dfc;
+  --color-primary-dark: #1e2939;
+
+  --color-secondary-lightest: #f7ffe8;
+  --color-secondary-lighter: #e0ffa3;
+  --color-secondary-light: #baff2f;
+  --color-secondary: #9ae600;
+  --color-secondary-dark: #192e03;
+
+  --color-gray-lighter: #f3f4f6;
+  --color-gray-light: #cacaca;
+  --color-gray: #a7a7a7;
+  --color-gray-dark: #4a5565;
+
+  --color-dark: #1e2939;
+  --color-black: #030712;
+
+  --color-body: #ffffff;
+
+  --spacing-container: 1200px;
+  --spacing-container-narrow: 790px;
+  --spacing-container-whide: 1440px;
+
+  --default-transition-duration: 300ms;
+
+  --background-image-check: url("data:image/svg+xml;utf8,<svg fill='none' stroke='white' stroke-width='3' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M5 13l4 4L19 7'/></svg>");
+}
+
+@custom-variant blue (&:where([data-theme=blue], [data-theme=blue] *));
+@custom-variant violet (&:where([data-theme=violet], [data-theme=violet] *));
+
+[data-theme='blue'] {
+  --color-primary-lightest: #f9fafb;
+  --color-primary-lighter: #edf5ff;
+  --color-primary-light: #dbeafe;
+  --color-primary: #155dfc;
+  --color-primary-dark: #1e2939;
+
+  --color-secondary-lightest: #f7ffe8;
+  --color-secondary-lighter: #e0ffa3;
+  --color-secondary-light: #baff2f;
+  --color-secondary: #9ae600;
+  --color-secondary-dark: #192e03;
+
+  --color-gray-lighter: #f3f4f6;
+  --color-gray-light: #cacaca;
+  --color-gray: #a7a7a7;
+  --color-gray-dark: #4a5565;
+
+  --color-dark: #1e2939;
+  --color-black: #030712;
+
+  --color-body: #ffffff;
+}
+
+[data-theme='violet'] {
+  --color-primary-lightest: #fafafa;
+  --color-primary-lighter: #faf5ff;
+  --color-primary-light: #f3e8ff;
+  --color-primary: #8200db;
+  --color-primary-dark: #3c0366;
+
+  --color-secondary-lightest: #fffbed;
+  --color-secondary-lighter: #fff4ce;
+  --color-secondary-light: #ffe484;
+  --color-secondary: #fdc700;
+  --color-secondary-dark: #432004;
+
+  --color-gray-lighter: #f3f4f6;
+  --color-gray-light: #cacaca;
+  --color-gray: #a7a7a7;
+  --color-gray-dark: #52525c;
+
+  --color-dark: #27272a;
+  --color-black: #09090b;
+
+  --color-body: #ffffff;
+}

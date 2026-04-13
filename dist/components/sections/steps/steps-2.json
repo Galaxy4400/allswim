@@ -1,0 +1,12 @@
+{
+  "index": {
+    "steps_title": "How <mark>It Works</mark>",
+    "steps_text": "3 Easy Steps to Start Trading",
+    "steps_item_title_1": "Sign Up",
+    "steps_item_text_1": "Click the «Open Account» button and fill out the registration form with your (name, email, and phone number?). It’s free and only takes a couple of minutes. We’ll ask you to verify your email and set a password. For your safety, you’ll enable two-factor authentication (2FA) — this keeps your funds protected.",
+    "steps_item_title_2": "Deposit Funds",
+    "steps_item_text_2": "Next, fund your account. The minimum deposit is just <span data-local-currency='{currency}'>{currency}</span>. You can use credit/debit cards, local bank transfer or popular e-wallets in {country_name}. Your deposit should appear in your account quickly. (Tip: start with an amount you’re comfortable with.) We may ask you to complete a quick ID verification on your first deposit — this is standard and only takes a few minutes.",
+    "steps_item_title_3": "Start Trading",
+    "steps_item_text_3": "With funds in your account, you’re ready to trade. Choose the asset you want (like BTC, SOL or USDT) and decide how much you should get. {site_name} provides tools to set your strategy, including stop-loss limits and target prices. We also offer an automated trading option that follows market signals for you, based on the risk level you select. Watch the live charts update on your dashboard. When a trade makes a profit, you’ll see your balance grow immediately."
+  }
+}

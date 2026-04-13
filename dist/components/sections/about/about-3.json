@@ -1,0 +1,10 @@
+{
+  "index": {
+    "about_title": "<mark>What is</mark> {site_name}?",
+    "about_item_text_1": "{site_name} is the official online trading platform designed for any cryptocurrency-related tasks working to all categories of people in {country_name} for years, whether they are starting users or long-time investors. {site_name} offers a secure, intuitive environment to trade various digital assets. We handle all the complexity of the crypto markets so you don’t have to.",
+    "about_item_text_2": "We’ve built {site_name} to make crypto trading as easy as online banking, so even beginners feel comfortable with it. Thousands of users in {country_name} have already started with {site_name}, and many say it was simple to get going.",
+    "about_item_text_3": "Our platform supports all major cryptocurrencies and provides tools to help you make informed and well-calculated trades. The main dashboard is easy to navigate, so you always know your balance and positions at a glance.",
+    "about_item_text_4": "Best of all, you can start with a minimum deposit of only <span data-local-currency='{currency}'>{currency}</span> — no hidden fees. Our focus is on clear guidance and support. Trading with {site_name} platform means you’ve got help from day one: we explain each step and include educational resources right on the platform.",
+    "about_item_text_5": "You can even access market updates and crypto news directly in your dashboard. {site_name} is as transparent as it gets with explain every feature explained. From registration to your first trade, everything is straightforward."
+  }
+}

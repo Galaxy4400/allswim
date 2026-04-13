@@ -1,0 +1,15 @@
+{
+  "index": {
+    "trust_title": "<mark>Trusted</mark> by {country_name} Traders",
+    "trust_text": "Join thousands of fellow {country_name} residents who trade with {site_name}. We even display a live counter on our site showing how many people are trading right now, so you see our active community in real time.",
+    "trust_label": "Here’s why local traders trust {site_name}:",
+    "trust_item_title_1": "Fully Regulated",
+    "trust_item_text_1": "{site_name} is fully registered in {country_name} and follows all local financial regulations. This means we operate under strict rules to protect you.",
+    "trust_item_title_2": "Top-Notch Security",
+    "trust_item_text_2": "All your data and funds are encrypted and secured. We enforce strong account protection with SSL encryption and two-factor authentication. You can trade with confidence knowing we take security seriously.",
+    "trust_item_title_3": "Transparent Operations",
+    "trust_item_text_3": "We don’t hide fees or add surprising rules. Before any trade, you see exactly what fees apply. We also clearly communicate the risks of trading. Honesty builds trust in our community.",
+    "trust_item_title_4": "Responsive Support",
+    "trust_item_text_4": "Our support team is based in {country_name} and speaks your language. They’re available via chat, phone, or email to help with any questions or issues."
+  }
+}

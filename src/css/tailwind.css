@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+/* Указываем, откуда Tailwind должен забирать классы */
+@source '../../dist/components/**/*.{html,php}';
+@source '../../dist/pages/**/*.{html,php}';
+
+@import './intlTelInput.min';
+
+@import './theme.css';
+@import './base.css';
+@import './utilities.css';
+@import './components.css';
+@import './custom.css';

@@ -1,0 +1,15 @@
+{
+  "index": {
+    "benefits_title": "<mark>Why Choose</mark> {site_name}",
+    "benefits_item_title_1": "User-Friendly Experience",
+    "benefits_item_text_1": "The {site_name} interface is clean and simple. Everything is labeled clearly so we guarantee you won’t feel lost. We are constantly improving the design with some of the best UX/UI experts on the market. We also provide easy tutorials and tips, helping even first-timers place their first trade within minutes.",
+    "benefits_item_title_2": "Official & Transparent",
+    "benefits_item_text_2": "{site_name} is fully registered and transparent. We show all fees upfront and follow {country_name} regulations. You’ll never see hidden charges or sneaky terms — only small, clear fees when applicable. Transparency and honesty are part of our core values, based on which we’ve built our community.",
+    "benefits_item_title_3": "Advanced Trading Tools",
+    "benefits_item_text_3": "{site_name} provides tools for every trader. You want to set a stop-loss orders and view real-time charts? We’ve git that! You can even enable automated trading based on market signals, all tailored to your chosen strategy and risk level. You’re always in control — adjust or cancel trades anytime.",
+    "benefits_item_title_4": "24/7 Trading Access",
+    "benefits_item_text_4": "Trade on your schedule, day or night, worldwide. {site_name} works on both desktop and mobile, so you can act on market moves wherever you are. The platform is fast and reliable — assets prices update in real time to help you catch opportunities quickly.",
+    "benefits_item_title_5": "Local Support",
+    "benefits_item_text_5": "Our team is based in {country_name} and ready to assist you via several different connectivity options. They know the local market and are here to answer your questions. {site_name} also complies with all {country_name} financial rules, so you know we meet regulatory standards."
+  }
+}
