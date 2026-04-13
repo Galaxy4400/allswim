@@ -83,6 +83,9 @@ const toggleAccordion = (index) => {
 };
 
 //===============================================================
+window.toggleAccordion = toggleAccordion;
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initConnectors();

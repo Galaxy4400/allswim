@@ -1,9 +1,4 @@
 //===============================================================
-const local = (path) => {
-  return path.split('.').reduce((obj, key) => obj?.[key], window.translations) ?? path;
-};
-
-//===============================================================
 const initCountryPhones = (form) => {
   const intlTelInput = form.querySelector('input[data-phone]');
 
@@ -15,7 +10,7 @@ const initCountryPhones = (form) => {
   form.iti = window.intlTelInput(intlTelInput, {
     strictMode: false,
     separateDialCode: true,
-    initialCountry: window.geo?.data?.country_code?.toLowerCase() || window.userCountry.toLowerCase(),
+    initialCountry: 'ru',
     loadUtils: () => import('https://cdn.jsdelivr.net/npm/intl-tel-input@25.12.5/build/js/utils.min.js'),
   });
 
@@ -29,7 +24,7 @@ const initCountryPhones = (form) => {
 const resetForm = (form) => {
   form.reset();
 
-  form.iti.setNumber('');
+  form.iti?.setNumber('');
 
   form.querySelectorAll('[data-valid], [data-novalid]').forEach((input) => {
     input.removeAttribute('data-valid');
@@ -63,7 +58,7 @@ const showFormMessage = (form, { type = 'success', title = '', text = '' }, link
     let time = 5;
     const intervalId = setInterval(() => {
       time--;
-      contentEl.innerHTML = local('redirect_timer').replace('{{timer}}', `<span>${time}</span>`);
+      contentEl.innerHTML = text.replace('{{timer}}', `<span>${time}</span>`);
       if (time <= 0) {
         clearInterval(intervalId);
         window.location.href = link;
@@ -81,23 +76,22 @@ const responseHandler = (form, { success, code, errors, auto_login_url, tech }) 
       return showFormMessage(
         form,
         {
-          title: local('reg_complete'),
-          text: local('redirect_timer'),
+          title: 'Регистрация завершена',
+          text: 'Перенаправление через {{timer}} секунд',
         },
         auto_login_url,
       );
     }
 
     return showFormMessage(form, {
-      title: local('reg_complete'),
+      title: 'Регистрация завершена',
     });
   }
 
-  // Errors
   if (code === 'invalid_params') {
     return showFormMessage(form, {
       type: 'error',
-      title: local('something_wrong'),
+      title: 'Что-то пошло не так',
       text: errors,
     });
   }
@@ -105,15 +99,15 @@ const responseHandler = (form, { success, code, errors, auto_login_url, tech }) 
   if (tech) {
     return showFormMessage(form, {
       type: 'error',
-      title: local('something_wrong'),
-      text: local('ask_support'),
+      title: 'Что-то пошло не так',
+      text: 'Обратитесь в поддержку',
     });
   }
 
   return showFormMessage(form, {
     type: 'error',
-    title: local('something_wrong'),
-    text: local('try_again'),
+    title: 'Что-то пошло не так',
+    text: 'Попробуйте ещё раз',
   });
 };
 
@@ -123,7 +117,7 @@ const validateForm = (form) => {
 
   if (formSubmitted) {
     showFormMessage(form, {
-      title: local('already_reg'),
+      title: 'Вы уже зарегистрированы',
     });
 
     return;
@@ -139,36 +133,30 @@ const validateForm = (form) => {
     const required = input.required ? true : false;
     const regexp = input.dataset.regexp ? input.dataset.regexp : false;
 
-    // clean status
     input.removeAttribute('data-valid');
     input.removeAttribute('data-novalid');
 
     let isValid = true;
     const value = input.value.trim();
 
-    // required
     if (isValid && required) {
       if (!value) isValid = false;
     }
 
-    // email
     if (isValid && type === 'email') {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(value)) isValid = false;
     }
 
-    // tel
     if (isValid && type === 'tel') {
-      if (!form.iti.isValidNumber()) isValid = false;
+      if (!form.iti?.isValidNumber()) isValid = false;
     }
 
-    // regexp
     if (isValid && regexp) {
       const customRegex = new RegExp(regexp, 'gi');
       if (!customRegex.test(value)) isValid = false;
     }
 
-    // status
     if (isValid) {
       input.setAttribute('data-valid', '');
     } else {
@@ -198,8 +186,6 @@ const initSubmit = (form) => {
     const formData = new FormData(form);
 
     form.setAttribute('data-loading', '');
-
-    formData.set('geo', window.userCountry);
 
     if (form.iti) formData.set('phone', formData.get('phone').replace(/^0+/, ''));
     if (form.iti) formData.append('full_phone', form.iti.getNumber());
