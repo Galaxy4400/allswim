@@ -28,7 +28,7 @@
   }
 
   a {
-    @apply hover:text-secondary-light transition-colors;
+    @apply hover:text-primary-dark transition-colors;
   }
 
   picture img {
