@@ -4,7 +4,7 @@
   }
 
   body {
-    @apply bg-body flex min-h-screen flex-col text-sm leading-[1.4] font-medium text-black md:text-base;
+    @apply bg-primary-lighter text-primary flex min-h-screen flex-col text-sm leading-[1.4] font-medium md:text-base;
   }
 
   main {

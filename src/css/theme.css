@@ -1,28 +1,20 @@
 @theme {
-  --font-sans: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
-  --font-special: 'Epilogue', Montserrat, ui-sans-serif, sans-serif;
+  --font-sans: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+  --font-special: 'Montserrat', ui-sans-serif, sans-serif;
 
-  --color-primary-lightest: #f9fafb;
-  --color-primary-lighter: #edf5ff;
-  --color-primary-light: #dbeafe;
-  --color-primary: #155dfc;
-  --color-primary-dark: #1e2939;
+  --color-primary-lightest: #f9fdff;
+  --color-primary-lighter: #ecf8ff;
+  --color-primary-light: #91cff2;
+  --color-primary: #7cc8f2;
+  --color-primary-dark: #8294b2;
+  --color-primary-darker: #304569;
+  --color-primary-darkest: #002159;
 
-  --color-secondary-lightest: #f7ffe8;
-  --color-secondary-lighter: #e0ffa3;
-  --color-secondary-light: #baff2f;
-  --color-secondary: #9ae600;
-  --color-secondary-dark: #192e03;
-
-  --color-gray-lighter: #f3f4f6;
-  --color-gray-light: #cacaca;
-  --color-gray: #a7a7a7;
-  --color-gray-dark: #4a5565;
-
-  --color-dark: #1e2939;
-  --color-black: #030712;
-
-  --color-body: #ffffff;
+  --color-secondary-lightest: #fffcfa;
+  --color-secondary-lighter: #fff7f0;
+  --color-secondary-light: #ffecdc;
+  --color-secondary: #ff9533;
+  --color-secondary-dark: #ff8a1e;
 
   --spacing-container: 1200px;
   --spacing-container-narrow: 790px;
