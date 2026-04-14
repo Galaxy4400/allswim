@@ -27,7 +27,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch('./src/css/**/*.css', gulp.series(styles, reload));
-  gulp.watch('./dist/**/*.html', reload);
+  gulp.watch('./dist/**/*.html', gulp.series(styles, reload));
 };
 
 export const build = (done) => {
