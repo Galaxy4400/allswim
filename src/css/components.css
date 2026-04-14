@@ -12,15 +12,19 @@
   }
 
   .h1 {
-    @apply font-special text-[42px] leading-[1.2] md:text-[66px];
+    @apply text-[26px] leading-[1.15] font-extrabold md:text-[46px];
   }
 
   .h2 {
-    @apply font-special text-[32px] leading-[1.2] md:text-[46px];
+    @apply text-[20px] leading-[1.15] font-bold md:text-[36px];
   }
 
   .h3 {
-    @apply font-special text-lg leading-[1.2] md:text-2xl;
+    @apply text-sm leading-normal md:text-[24px];
+  }
+
+  .h4 {
+    @apply text-sm leading-normal md:text-xl;
   }
 
   .label {
@@ -159,45 +163,11 @@
   }
 
   .paggination-dot {
-    @apply data-active:bg-primary bg-gray-light h-2.5 w-2.5 rounded-full transition-all data-active:w-[30px];
+    @apply data-active:bg-primary h-2.5 w-2.5 rounded-full bg-gray-500 transition-all data-active:w-[30px];
   }
 
   .text-small {
-    @apply text-[10px] md:text-xs;
-  }
-
-  .text-medium {
-    @apply md:text-lg;
-  }
-
-  .text-big {
-    @apply md:text-xl;
-  }
-
-  .glass {
-    @apply px-4 py-8 md:px-8 md:py-12;
-    @apply rounded-[20px] md:rounded-[30px];
-    @apply border-2 border-white/50;
-    @apply bg-[linear-gradient(70deg,rgba(255,255,255,0.2)_10%,rgba(255,255,255,0.04)_77%)];
-    @apply shadow-[inset_10px_10px_25px_0_rgba(255,255,255,0.25),0_2px_30px_0_rgba(116,95,202,0.1)];
-    @apply backdrop-blur-[35px];
-  }
-
-  .panel {
-    @apply px-4 py-8 md:px-8 md:py-12;
-    @apply rounded-[20px] md:rounded-[60px];
-  }
-
-  .card {
-    @apply bg-gray-lighter grid content-start gap-3 rounded-[20px] px-4 py-5 md:gap-4 md:rounded-[30px] md:px-5 md:py-6;
-  }
-
-  .card-simple {
-    @apply grid content-start gap-3 md:gap-4;
-  }
-
-  .card-row {
-    @apply flex items-start gap-3 max-md:flex-col md:gap-4;
+    @apply text-xs md:text-sm;
   }
 
   .icon-wrapper {

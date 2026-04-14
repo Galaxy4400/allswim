@@ -32,7 +32,7 @@
 
 /* Стили трейдинга */
 [data-trading] > div {
-  @apply border-gray-light h-[93px]! gap-3 rounded-sm border bg-white max-md:w-[90%]! max-md:shrink-0 md:rounded-md;
+  @apply h-[93px]! gap-3 rounded-sm border border-gray-500 bg-white max-md:w-[90%]! max-md:shrink-0 md:rounded-md;
 }
 
 /* Базовые стили слайдеров */
@@ -46,7 +46,7 @@
 
 /* Кастомные стили реинджа */
 .range {
-  @apply bg-gray-light h-0.75 w-full appearance-none rounded-full outline-none;
+  @apply h-0.75 w-full appearance-none rounded-full bg-gray-500 outline-none;
 }
 
 .range::-webkit-slider-thumb {
