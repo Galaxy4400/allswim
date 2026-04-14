@@ -5,7 +5,8 @@
       "Bash(npm install:*)",
       "Bash(npm view:*)",
       "Bash(npx gulp:*)",
-      "Bash(npx prettier:*)"
+      "Bash(npx prettier:*)",
+      "Bash(ls:*)"
     ]
   }
 }

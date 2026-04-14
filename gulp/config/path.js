@@ -11,7 +11,7 @@ export const path = {
     svg: `${buildFolder}/assets/svg/`,
   },
   src: {
-    html: `${srcFolder}/html/*.html`,
+    html: `${srcFolder}/html/pages/*.html`,
     css: `${srcFolder}/css/tailwind.css`,
     js: `${srcFolder}/scripts/**/*.js`,
     images: `${srcFolder}/assets/images/**/*.{jpg,jpeg,png,gif,webp,avif}`,
