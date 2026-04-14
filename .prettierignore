@@ -1,7 +1,2 @@
-# Игнорируем всё
-*.php
-
-# Разрешаем форматировать только в dist/ и dist/components
-!dist/*.php
-!dist/components/**/*.php
-!dist/pages/**/*.php
+dist/
+node_modules/

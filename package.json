@@ -18,7 +18,6 @@
     "glob": "^13.0.0",
     "gulp": "^5.0.1",
     "gulp-babel": "^8.0.0",
-    "gulp-file-include": "^2.3.0",
     "gulp-fonter": "^0.3.0",
     "gulp-if": "^3.0.0",
     "gulp-newer": "^1.4.0",
