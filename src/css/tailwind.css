@@ -1,9 +1,8 @@
 @import 'tailwindcss';
 
-@source '../html/**/*.html';
-@source '../scripts/**/*.js';
+@source '../../dist/**/*.html';
 
-@import './intlTelInput.min';
+/* @import './intlTelInput.min'; */
 
 @import './theme.css';
 @import './base.css';
