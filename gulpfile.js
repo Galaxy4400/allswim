@@ -1,58 +1,42 @@
 import gulp from 'gulp';
-import { path } from './gulp/config/path.js';
-import { plugins } from './gulp/config/plugins.js';
+import { spawn } from 'child_process';
+import browserSync from 'browser-sync';
 
-global.app = {
-  isBuild: process.argv.includes('--build'),
-  isDev: !process.argv.includes('--build'),
-  path,
-  gulp,
-  plugins,
+const bs = browserSync.create();
+
+const cssInput = './src/css/tailwind.css';
+const cssOutput = './dist/assets/css/tailwind.min.css';
+
+const styles = (done) => {
+  const tw = spawn('npx', ['tailwindcss', '-i', cssInput, '-o', cssOutput], {
+    shell: true,
+    stdio: 'inherit',
+  });
+  tw.on('close', done);
 };
 
-import { reset } from './gulp/tasks/reset.js';
-import { html } from './gulp/tasks/html.js';
-import { styles } from './gulp/tasks/styles.js';
-import { scripts } from './gulp/tasks/scripts.js';
-import { images } from './gulp/tasks/images.js';
-import { fonts } from './gulp/tasks/fonts.js';
-import { fontscss } from './gulp/tasks/fontscss.js';
-import { svg } from './gulp/tasks/svg.js';
-
-function server(done) {
-  app.plugins.browsersync.init({
-    server: { baseDir: path.buildFolder },
-    notify: false,
-    port: 3000,
-  });
+const server = (done) => {
+  bs.init({ server: './dist', notify: false, port: 3000 });
   done();
-}
+};
 
 const reload = (done) => {
-  app.plugins.browsersync.reload();
+  bs.reload();
   done();
 };
 
-function watcher() {
-  gulp.watch(path.watch.html, gulp.series(html, reload));
-  gulp.watch(path.watch.css, gulp.series(styles, reload));
-  gulp.watch(path.watch.js, gulp.series(scripts, reload));
-  gulp.watch(path.watch.images, gulp.series(images, reload));
-  gulp.watch(path.watch.svg, gulp.series(svg, reload));
-}
+const watcher = () => {
+  gulp.watch('./src/css/**/*.css', gulp.series(styles, reload));
+  gulp.watch('./dist/**/*.html', reload);
+};
 
-export const dev = gulp.series(
-  reset,
-  gulp.parallel(html, styles, scripts, images, svg),
-  server,
-  watcher,
-);
+export const build = (done) => {
+  const tw = spawn('npx', ['tailwindcss', '-i', cssInput, '-o', cssOutput, '--minify'], {
+    shell: true,
+    stdio: 'inherit',
+  });
+  tw.on('close', done);
+};
 
-export const build = gulp.series(
-  reset,
-  fonts,
-  fontscss,
-  gulp.parallel(html, styles, scripts, images, svg),
-);
-
-gulp.task('default', dev);
+export const dev = gulp.series(styles, server, watcher);
+export default dev;
