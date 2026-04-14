@@ -23,8 +23,6 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
-    --text-2xl: 1.5rem;
-    --text-2xl--line-height: calc(2 / 1.5);
     --font-weight-medium: 500;
     --font-weight-bold: 700;
     --font-weight-extrabold: 800;
@@ -1239,6 +1237,8 @@
     scroll-behavior: smooth;
   }
   body {
+    position: relative;
+    isolation: isolate;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -2046,6 +2046,21 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--color-primary-dark);
   }
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: -50vh;
+  left: -50vw;
+  width: 200vw;
+  height: 200vh;
+  background-image: url('../img/svg/bg-circle-pattern.svg'), url('../img/svg/bg-circle-pattern.svg');
+  background-size: 720px 720px;
+  background-position: 0 0, 360px 360px;
+  background-repeat: repeat;
+  transform: rotate(-20deg);
+  z-index: -1;
+  pointer-events: none;
 }
 .iti__selected-country-primary {
   border-radius: var(--radius-sm);
