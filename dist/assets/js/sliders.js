@@ -195,8 +195,8 @@ const initSlider = (sliderTag, options = {}) => {
 const initSliders = () => {
   markupSliders();
 
-  initSlider('stories', { loop: true, align: 'start' });
-  initSlider('stories-scale', { loop: true, align: 'center', containScroll: false, startIndex: 1, scale: true });
+  // initSlider('stories', { loop: true, align: 'start' });
+  // initSlider('stories-scale', { loop: true, align: 'center', containScroll: false, startIndex: 1, scale: true });
 };
 
 //===============================================================
