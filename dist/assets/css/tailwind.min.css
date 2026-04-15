@@ -37,8 +37,8 @@
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
-    --color-primary-lightest: #f9fdff;
-    --color-primary-lighter: #ecf8ff;
+    --color-primary-lightest: #ecf8ff;
+    --color-primary-lighter: #bde7ff;
     --color-primary-light: #91cff2;
     --color-primary: #7cc8f2;
     --color-primary-dark: #8294b2;
@@ -323,12 +323,12 @@
   .basis-full {
     flex-basis: 100%;
   }
-  .-translate-x-1\/2 {
-    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+  .-translate-x-\[100px\] {
+    --tw-translate-x: calc(100px * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-x-1\/2 {
-    --tw-translate-x: calc(1/2 * 100%);
+  .translate-x-\[100px\] {
+    --tw-translate-x: 100px;
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -344,6 +344,9 @@
   .flex-wrap {
     flex-wrap: wrap;
   }
+  .content-center {
+    align-content: center;
+  }
   .content-start {
     align-content: flex-start;
   }
@@ -358,6 +361,9 @@
   }
   .justify-end {
     justify-content: flex-end;
+  }
+  .justify-items-start {
+    justify-items: start;
   }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
@@ -515,6 +521,30 @@
   .duration-300 {
     --tw-duration: 300ms;
     transition-duration: 300ms;
+  }
+  .btn-primary {
+    --btn-bg: var(--color-primary);
+    --btn-bg-hover: var(--color-primary-dark);
+    --btn-text: var(--color-white);
+    --btn-text-hover: var(--color-white);
+    --btn-border: var(--color-primary);
+    --btn-border-hover: var(--color-primary-dark);
+    --btn-bg-image: none;
+    --btn-bg-image-hover: none;
+    --btn-shadow: none;
+    --btn-shadow-hover: none;
+  }
+  .btn-secondary {
+    --btn-bg: var(--color-secondary);
+    --btn-bg-hover: var(--color-secondary-light);
+    --btn-text: var(--color-secondary-dark);
+    --btn-text-hover: var(--color-secondary-dark);
+    --btn-border: var(--color-secondary);
+    --btn-border-hover: var(--color-secondary-light);
+    --btn-bg-image: none;
+    --btn-bg-image-hover: none;
+    --btn-shadow: none;
+    --btn-shadow-hover: none;
   }
   .group-hover\:visible {
     &:is(:where(.group):hover *) {
@@ -1698,7 +1728,7 @@
     display: flex;
     min-height: 100vh;
     flex-direction: column;
-    background-color: var(--color-primary-lighter);
+    background-color: var(--color-primary-lightest);
     padding-top: 60px;
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -2273,24 +2303,20 @@
   .paggination {
     display: inline-flex;
     flex-wrap: wrap;
-    gap: calc(var(--spacing) * 3);
-    justify-self: flex-end;
-    border-radius: calc(infinity * 1px);
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    border-color: var(--color-primary);
-    padding: calc(var(--spacing) * 3);
+    gap: calc(var(--spacing) * 5);
+    justify-self: center;
   }
   .paggination-dot {
     height: calc(var(--spacing) * 2.5);
     width: calc(var(--spacing) * 2.5);
+    cursor: pointer;
     border-radius: calc(infinity * 1px);
-    background-color: var(--color-gray-500);
+    background-color: var(--color-primary-lighter);
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
     &[data-active] {
-      width: 30px;
+      scale: 1.5;
     }
     &[data-active] {
       background-color: var(--color-primary);
@@ -2589,7 +2615,7 @@ body::before {
   width: 100vw;
   --tw-translate-x: calc(calc(1/2 * 100%) * -1);
   translate: var(--tw-translate-x) var(--tw-translate-y);
-  background-color: var(--color-primary-lighter);
+  background-color: var(--color-primary-lightest);
 }
 @property --tw-translate-x {
   syntax: "*";

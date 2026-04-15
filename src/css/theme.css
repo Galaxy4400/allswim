@@ -1,8 +1,8 @@
 @theme {
   --font-sans: 'Montserrat', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
 
-  --color-primary-lightest: #f9fdff;
-  --color-primary-lighter: #ecf8ff;
+  --color-primary-lightest: #ecf8ff;
+  --color-primary-lighter: #bde7ff;
   --color-primary-light: #91cff2;
   --color-primary: #7cc8f2;
   --color-primary-dark: #8294b2;

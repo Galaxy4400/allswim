@@ -150,11 +150,11 @@
   }
 
   .paggination {
-    @apply border-primary inline-flex flex-wrap gap-3 justify-self-end rounded-full border p-3;
+    @apply inline-flex flex-wrap gap-5 justify-self-center;
   }
 
   .paggination-dot {
-    @apply data-active:bg-primary h-2.5 w-2.5 rounded-full bg-gray-500 transition-all data-active:w-[30px];
+    @apply data-active:bg-primary bg-primary-lighter h-2.5 w-2.5 cursor-pointer rounded-full transition-all data-active:scale-[1.5];
   }
 
   .text-small {
