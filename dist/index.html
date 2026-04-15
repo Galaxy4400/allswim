@@ -192,17 +192,26 @@
                 <li>
                   <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
                 </li>
-                <li>
+                <li class="group">
                   <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
                     каталог
-                    <svg width="8" height="7" viewBox="0 0 8 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg
+                      class="transition-transform duration-300 group-hover:rotate-180"
+                      width="8"
+                      height="7"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
                       <path
                         d="M5.9075 0.500268C6.18362 0.0220178 6.79543 -0.141983 7.27371 0.134058C7.75198 0.41019 7.91602 1.02198 7.63992 1.50027L4.7532 6.50027C4.57457 6.80967 4.24426 7.00027 3.88699 7.00027C3.52974 7.00026 3.19941 6.80966 3.02078 6.50027L0.134061 1.50027C-0.142018 1.02199 0.0220054 0.410185 0.500271 0.134058C0.978551 -0.142016 1.59036 0.0220047 1.86648 0.500268L3.88699 3.99929L5.9075 0.500268Z"
                         fill="#002159"
                       />
                     </svg>
                   </a>
-                  <div class="absolute top-full left-0 w-full rounded-b-3xl bg-white p-14">
+                  <div
+                    class="invisible absolute top-full left-0 w-full rounded-b-3xl bg-white p-14 group-hover:visible before:absolute before:-top-10 before:left-0 before:h-10 before:w-full"
+                  >
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt maiores laboriosam officia ut ab!
                     Tempore rem asperiores maiores architecto obcaecati beatae rerum debitis id similique ipsam, unde
                     reiciendis nemo iusto aspernatur et assumenda dicta. Quos nesciunt repellat enim illo? Ipsam,
@@ -213,8 +222,31 @@
                     numquam illo! Nihil modi est totam obcaecati, explicabo sed?
                   </div>
                 </li>
-                <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Еще</a>
+                <li class="group relative">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                    еще
+                    <svg
+                      class="transition-transform duration-300 group-hover:rotate-180"
+                      width="8"
+                      height="7"
+                      viewBox="0 0 8 7"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5.9075 0.500268C6.18362 0.0220178 6.79543 -0.141983 7.27371 0.134058C7.75198 0.41019 7.91602 1.02198 7.63992 1.50027L4.7532 6.50027C4.57457 6.80967 4.24426 7.00027 3.88699 7.00027C3.52974 7.00026 3.19941 6.80966 3.02078 6.50027L0.134061 1.50027C-0.142018 1.02199 0.0220054 0.410185 0.500271 0.134058C0.978551 -0.142016 1.59036 0.0220047 1.86648 0.500268L3.88699 3.99929L5.9075 0.500268Z"
+                        fill="#002159"
+                      />
+                    </svg>
+                  </a>
+                  <div
+                    class="invisible absolute top-full left-0 w-[150px] rounded-b-2xl bg-white p-4 group-hover:visible"
+                  >
+                    <ul>
+                      <li class="border-primary-light border-b py-2"><a href="#">Помощь</a></li>
+                      <li class="py-2"><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
                 </li>
               </ul>
             </nav>
