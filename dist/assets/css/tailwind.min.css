@@ -324,12 +324,12 @@
   .basis-full {
     flex-basis: 100%;
   }
-  .-translate-x-\[100px\] {
-    --tw-translate-x: calc(100px * -1);
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
-  .translate-x-\[100px\] {
-    --tw-translate-x: 100px;
+  .translate-x-1\/2 {
+    --tw-translate-x: calc(1/2 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-1\/2 {
@@ -404,6 +404,9 @@
   }
   .gap-y-1 {
     row-gap: calc(var(--spacing) * 1);
+  }
+  .gap-y-5 {
+    row-gap: calc(var(--spacing) * 5);
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
@@ -621,19 +624,29 @@
       overflow-y: hidden;
     }
   }
-  .md\:absolute {
-    @media (width >= 48rem) {
-      position: absolute;
+  .max-md\:hidden {
+    @media (width < 48rem) {
+      display: none;
     }
   }
-  .md\:top-1\/2 {
-    @media (width >= 48rem) {
-      top: calc(1/2 * 100%);
+  .max-md\:flex-col-reverse {
+    @media (width < 48rem) {
+      flex-direction: column-reverse;
     }
   }
-  .md\:left-0 {
-    @media (width >= 48rem) {
-      left: calc(var(--spacing) * 0);
+  .max-md\:gap-2 {
+    @media (width < 48rem) {
+      gap: calc(var(--spacing) * 2);
+    }
+  }
+  .max-md\:justify-self-center {
+    @media (width < 48rem) {
+      justify-self: center;
+    }
+  }
+  .max-md\:text-center {
+    @media (width < 48rem) {
+      text-align: center;
     }
   }
   .md\:-m-2\.5 {
@@ -641,15 +654,19 @@
       margin: calc(var(--spacing) * -2.5);
     }
   }
-  .md\:-translate-y-1\/2 {
+  .md\:gap-2 {
     @media (width >= 48rem) {
-      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-      translate: var(--tw-translate-x) var(--tw-translate-y);
+      gap: calc(var(--spacing) * 2);
     }
   }
   .md\:p-2\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 2.5);
+    }
+  }
+  .md\:py-4 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 4);
     }
   }
   .md\:leading-6 {
@@ -706,6 +723,30 @@
   .lg\:gap-8\.5 {
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 8.5);
+    }
+  }
+  .xl\:-translate-x-\[50px\] {
+    @media (width >= 80rem) {
+      --tw-translate-x: calc(50px * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .xl\:translate-x-\[50px\] {
+    @media (width >= 80rem) {
+      --tw-translate-x: 50px;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .\32 xl\:-translate-x-\[100px\] {
+    @media (width >= 96rem) {
+      --tw-translate-x: calc(100px * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .\32 xl\:translate-x-\[100px\] {
+    @media (width >= 96rem) {
+      --tw-translate-x: 100px;
+      translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
 }
