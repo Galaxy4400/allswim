@@ -257,6 +257,9 @@
   .h-\[60px\] {
     height: 60px;
   }
+  .h-full {
+    height: 100%;
+  }
   .max-h-\[calc\(100vh-105px\)\] {
     max-height: calc(100vh - 105px);
   }
@@ -268,6 +271,9 @@
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
   .w-\[55px\] {
     width: 55px;
@@ -293,6 +299,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .flex-col {
+    flex-direction: column;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -352,8 +361,14 @@
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
+  }
   .pr-\[100px\] {
     padding-right: 100px;
+  }
+  .pb-16 {
+    padding-bottom: calc(var(--spacing) * 16);
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
