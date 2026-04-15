@@ -92,6 +92,8 @@ const initSearch = () => {
   const panel = document.querySelector('[data-search-container]');
   const openBtn = document.querySelector('[data-search-open]');
   const closeBtn = document.querySelector('[data-search-close]');
+  const clearBtn = document.querySelector('[data-search-clear]');
+  const input = document.querySelector('[data-search-input]');
 
   if (!panel) return;
 
@@ -108,6 +110,14 @@ const initSearch = () => {
   closeBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
     toggle(false);
+  });
+
+  clearBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (input) {
+      input.value = '';
+      input.focus();
+    }
   });
 
   panel.addEventListener('click', (e) => {
