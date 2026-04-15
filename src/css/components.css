@@ -75,9 +75,9 @@
     --btn-shadow-hover: none;
 
     @apply inline-flex items-center justify-center;
-    @apply min-h-12 px-6 py-1.5;
+    @apply min-h-11 min-w-36 px-8 py-1.5 md:min-h-14.5 md:min-w-[304px];
     @apply rounded-full;
-    @apply text-base leading-none md:text-lg;
+    @apply text-sm leading-none font-extrabold md:text-lg md:font-black;
     @apply cursor-pointer transition-all;
 
     @apply border-(length:--btn-border-width) border-(--btn-border) bg-(--btn-bg) bg-(image:--btn-bg-image) text-(--btn-text) shadow-(--btn-shadow);
