@@ -473,11 +473,13 @@
     <!-- footer -->
     <footer>
       <div class="py-[50px]">
-        <div class="container-base flex justify-between gap-6">
-          <div class="flex flex-col">
-            <a class="w-[55px] grow lg:w-[100px]" href="#">
-              <img src="assets/img/svg/logo.svg" alt="logo" />
-            </a>
+        <div class="container-base flex justify-between gap-6 max-lg:flex-col">
+          <div class="flex lg:flex-col">
+            <div class="grow">
+              <a class="block w-[55px] lg:w-[100px]" href="#">
+                <img src="assets/img/svg/logo.svg" alt="logo" />
+              </a>
+            </div>
             <div class="flex gap-3">
               <a href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
@@ -507,7 +509,7 @@
               </a>
             </div>
           </div>
-          <div class="flex gap-10">
+          <div class="flex gap-6 max-lg:flex-col">
             <nav class="grid content-start gap-3">
               <span class="text-xs font-extrabold uppercase">Помощь</span>
               <ul class="grid content-start gap-2">

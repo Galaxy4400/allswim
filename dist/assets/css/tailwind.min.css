@@ -537,6 +537,11 @@
       flex-basis: calc(1/2 * 100%);
     }
   }
+  .max-lg\:flex-col {
+    @media (width < 64rem) {
+      flex-direction: column;
+    }
+  }
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
@@ -560,6 +565,11 @@
   .lg\:w-\[100px\] {
     @media (width >= 64rem) {
       width: 100px;
+    }
+  }
+  .lg\:flex-col {
+    @media (width >= 64rem) {
+      flex-direction: column;
     }
   }
 }
