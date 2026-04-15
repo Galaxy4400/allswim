@@ -86,6 +86,41 @@ const toggleAccordion = (index) => {
 window.toggleAccordion = toggleAccordion;
 
 //===============================================================
+const initSearch = () => {
+  let isOpen = false;
+
+  const panel = document.querySelector('[data-search-container]');
+  const openBtn = document.querySelector('[data-search-open]');
+  const closeBtn = document.querySelector('[data-search-close]');
+
+  if (!panel) return;
+
+  const toggle = (state) => {
+    isOpen = state;
+    panel.toggleAttribute('data-active', isOpen);
+  };
+
+  openBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggle(true);
+  });
+
+  closeBtn?.addEventListener('click', (e) => {
+    e.stopPropagation();
+    toggle(false);
+  });
+
+  panel.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  document.addEventListener('click', () => {
+    if (isOpen) toggle(false);
+  });
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initConnectors();
+initSearch();

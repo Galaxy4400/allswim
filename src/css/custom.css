@@ -86,10 +86,3 @@ body::before {
   @apply relative;
   @apply before:bg-primary before:absolute before:top-1/2 before:left-1/2 before:h-[434px] before:w-[320px] before:rotate-52 before:rounded-[434px] before:blur-[100px];
 }
-
-.backlight-form-2 {
-  @apply hidden;
-  @apply absolute inset-0 overflow-hidden;
-  @apply before:bg-primary before:absolute before:top-[15%] before:left-[20%] before:h-[200px] before:w-[100px] before:-translate-1/2 before:-rotate-30 before:rounded-[408px] before:blur-[100px] md:before:h-[408px] md:before:w-[186px];
-  @apply after:bg-secondary after:absolute after:bottom-[-35%] after:left-[80%] after:h-[150px] after:w-[220px] after:-translate-1/2 after:-rotate-70 after:rounded-[408px] after:blur-[100px] md:after:h-[257px] md:after:w-[445px];
-}
