@@ -15,70 +15,6 @@ const markupSliders = () => {
 
 //===============================================================
 
-const setupTweenScale = (sliderApi) => {
-  const TWEEN_FACTOR_BASE = 0.15;
-
-  let tweenFactor = 0;
-  let tweenNodes = [];
-
-  const numberWithinRange = (number, min, max) => Math.min(Math.max(number, min), max);
-
-  const setTweenNodes = () => {
-    tweenNodes = sliderApi.slideNodes().map((slideNode) => slideNode.firstElementChild);
-  };
-
-  const setTweenFactor = () => {
-    tweenFactor = TWEEN_FACTOR_BASE * sliderApi.scrollSnapList().length;
-  };
-
-  const tweenScale = (eventName) => {
-    const engine = sliderApi.internalEngine();
-    const scrollProgress = sliderApi.scrollProgress();
-    const slidesInView = sliderApi.slidesInView();
-    const isScrollEvent = eventName === 'scroll';
-
-    sliderApi.scrollSnapList().forEach((scrollSnap, snapIndex) => {
-      let diffToTarget = scrollSnap - scrollProgress;
-      const slidesInSnap = engine.slideRegistry[snapIndex];
-
-      slidesInSnap.forEach((slideIndex) => {
-        if (isScrollEvent && !slidesInView.includes(slideIndex)) return;
-
-        if (engine.options.loop) {
-          engine.slideLooper.loopPoints.forEach((loopItem) => {
-            const target = loopItem.target();
-
-            if (slideIndex === loopItem.index && target !== 0) {
-              diffToTarget = scrollSnap + (target > 0 ? 1 - scrollProgress : -1 - scrollProgress);
-            }
-          });
-        }
-
-        const tweenValue = 1 - Math.abs(diffToTarget * tweenFactor);
-        const scale = numberWithinRange(tweenValue, 0.8, 1);
-        tweenNodes[slideIndex].style.transform = `scale(${scale})`;
-      });
-    });
-  };
-
-  setTweenNodes();
-  setTweenFactor();
-  tweenScale();
-
-  sliderApi
-    .on('reInit', setTweenNodes)
-    .on('reInit', setTweenFactor)
-    .on('reInit', tweenScale)
-    .on('scroll', tweenScale)
-    .on('select', tweenScale);
-
-  return () => {
-    tweenNodes.forEach((node) => node.removeAttribute('style'));
-  };
-};
-
-//===============================================================
-
 const addTogglePrevNextBtnsActive = (sliderApi, prevBtn, nextBtn) => {
   const togglePrevNextBtnsState = () => {
     if (sliderApi.canScrollPrev()) prevBtn.removeAttribute('disabled');
@@ -172,31 +108,25 @@ const addDotBtnsAndClickHandlers = (sliderApi, sliderKey) => {
 };
 
 //===============================================================
-const initSlider = (sliderTag, options = {}) => {
+const initSlider = (sliderTag, options = {}, plugins = []) => {
   const slider = document.querySelector(`[data-slider="${sliderTag}"]`);
 
   if (!slider) return;
 
-  const sliderApi = EmblaCarousel(slider, options);
+  const sliderApi = EmblaCarousel(slider, options, plugins);
 
   const removePrevNextBtnsClickHandlers = addPrevNextBtnsClickHandlers(sliderApi, sliderTag);
   const removeDotBtnsAndClickHandlers = addDotBtnsAndClickHandlers(sliderApi, sliderTag);
 
   sliderApi.on('destroy', removePrevNextBtnsClickHandlers);
   sliderApi.on('destroy', removeDotBtnsAndClickHandlers);
-
-  if (options?.scale) {
-    const removeTweenScale = setupTweenScale(sliderApi);
-    sliderApi.on('destroy', removeTweenScale);
-  }
 };
 
 //===============================================================
 const initSliders = () => {
   markupSliders();
 
-  // initSlider('stories', { loop: true, align: 'start' });
-  // initSlider('stories-scale', { loop: true, align: 'center', containScroll: false, startIndex: 1, scale: true });
+  initSlider('main', { loop: true }, [EmblaCarouselFade()]);
 };
 
 //===============================================================

@@ -6,6 +6,8 @@
     <title>Allswim</title>
     <link rel="stylesheet" href="assets/css/tailwind.min.css" />
 
+    <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+    <script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
     <script src="assets/js/lazyload.min.js" defer></script>
     <script src="assets/js/scripts.js" defer></script>
     <script src="assets/js/forms.js" defer></script>
@@ -326,7 +328,38 @@
 
     <!-- main -->
     <main>
-      <section></section>
+      <section>
+        <div class="container-base">
+          <div class="relative grid gap-2 md:px-[100px]">
+            <div class="overflow-hidden" data-slider="main">
+              <div class="-ml-6 flex">
+                <div class="min-w-0 shrink-0 basis-full pl-6">
+                  <div class="">slider 1</div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full pl-6">
+                  <div class="">slider 2</div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full pl-6">
+                  <div class="">slider 3</div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full pl-6">
+                  <div class="">slider 4</div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full pl-6">
+                  <div class="">slider 5</div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none flex w-full justify-between gap-8 md:absolute md:top-1/2 md:left-0 md:-translate-y-1/2"
+            >
+              <button class="arrow-btn" data-prev="main">prev</button>
+              <button class="arrow-btn" data-next="main">next</button>
+            </div>
+            <div data-paggination="main"></div>
+          </div>
+        </div>
+      </section>
 
       <section class="py-[50px]">
         <div class="container-base grid gap-4 lg:gap-8.5">
