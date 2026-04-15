@@ -282,6 +282,9 @@
   .h-\[60px\] {
     height: 60px;
   }
+  .h-\[120px\] {
+    height: 120px;
+  }
   .h-full {
     height: 100%;
   }
@@ -356,6 +359,9 @@
   }
   .items-center {
     align-items: center;
+  }
+  .justify-around {
+    justify-content: space-around;
   }
   .justify-between {
     justify-content: space-between;
