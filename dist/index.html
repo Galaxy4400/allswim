@@ -36,11 +36,11 @@
         data-search-container
       >
         <div class="container-base">
-          <div class="flex min-h-[105px] items-center">
+          <div class="flex h-[60px] items-center lg:h-[105px]">
             <div class="flex w-full gap-6">
               <div class="relative grow">
                 <input
-                  class="border-primary-darkest h-12 w-full rounded-[20px] border-2 py-1 pr-[100px] pl-10 text-xl font-semibold"
+                  class="border-primary-darkest h-11 w-full rounded-[20px] border-2 py-1 pr-[100px] pl-10 text-xl font-semibold lg:h-12"
                   type="text"
                   placeholder="Поиск"
                   data-search-input
@@ -80,16 +80,32 @@
               </button>
             </div>
           </div>
-          <div class="max-h-[calc(100vh-105px)] overflow-y-auto">ничего не найдено</div>
+          <div class="hidden max-h-[calc(100vh-105px)] overflow-y-auto">ничего не найдено</div>
         </div>
       </div>
       <div class="container-base">
-        <div class="flex min-h-[60px] items-center justify-between gap-10 md:min-h-[105px]">
+        <div class="flex min-h-[60px] items-center justify-between gap-10 lg:min-h-[105px]">
+          <button class="basis-1/2 cursor-pointer lg:hidden" data-menu-open>
+            <svg width="26" height="20" viewBox="0 0 26 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M21 0C21.5523 0 22 0.447715 22 1C22 1.55228 21.5523 2 21 2H1C0.447715 2 0 1.55228 0 1C0 0.447715 0.447715 0 1 0H21Z"
+                fill="#002159"
+              />
+              <path
+                d="M22.9091 9C23.5116 9 24 9.44772 24 10C24 10.5523 23.5116 11 22.9091 11H1.09091C0.488417 11 0 10.5523 0 10C0 9.44772 0.488417 9 1.09091 9H22.9091Z"
+                fill="#002159"
+              />
+              <path
+                d="M24.8182 18C25.4709 18 26 18.4477 26 19C26 19.5523 25.4709 20 24.8182 20H1.18182C0.529118 20 0 19.5523 0 19C0 18.4477 0.529118 18 1.18182 18H24.8182Z"
+                fill="#002159"
+              />
+            </svg>
+          </button>
           <div class="flex items-center gap-10">
-            <a class="w-[100px] shrink-0" href="#">
+            <a class="w-[55px] shrink-0 lg:w-[100px]" href="#">
               <img src="assets/img/svg/logo.svg" alt="logo" />
             </a>
-            <nav>
+            <nav class="max-lg:hidden">
               <ul class="flex flex-wrap justify-center gap-x-6 gap-y-1">
                 <li>
                   <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
@@ -109,8 +125,8 @@
               </ul>
             </nav>
           </div>
-          <div class="flex items-center gap-7.5">
-            <div class="flex gap-2.5">
+          <div class="flex items-center justify-end gap-7.5 max-lg:basis-1/2">
+            <div class="flex gap-2.5 max-lg:hidden">
               <a class="w-5" href="#">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path
@@ -134,7 +150,7 @@
                 </svg>
               </a>
             </div>
-            <div class="grid gap-2">
+            <div class="grid gap-2 max-lg:hidden">
               <a class="font-bold" href="tel:+74998990859">+7 499 899-08-59</a>
               <a class="font-bold" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
             </div>
