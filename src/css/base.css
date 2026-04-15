@@ -11,20 +11,20 @@
     @apply flex grow flex-col overflow-hidden;
   }
 
-  .h1 {
+  h1 {
     @apply text-[26px] leading-[1.15] font-extrabold md:text-[46px];
   }
 
-  .h2 {
+  h2 {
     @apply text-[20px] leading-[1.15] font-bold md:text-[36px];
   }
 
-  .h3 {
+  h3 {
     @apply text-sm leading-normal md:text-[24px];
   }
 
-  .h4 {
-    @apply text-sm leading-normal md:text-xl;
+  h4 {
+    @apply text-sm leading-normal font-bold md:text-xl;
   }
 
   a {

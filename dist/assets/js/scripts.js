@@ -108,5 +108,4 @@ const initSearch = () => {
 //===============================================================
 initLazyLoad();
 initMobileMenu();
-initConnectors();
 initSearch();

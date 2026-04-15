@@ -16,7 +16,7 @@
   }
 
   .h4 {
-    @apply text-sm leading-normal md:text-xl;
+    @apply text-sm leading-normal font-bold md:text-xl;
   }
 
   .label {
