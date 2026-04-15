@@ -81,8 +81,12 @@ body::before {
   @apply h-0.75 rounded-full bg-gray-100;
 }
 
-/* Подсветка блоков */
-.backlight-hero {
+/* Линия */
+.after-line {
   @apply relative;
-  @apply before:bg-primary before:absolute before:top-1/2 before:left-1/2 before:h-[434px] before:w-[320px] before:rotate-52 before:rounded-[434px] before:blur-[100px];
+}
+
+.after-line::after {
+  content: '';
+  @apply bg-primary-lighter absolute bottom-0 left-1/2 h-0.5 w-screen -translate-x-1/2;
 }

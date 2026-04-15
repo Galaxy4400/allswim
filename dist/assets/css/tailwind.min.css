@@ -1329,45 +1329,19 @@ body::before {
   border-radius: calc(infinity * 1px);
   background-color: var(--color-gray-100);
 }
-.backlight-hero {
+.after-line {
   position: relative;
-  &::before {
-    content: var(--tw-content);
-    position: absolute;
-  }
-  &::before {
-    content: var(--tw-content);
-    top: calc(1/2 * 100%);
-  }
-  &::before {
-    content: var(--tw-content);
-    left: calc(1/2 * 100%);
-  }
-  &::before {
-    content: var(--tw-content);
-    height: 434px;
-  }
-  &::before {
-    content: var(--tw-content);
-    width: 320px;
-  }
-  &::before {
-    content: var(--tw-content);
-    rotate: 52deg;
-  }
-  &::before {
-    content: var(--tw-content);
-    border-radius: 434px;
-  }
-  &::before {
-    content: var(--tw-content);
-    background-color: var(--color-primary);
-  }
-  &::before {
-    content: var(--tw-content);
-    --tw-blur: blur(100px);
-    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
-  }
+}
+.after-line::after {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--spacing) * 0);
+  left: calc(1/2 * 100%);
+  height: calc(var(--spacing) * 0.5);
+  width: 100vw;
+  --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+  translate: var(--tw-translate-x) var(--tw-translate-y);
+  background-color: var(--color-primary-lighter);
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1510,59 +1484,6 @@ body::before {
   initial-value: "";
   inherits: false;
 }
-@property --tw-blur {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-brightness {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-contrast {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-grayscale {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-hue-rotate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-invert {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-opacity {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-saturate {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-sepia {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-color {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-drop-shadow-alpha {
-  syntax: "<percentage>";
-  inherits: false;
-  initial-value: 100%;
-}
-@property --tw-drop-shadow-size {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -1597,19 +1518,6 @@ body::before {
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-duration: initial;
       --tw-content: "";
-      --tw-blur: initial;
-      --tw-brightness: initial;
-      --tw-contrast: initial;
-      --tw-grayscale: initial;
-      --tw-hue-rotate: initial;
-      --tw-invert: initial;
-      --tw-opacity: initial;
-      --tw-saturate: initial;
-      --tw-sepia: initial;
-      --tw-drop-shadow: initial;
-      --tw-drop-shadow-color: initial;
-      --tw-drop-shadow-alpha: 100%;
-      --tw-drop-shadow-size: initial;
     }
   }
 }
