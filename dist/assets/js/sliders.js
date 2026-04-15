@@ -127,6 +127,9 @@ const initSliders = () => {
   markupSliders();
 
   initSlider('main', { loop: true }, [EmblaCarouselFade()]);
+  initSlider('partners', { loop: true, dragFree: false, align: 'start' }, [
+    EmblaCarouselAutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: false }),
+  ]);
 };
 
 //===============================================================

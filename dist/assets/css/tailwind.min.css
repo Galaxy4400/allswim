@@ -472,6 +472,9 @@
   .p-14 {
     padding: calc(var(--spacing) * 14);
   }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
