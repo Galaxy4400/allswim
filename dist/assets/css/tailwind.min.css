@@ -42,6 +42,7 @@
     --color-primary-light: #91cff2;
     --color-primary: #7cc8f2;
     --color-primary-dark: #8294b2;
+    --color-primary-darker: #304569;
     --color-primary-darkest: #002159;
     --color-secondary-light: #ffecdc;
     --color-secondary: #ff9533;
@@ -250,6 +251,9 @@
       max-width: 96rem;
     }
   }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -320,6 +324,9 @@
   .flex-wrap {
     flex-wrap: wrap;
   }
+  .content-start {
+    align-content: flex-start;
+  }
   .items-center {
     align-items: center;
   }
@@ -340,6 +347,9 @@
   }
   .gap-2\.5 {
     gap: calc(var(--spacing) * 2.5);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
   }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
@@ -405,8 +415,14 @@
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
   }
+  .py-5 {
+    padding-block: calc(var(--spacing) * 5);
+  }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-\[50px\] {
+    padding-block: 50px;
   }
   .pr-\[100px\] {
     padding-right: 100px;
@@ -416,6 +432,10 @@
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -429,12 +449,19 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
   .whitespace-nowrap {
     white-space: nowrap;
+  }
+  .text-primary-darker {
+    color: var(--color-primary-darker);
   }
   .uppercase {
     text-transform: uppercase;
