@@ -166,13 +166,12 @@
   }
 
   .arrow-btn {
-    @apply text-primary-dark bg-primary-light;
-    @apply text-secondary-dark hover:bg-secondary-light;
-    @apply rounded-full;
-    @apply h-11 w-11 md:h-14 md:w-14;
+    @apply bg-primary-light text-white opacity-70;
+    @apply hover:opacity-100;
+    @apply h-[50px] w-[50px] rounded-full;
     @apply inline-flex items-center justify-center;
     @apply pointer-events-auto cursor-pointer transition-all;
-    @apply disabled:opacity-0;
+    @apply disabled:opacity-30;
   }
 
   .accordion-icon {
