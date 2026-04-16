@@ -91,3 +91,27 @@ body::before {
   content: '';
   @apply bg-primary-lightest absolute bottom-0 left-1/2 h-0.5 w-screen -translate-x-1/2;
 }
+
+/* Таблица */
+.table-rounded-rows {
+  @apply border-separate border-spacing-0;
+}
+
+.table-rounded-rows tbody tr:nth-child(even) td {
+  @apply bg-secondary-lightest;
+}
+
+.table-rounded-rows tr td:first-child,
+.table-rounded-rows tr th:first-child {
+  @apply rounded-l-2xl;
+}
+
+.table-rounded-rows tr td:last-child,
+.table-rounded-rows tr th:last-child {
+  @apply rounded-r-2xl;
+}
+
+.table-rounded-rows tr td:not(:last-child),
+.table-rounded-rows tr th:not(:last-child) {
+  @apply border-secondary-lighter border-r-2;
+}

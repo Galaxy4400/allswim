@@ -47,6 +47,8 @@
     --color-primary-dark: #8294b2;
     --color-primary-darker: #304569;
     --color-primary-darkest: #002159;
+    --color-secondary-lightest: #ffecdc;
+    --color-secondary-lighter: #ffe5ce;
     --color-secondary-light: #ff9533;
     --color-secondary: #ff8a1e;
     --color-secondary-dark: #f27e11;
@@ -335,6 +337,9 @@
   .min-h-\[60px\] {
     min-height: 60px;
   }
+  .w-1\/6 {
+    width: calc(1/6 * 100%);
+  }
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
@@ -382,6 +387,9 @@
   }
   .basis-full {
     flex-basis: 100%;
+  }
+  .table-fixed {
+    table-layout: fixed;
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -519,6 +527,9 @@
   .bg-primary-lightest {
     background-color: var(--color-primary-lightest);
   }
+  .bg-secondary-light {
+    background-color: var(--color-secondary-light);
+  }
   .bg-white {
     background-color: var(--color-white);
   }
@@ -540,6 +551,9 @@
   .p-14 {
     padding: calc(var(--spacing) * 14);
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
@@ -548,6 +562,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
   }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
@@ -873,6 +890,16 @@
   .md\:p-7\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 7.5);
+    }
+  }
+  .md\:px-2 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 2);
+    }
+  }
+  .md\:px-3 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 3);
     }
   }
   .md\:py-4 {
@@ -2988,6 +3015,28 @@ body::before {
   translate: var(--tw-translate-x) var(--tw-translate-y);
   background-color: var(--color-primary-lightest);
 }
+.table-rounded-rows {
+  border-collapse: separate;
+  --tw-border-spacing-x: calc(var(--spacing) * 0);
+  --tw-border-spacing-y: calc(var(--spacing) * 0);
+  border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
+}
+.table-rounded-rows tbody tr:nth-child(even) td {
+  background-color: var(--color-secondary-lightest);
+}
+.table-rounded-rows tr td:first-child, .table-rounded-rows tr th:first-child {
+  border-top-left-radius: var(--radius-2xl);
+  border-bottom-left-radius: var(--radius-2xl);
+}
+.table-rounded-rows tr td:last-child, .table-rounded-rows tr th:last-child {
+  border-top-right-radius: var(--radius-2xl);
+  border-bottom-right-radius: var(--radius-2xl);
+}
+.table-rounded-rows tr td:not(:last-child), .table-rounded-rows tr th:not(:last-child) {
+  border-right-style: var(--tw-border-style);
+  border-right-width: 2px;
+  border-color: var(--color-secondary-lighter);
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -3109,6 +3158,16 @@ body::before {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-border-spacing-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-spacing-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -3138,6 +3197,8 @@ body::before {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
     }
   }
 }
