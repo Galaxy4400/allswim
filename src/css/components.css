@@ -79,21 +79,21 @@
     --btn-shadow-hover: none;
 
     @apply inline-flex items-center justify-center;
-    @apply min-h-11 min-w-36 px-8 py-1.5 md:min-h-14.5 md:min-w-[304px];
+    @apply min-h-10 px-8 py-1.5 md:min-h-11;
     @apply rounded-full;
-    @apply text-sm leading-none font-extrabold md:text-lg md:font-black;
+    @apply text-sm leading-none font-extrabold md:text-xl;
     @apply cursor-pointer transition-all;
 
     @apply border-(length:--btn-border-width) border-(--btn-border) bg-(--btn-bg) bg-(image:--btn-bg-image) text-(--btn-text) shadow-(--btn-shadow);
     @apply hover:border-(--btn-border-hover) hover:bg-(--btn-bg-hover) hover:bg-(image:--btn-bg-image-hover) hover:text-(--btn-text-hover) hover:shadow-(--btn-shadow-hover);
   }
 
-  .btn-long {
-    @apply w-full max-w-[400px];
+  .btn-big {
+    @apply min-h-12 min-w-60 text-lg md:min-h-14.5 md:min-w-[304px] md:font-black;
   }
 
   .btn-small {
-    @apply min-h-11 md:min-h-[46px];
+    @apply min-h-7 px-3 py-1 text-xs font-semibold;
   }
 
   .form-message {
