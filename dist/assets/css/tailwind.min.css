@@ -331,6 +331,9 @@
   .h-full {
     height: 100%;
   }
+  .max-h-0 {
+    max-height: calc(var(--spacing) * 0);
+  }
   .max-h-\[calc\(100vh-105px\)\] {
     max-height: calc(100vh - 105px);
   }
@@ -375,6 +378,9 @@
   }
   .min-w-\[650px\] {
     min-width: 650px;
+  }
+  .flex-auto {
+    flex: auto;
   }
   .shrink-0 {
     flex-shrink: 0;
@@ -463,6 +469,9 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -536,6 +545,9 @@
   .border-primary-light {
     border-color: var(--color-primary-light);
   }
+  .bg-primary-light {
+    background-color: var(--color-primary-light);
+  }
   .bg-primary-lightest {
     background-color: var(--color-primary-lightest);
   }
@@ -566,6 +578,9 @@
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
+  .px-5 {
+    padding-inline: calc(var(--spacing) * 5);
+  }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
@@ -574,6 +589,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -649,6 +667,9 @@
   .whitespace-nowrap {
     white-space: nowrap;
   }
+  .text-primary-dark {
+    color: var(--color-primary-dark);
+  }
   .text-primary-darker {
     color: var(--color-primary-darker);
   }
@@ -660,6 +681,16 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
   .transition-transform {
     transition-property: transform, translate, scale, rotate;
@@ -708,6 +739,18 @@
       }
     }
   }
+  .group-hover\/button\:text-primary {
+    &:is(:where(.group\/button):hover *) {
+      @media (hover: hover) {
+        color: var(--color-primary);
+      }
+    }
+  }
+  .group-data-active\/item\:text-primary {
+    &:is(:where(.group\/item)[data-active] *) {
+      color: var(--color-primary);
+    }
+  }
   .before\:absolute {
     &::before {
       content: var(--tw-content);
@@ -736,6 +779,13 @@
     &::before {
       content: var(--tw-content);
       width: 100%;
+    }
+  }
+  .hover\:text-primary {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-primary);
+      }
     }
   }
   .data-active\:block {
@@ -873,6 +923,11 @@
       gap: calc(var(--spacing) * 5);
     }
   }
+  .md\:gap-6 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 6);
+    }
+  }
   .md\:gap-10 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 10);
@@ -901,6 +956,16 @@
   .md\:px-3 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:px-6 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:py-3 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 3);
     }
   }
   .md\:py-4 {
