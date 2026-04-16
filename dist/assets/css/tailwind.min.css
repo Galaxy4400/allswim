@@ -323,6 +323,9 @@
   .w-\[150px\] {
     width: 150px;
   }
+  .w-\[400px\] {
+    width: 400px;
+  }
   .w-full {
     width: 100%;
   }
@@ -341,8 +344,8 @@
   .basis-\[300px\] {
     flex-basis: 300px;
   }
-  .basis-\[400px\] {
-    flex-basis: 400px;
+  .basis-auto {
+    flex-basis: auto;
   }
   .basis-full {
     flex-basis: 100%;
@@ -470,6 +473,9 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .object-contain {
+    object-fit: contain;
   }
   .object-cover {
     object-fit: cover;
@@ -647,6 +653,11 @@
   .max-lg\:hidden {
     @media (width < 64rem) {
       display: none;
+    }
+  }
+  .max-lg\:w-\[300px\] {
+    @media (width < 64rem) {
+      width: 300px;
     }
   }
   .max-lg\:basis-1\/2 {
