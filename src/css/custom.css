@@ -55,16 +55,13 @@ body::before {
 }
 
 /* Базовые стили слайдеров */
-[data-slider] {
-}
-
 [data-slider-container] {
   @apply flex min-w-0;
-  will-change: transform;
+  touch-action: pan-y pinch-zoom;
 }
 
 [data-slider-item] {
-  @apply min-w-0 shrink-0 grow-0 translate-x-0 translate-y-0 translate-z-0 transform;
+  @apply min-w-0 shrink-0 grow-0;
 }
 
 /* Кастомные стили реинджа */
