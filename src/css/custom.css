@@ -55,8 +55,12 @@ body::before {
 }
 
 /* Базовые стили слайдеров */
+[data-slider] {
+}
+
 [data-slider-container] {
   @apply flex min-w-0;
+  will-change: transform;
 }
 
 [data-slider-item] {
