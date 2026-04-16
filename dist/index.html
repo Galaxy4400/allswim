@@ -2345,14 +2345,11 @@
               <button class="btn btn-primary">Задать вопрос</button>
             </div>
             <div class="shrink-0 basis-[724px]">
-              <div class="grid gap-3 md:gap-6" data-accordion>
-                <div
-                  id="accordion-1"
-                  class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all"
-                >
+              <div class="grid gap-3 md:gap-6" data-spoiler="faq">
+                <div class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all">
                   <button
                     class="bg-primary-light group-data-active/item:text-primary group/button hover:text-primary flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-2.5 md:px-6 md:py-3"
-                    onclick="toggleAccordion(1)"
+                    data-spoiler-button
                   >
                     <span
                       class="h3 group-hover/button:text-primary group-data-active/item:text-primary text-primary-dark text-left transition-colors"
@@ -2361,19 +2358,16 @@
                     </span>
                     <span class="accordion-icon"></span>
                   </button>
-                  <div id="content-1" class="max-h-0 overflow-hidden transition-all">
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                     <div class="grid gap-2 px-5 py-2.5 md:px-6 md:py-3">
                       <p>item_text_1</p>
                     </div>
                   </div>
                 </div>
-                <div
-                  id="accordion-2"
-                  class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all"
-                >
+                <div class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all">
                   <button
                     class="bg-primary-light group-data-active/item:text-primary group/button hover:text-primary flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-2.5 md:px-6 md:py-3"
-                    onclick="toggleAccordion(2)"
+                    data-spoiler-button
                   >
                     <span
                       class="h3 group-hover/button:text-primary group-data-active/item:text-primary text-primary-dark text-left transition-colors"
@@ -2382,19 +2376,16 @@
                     </span>
                     <span class="accordion-icon"></span>
                   </button>
-                  <div id="content-2" class="max-h-0 overflow-hidden transition-all">
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                     <div class="grid gap-2 px-5 py-2.5 md:px-6 md:py-3">
                       <p>item_text_2</p>
                     </div>
                   </div>
                 </div>
-                <div
-                  id="accordion-3"
-                  class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all"
-                >
+                <div class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all">
                   <button
                     class="bg-primary-light group-data-active/item:text-primary group/button hover:text-primary flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-2.5 md:px-6 md:py-3"
-                    onclick="toggleAccordion(3)"
+                    data-spoiler-button
                   >
                     <span
                       class="h3 group-hover/button:text-primary group-data-active/item:text-primary text-primary-dark text-left transition-colors"
@@ -2403,19 +2394,16 @@
                     </span>
                     <span class="accordion-icon"></span>
                   </button>
-                  <div id="content-3" class="max-h-0 overflow-hidden transition-all">
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                     <div class="grid gap-2 px-5 py-2.5 md:px-6 md:py-3">
                       <p>item_text_3</p>
                     </div>
                   </div>
                 </div>
-                <div
-                  id="accordion-4"
-                  class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all"
-                >
+                <div class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all">
                   <button
                     class="bg-primary-light group-data-active/item:text-primary group/button hover:text-primary flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-2.5 md:px-6 md:py-3"
-                    onclick="toggleAccordion(4)"
+                    data-spoiler-button
                   >
                     <span
                       class="h3 group-hover/button:text-primary group-data-active/item:text-primary text-primary-dark text-left transition-colors"
@@ -2424,19 +2412,16 @@
                     </span>
                     <span class="accordion-icon"></span>
                   </button>
-                  <div id="content-4" class="max-h-0 overflow-hidden transition-all">
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                     <div class="grid gap-2 px-5 py-2.5 md:px-6 md:py-3">
                       <p>item_text_4</p>
                     </div>
                   </div>
                 </div>
-                <div
-                  id="accordion-5"
-                  class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all"
-                >
+                <div class="group/item rounded-custom border-primary-light overflow-hidden border-2 transition-all">
                   <button
                     class="bg-primary-light group-data-active/item:text-primary group/button hover:text-primary flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-2.5 md:px-6 md:py-3"
-                    onclick="toggleAccordion(5)"
+                    data-spoiler-button
                   >
                     <span
                       class="h3 group-hover/button:text-primary group-data-active/item:text-primary text-primary-dark text-left transition-colors"
@@ -2445,7 +2430,7 @@
                     </span>
                     <span class="accordion-icon"></span>
                   </button>
-                  <div id="content-5" class="max-h-0 overflow-hidden transition-all">
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                     <div class="grid gap-2 px-5 py-2.5 md:px-6 md:py-3">
                       <p>item_text_5</p>
                     </div>

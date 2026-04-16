@@ -41,25 +41,33 @@ const initLazyLoad = () => {
 };
 
 //===============================================================
-const toggleAccordion = (index) => {
-  const currentAccordion = document.getElementById(`accordion-${index}`);
-  const currentContent = document.getElementById(`content-${index}`);
-  const isActive = currentAccordion.hasAttribute('data-active');
+const initSpoilers = () => {
+  const sliders = document.querySelectorAll('[data-spoiler]');
 
-  const allAccordions = document.querySelectorAll('[id^="accordion-"]');
-  const allContents = document.querySelectorAll('[id^="content-"]');
+  sliders.forEach((slider) => {
+    const items = Array.from(slider.children);
 
-  allAccordions.forEach((acc) => acc.removeAttribute('data-active'));
-  allContents.forEach((content) => (content.style.maxHeight = '0'));
+    items.forEach((item) => {
+      const button = item.querySelector('[data-spoiler-button]');
+      const content = item.querySelector('[data-spoiler-content]');
 
-  if (isActive) return;
+      button?.addEventListener('click', () => {
+        const isActive = item.hasAttribute('data-active');
 
-  currentAccordion.setAttribute('data-active', '');
-  currentContent.style.maxHeight = currentContent.scrollHeight + 'px';
+        items.forEach((i) => {
+          i.removeAttribute('data-active');
+          const c = i.querySelector('[data-spoiler-content]');
+          if (c) c.style.maxHeight = '0';
+        });
+
+        if (!isActive) {
+          item.setAttribute('data-active', '');
+          if (content) content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  });
 };
-
-//===============================================================
-window.toggleAccordion = toggleAccordion;
 
 //===============================================================
 const initSearch = () => {
@@ -109,3 +117,4 @@ const initSearch = () => {
 initLazyLoad();
 initMobileMenu();
 initSearch();
+initSpoilers();
