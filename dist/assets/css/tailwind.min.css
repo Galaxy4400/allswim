@@ -268,6 +268,9 @@
   .-m-1 {
     margin: calc(var(--spacing) * -1);
   }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
   .mb-2\.5 {
     margin-bottom: calc(var(--spacing) * 2.5);
   }
@@ -599,6 +602,9 @@
   .text-left {
     text-align: left;
   }
+  .text-right {
+    text-align: right;
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -835,6 +841,11 @@
   .md\:-m-2\.5 {
     @media (width >= 48rem) {
       margin: calc(var(--spacing) * -2.5);
+    }
+  }
+  .md\:mb-9 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 9);
     }
   }
   .md\:w-6 {
