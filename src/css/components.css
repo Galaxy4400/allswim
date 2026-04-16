@@ -3,6 +3,10 @@
     @apply max-w-container mx-auto box-content px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
   }
 
+  .overflow-scroll-p-md {
+    @apply px-4 sm:px-8 md:px-12 lg:px-0;
+  }
+
   .h1 {
     @apply text-[26px] leading-[1.15] font-extrabold md:text-[46px];
   }

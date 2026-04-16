@@ -390,9 +390,6 @@
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
-  .gap-4 {
-    gap: calc(var(--spacing) * 4);
-  }
   .gap-5 {
     gap: calc(var(--spacing) * 5);
   }
@@ -489,6 +486,9 @@
   }
   .pr-\[100px\] {
     padding-right: 100px;
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
@@ -647,6 +647,11 @@
       overflow-y: hidden;
     }
   }
+  .max-lg\:px-0 {
+    @media (width < 64rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
   .max-md\:hidden {
     @media (width < 48rem) {
       display: none;
@@ -793,9 +798,9 @@
       flex-wrap: wrap;
     }
   }
-  .lg\:gap-8\.5 {
+  .lg\:pb-8\.5 {
     @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 8.5);
+      padding-bottom: calc(var(--spacing) * 8.5);
     }
   }
   .xl\:-translate-x-\[50px\] {
@@ -1953,6 +1958,18 @@
     }
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 20);
+    }
+  }
+  .overflow-scroll-p-md {
+    padding-inline: calc(var(--spacing) * 4);
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 8);
+    }
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .h1 {
