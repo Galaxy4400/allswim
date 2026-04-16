@@ -394,9 +394,6 @@
   .basis-\[300px\] {
     flex-basis: 300px;
   }
-  .basis-\[724px\] {
-    flex-basis: 724px;
-  }
   .basis-auto {
     flex-basis: auto;
   }
@@ -616,9 +613,6 @@
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
   }
-  .pr-7\.5 {
-    padding-right: calc(var(--spacing) * 7.5);
-  }
   .pr-\[100px\] {
     padding-right: 100px;
   }
@@ -798,6 +792,11 @@
   .data-active\:text-primary-darkest {
     &[data-active] {
       color: var(--color-primary-darkest);
+    }
+  }
+  .max-xl\:flex-col {
+    @media (width < 80rem) {
+      flex-direction: column;
     }
   }
   .max-lg\:hidden {
@@ -1090,6 +1089,11 @@
       flex-wrap: wrap;
     }
   }
+  .lg\:pr-7\.5 {
+    @media (width >= 64rem) {
+      padding-right: calc(var(--spacing) * 7.5);
+    }
+  }
   .lg\:pb-8\.5 {
     @media (width >= 64rem) {
       padding-bottom: calc(var(--spacing) * 8.5);
@@ -1110,6 +1114,11 @@
     @media (width >= 64rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .xl\:basis-\[724px\] {
+    @media (width >= 80rem) {
+      flex-basis: 724px;
     }
   }
   .xl\:-translate-x-\[50px\] {
