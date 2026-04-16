@@ -130,6 +130,7 @@ const initSliders = () => {
   initSlider('partners', { loop: true, dragFree: false, align: 'start' }, [
     EmblaCarouselAutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: false }),
   ]);
+	initSlider('sales', { loop: true, slidesToScroll: 'auto' });
 };
 
 //===============================================================
