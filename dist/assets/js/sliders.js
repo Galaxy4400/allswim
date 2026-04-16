@@ -131,6 +131,7 @@ const initSliders = () => {
     EmblaCarouselAutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: false }),
   ]);
 	initSlider('sales', { loop: false, slidesToScroll: 1 });
+	initSlider('catalog', { loop: false, slidesToScroll: 1 });
 };
 
 //===============================================================

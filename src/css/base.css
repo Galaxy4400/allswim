@@ -20,7 +20,7 @@
   }
 
   h3 {
-    @apply text-sm leading-normal md:text-[24px];
+    @apply text-sm leading-normal font-bold md:text-[24px];
   }
 
   h4 {

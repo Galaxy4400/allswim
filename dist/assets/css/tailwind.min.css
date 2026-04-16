@@ -269,6 +269,9 @@
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
   .mb-7\.5 {
     margin-bottom: calc(var(--spacing) * 7.5);
   }
@@ -284,11 +287,20 @@
   .hidden {
     display: none;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .inline-flex {
     display: inline-flex;
   }
+  .inline-grid {
+    display: inline-grid;
+  }
   .aspect-34\/26 {
     aspect-ratio: 34/26;
+  }
+  .aspect-340\/273 {
+    aspect-ratio: 340/273;
   }
   .aspect-square {
     aspect-ratio: 1 / 1;
@@ -368,6 +380,9 @@
   .cursor-pointer {
     cursor: pointer;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -428,6 +443,9 @@
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
+  .gap-x-5 {
+    column-gap: calc(var(--spacing) * 5);
+  }
   .gap-x-6 {
     column-gap: calc(var(--spacing) * 6);
   }
@@ -436,6 +454,9 @@
   }
   .gap-y-1 {
     row-gap: calc(var(--spacing) * 1);
+  }
+  .gap-y-3 {
+    row-gap: calc(var(--spacing) * 3);
   }
   .gap-y-6 {
     row-gap: calc(var(--spacing) * 6);
@@ -534,6 +555,10 @@
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .text-xl {
     font-size: var(--text-xl);
@@ -2004,6 +2029,8 @@
     line-height: var(--tw-leading, var(--text-sm--line-height));
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
     @media (width >= 48rem) {
       font-size: 24px;
     }
@@ -2105,6 +2132,8 @@
     line-height: var(--tw-leading, var(--text-sm--line-height));
     --tw-leading: var(--leading-normal);
     line-height: var(--leading-normal);
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
     @media (width >= 48rem) {
       font-size: 24px;
     }
