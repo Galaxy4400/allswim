@@ -339,6 +339,9 @@
   .basis-\[300px\] {
     flex-basis: 300px;
   }
+  .basis-\[400px\] {
+    flex-basis: 400px;
+  }
   .basis-full {
     flex-basis: 100%;
   }
@@ -735,16 +738,6 @@
   .md\:-m-2\.5 {
     @media (width >= 48rem) {
       margin: calc(var(--spacing) * -2.5);
-    }
-  }
-  .md\:hidden {
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
-  .md\:basis-1\/2 {
-    @media (width >= 48rem) {
-      flex-basis: calc(1/2 * 100%);
     }
   }
   .md\:gap-2 {
