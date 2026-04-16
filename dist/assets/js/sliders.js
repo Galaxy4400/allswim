@@ -132,6 +132,7 @@ const initSliders = () => {
   ]);
 	initSlider('sales', { loop: false, slidesToScroll: 1 });
 	initSlider('catalog', { loop: false, slidesToScroll: 1 });
+	initSlider('reviews', { loop: false, slidesToScroll: 1 });
 };
 
 //===============================================================
