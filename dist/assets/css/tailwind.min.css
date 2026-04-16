@@ -302,6 +302,9 @@
   .aspect-34\/26 {
     aspect-ratio: 34/26;
   }
+  .aspect-340\/162 {
+    aspect-ratio: 340/162;
+  }
   .aspect-340\/273 {
     aspect-ratio: 340/273;
   }
@@ -782,6 +785,11 @@
   .md\:-m-2\.5 {
     @media (width >= 48rem) {
       margin: calc(var(--spacing) * -2.5);
+    }
+  }
+  .md\:w-6 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 6);
     }
   }
   .md\:w-8 {
