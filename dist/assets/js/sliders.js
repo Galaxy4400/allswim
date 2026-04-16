@@ -126,11 +126,11 @@ const initSlider = (sliderTag, options = {}, plugins = []) => {
 const initSliders = () => {
   markupSliders();
 
-  initSlider('main', { loop: true }, [EmblaCarouselFade()]);
+  initSlider('main', { loop: false }, [EmblaCarouselFade()]);
   initSlider('partners', { loop: true, dragFree: false, align: 'start' }, [
     EmblaCarouselAutoScroll({ speed: 1, stopOnInteraction: false, stopOnMouseEnter: false }),
   ]);
-	initSlider('sales', { loop: true, slidesToScroll: 'auto' });
+	initSlider('sales', { loop: false, slidesToScroll: 1 });
 };
 
 //===============================================================

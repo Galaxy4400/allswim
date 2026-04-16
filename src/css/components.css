@@ -175,7 +175,7 @@
     @apply h-[50px] w-[50px] rounded-full;
     @apply inline-flex items-center justify-center;
     @apply pointer-events-auto cursor-pointer transition-all;
-    @apply disabled:opacity-30;
+    @apply disabled:cursor-default disabled:opacity-30;
   }
 
   .accordion-icon {
