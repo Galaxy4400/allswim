@@ -269,6 +269,9 @@
   .-m-1 {
     margin: calc(var(--spacing) * -1);
   }
+  .-mx-10 {
+    margin-inline: calc(var(--spacing) * -10);
+  }
   .mb-1\.5 {
     margin-bottom: calc(var(--spacing) * 1.5);
   }
@@ -307,6 +310,9 @@
   }
   .aspect-34\/26 {
     aspect-ratio: 34/26;
+  }
+  .aspect-212\/161 {
+    aspect-ratio: 212/161;
   }
   .aspect-340\/162 {
     aspect-ratio: 340/162;
@@ -395,6 +401,9 @@
   .basis-1\/2 {
     flex-basis: calc(1/2 * 100%);
   }
+  .basis-\[150px\] {
+    flex-basis: 150px;
+  }
   .basis-\[300px\] {
     flex-basis: 300px;
   }
@@ -424,6 +433,9 @@
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
   .flex-col {
     flex-direction: column;
@@ -590,6 +602,9 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
+  }
   .p-14 {
     padding: calc(var(--spacing) * 14);
   }
@@ -631,6 +646,9 @@
   }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
+  }
+  .pb-10 {
+    padding-bottom: calc(var(--spacing) * 10);
   }
   .pb-12 {
     padding-bottom: calc(var(--spacing) * 12);
@@ -699,6 +717,10 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .shadow-xl {
+    --tw-shadow: 0 20px 25px -5px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 8px 10px -6px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .transition-all {
     transition-property: all;
@@ -898,9 +920,9 @@
       width: 100%;
     }
   }
-  .sm\:min-w-\[246px\] {
+  .sm\:w-\[246px\] {
     @media (width >= 40rem) {
-      min-width: 246px;
+      width: 246px;
     }
   }
   .md\:top-\[30px\] {
@@ -1204,6 +1226,11 @@
     @media (width >= 80rem) {
       --tw-translate-x: 50px;
       translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .xl\:gap-10 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 10);
     }
   }
   .xl\:gap-12 {
@@ -3122,34 +3149,6 @@ body::before {
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-content {
-  syntax: "*";
-  initial-value: "";
-  inherits: false;
-}
-@property --tw-scale-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-scale-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 1;
-}
-@property --tw-ease {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -3215,6 +3214,34 @@ body::before {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-ease {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-spacing-x {
   syntax: "<length>";
   inherits: false;
@@ -3234,12 +3261,6 @@ body::before {
       --tw-border-style: solid;
       --tw-leading: initial;
       --tw-font-weight: initial;
-      --tw-duration: initial;
-      --tw-content: "";
-      --tw-scale-x: 1;
-      --tw-scale-y: 1;
-      --tw-scale-z: 1;
-      --tw-ease: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -3254,6 +3275,12 @@ body::before {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+      --tw-content: "";
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
+      --tw-ease: initial;
       --tw-border-spacing-x: 0;
       --tw-border-spacing-y: 0;
     }
