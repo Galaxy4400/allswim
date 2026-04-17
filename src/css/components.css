@@ -24,7 +24,7 @@
   }
 
   .label {
-    @apply text-xs leading-[150%] font-medium;
+    @apply text-xs leading-[150%];
   }
 
   .link {
@@ -114,7 +114,7 @@
   }
 
   .checkbox {
-    @apply checked:bg-check checked:border-primary checked:bg-primary h-5 w-5 appearance-none rounded border border-black checked:bg-center checked:bg-no-repeat;
+    @apply checked:bg-check checked:bg-primary-darkest border-primary-darkest h-5 w-5 appearance-none rounded-lg border checked:bg-center checked:bg-no-repeat;
   }
 
   .breadcrumb-item {

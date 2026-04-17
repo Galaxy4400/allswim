@@ -215,7 +215,7 @@ const initSubmit = (form) => {
 //===============================================================
 const initForms = () => {
   document.querySelectorAll('form[data-form]').forEach((form) => {
-    initCountryPhones(form);
+    // initCountryPhones(form);
     initSubmit(form);
   });
 };
