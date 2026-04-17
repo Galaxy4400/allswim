@@ -2582,10 +2582,10 @@
                   <div class="grid gap-2 md:gap-3.5">
                     <label class="grid gap-1.5">
                       <input
-                        class="input input-white"
+                        class="input"
                         type="text"
                         name="first_name"
-                        placeholder="first_name_placeholder"
+                        placeholder="Как к вам обращаться?"
                         required
                         data-regexp="^[^\d]+$"
                         data-should-validate
@@ -2593,35 +2593,32 @@
                     </label>
                     <label class="grid gap-1.5">
                       <input
-                        class="input input-white"
-                        type="text"
-                        name="last_name"
-                        placeholder="last_name_placeholder"
-                        required
-                        data-regexp="^[^\d]+$"
-                        data-should-validate
-                      />
-                    </label>
-                    <label class="grid gap-1.5">
-                      <input
-                        class="input input-white"
+                        class="input"
                         type="email"
                         name="email"
-                        placeholder="email_placeholder"
+                        placeholder="Действующий адрес электронной почты"
                         required
                         data-should-validate
                       />
                     </label>
                     <label class="grid gap-1.5">
                       <input
-                        class="input input-white"
+                        class="input"
                         type="tel"
                         name="phone"
-                        placeholder="phone_placeholder"
-                        data-phone
+                        placeholder="Номер телефона"
                         required
                         data-should-validate
                       />
+                    </label>
+                    <label class="grid gap-1.5">
+                      <textarea
+                        class="input min-h-20"
+                        placeholder="Ваш вопрос"
+                        name="message"
+                        required
+                        data-should-validate
+                      ></textarea>
                     </label>
                   </div>
                   <div class="">
