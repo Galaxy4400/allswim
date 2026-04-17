@@ -903,6 +903,11 @@
       display: none;
     }
   }
+  .max-md\:flex-col {
+    @media (width < 48rem) {
+      flex-direction: column;
+    }
+  }
   .max-md\:flex-col-reverse {
     @media (width < 48rem) {
       flex-direction: column-reverse;
