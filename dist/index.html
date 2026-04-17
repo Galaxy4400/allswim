@@ -2753,35 +2753,75 @@
             </div>
           </div>
           <div class="flex gap-x-10 gap-y-6 max-lg:flex-col">
-            <nav class="grid content-start gap-3">
-              <span class="text-xs font-extrabold uppercase">Помощь</span>
-              <ul class="grid content-start gap-2">
-                <li><a class="text-primary-darker block text-xs" href="#">О компании</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Доставка и оплата</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Вопросы и ответы</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Обмен и возврат</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Юридическая информация</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Статьи</a></li>
-              </ul>
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-help">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Помощь</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.29076 0.294666C-0.0983607 0.686347 -0.0967716 1.31946 0.294666 1.70873V1.70971H0.295643L0.31908 1.73314C0.334571 1.7485 0.357806 1.7712 0.387439 1.80053C0.447134 1.8596 0.534824 1.94565 0.646229 2.05541C0.869342 2.27522 1.18865 2.58918 1.57494 2.96556C2.3473 3.71812 3.38873 4.72345 4.46068 5.72924C5.52998 6.73253 6.64031 7.74642 7.54857 8.51342C8.00052 8.89506 8.41893 9.22957 8.76537 9.47338C8.93707 9.5942 9.11169 9.70789 9.27611 9.79467C9.39303 9.85637 9.67252 9.99974 9.99974 9.99974C10.327 9.99974 10.6065 9.85637 10.7234 9.79467C10.8878 9.70789 11.0624 9.5942 11.2341 9.47338C11.5806 9.22957 11.999 8.89506 12.4509 8.51342C13.3592 7.74642 14.4695 6.73253 15.5388 5.72924C16.6108 4.72345 17.6522 3.71812 18.4245 2.96556C18.8108 2.58918 19.1301 2.27522 19.3533 2.05541C19.4647 1.94565 19.5524 1.8596 19.612 1.80053C19.6417 1.7712 19.6649 1.7485 19.6804 1.73314L19.7038 1.70971H19.7048V1.70873C20.0963 1.31946 20.0978 0.686347 19.7087 0.294666C19.3195 -0.0967717 18.6863 -0.0983606 18.2947 0.29076L18.2898 0.295643C18.286 0.299372 18.2797 0.304805 18.2722 0.312244C18.2572 0.32713 18.2351 0.34966 18.2058 0.37865C18.1471 0.436758 18.0604 0.52276 17.9499 0.63158C17.729 0.849223 17.4122 1.16056 17.029 1.53392C16.2619 2.28135 15.2302 3.2761 14.1706 4.27025C13.1086 5.26675 12.0288 6.25317 11.1609 6.98607C10.7248 7.35432 10.358 7.64494 10.0828 7.83861C10.0536 7.85912 10.0251 7.87612 9.99974 7.8933C9.97435 7.87612 9.94588 7.85912 9.91674 7.83861C9.64152 7.64494 9.27469 7.35432 8.83861 6.98607C7.97071 6.25317 6.89091 5.26675 5.82885 4.27025C4.76929 3.2761 3.73754 2.28135 2.97045 1.53392C2.58725 1.16056 2.27047 0.849223 2.04955 0.63158C1.93909 0.52276 1.85241 0.436758 1.79369 0.37865C1.76439 0.34966 1.7423 0.32713 1.72728 0.312244C1.71978 0.304805 1.71346 0.299372 1.70971 0.295643L1.70482 0.29076C1.31314 -0.0983606 0.680032 -0.0967716 0.29076 0.294666Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">О компании</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Доставка и оплата</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Вопросы и ответы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Обмен и возврат</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Юридическая информация</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Статьи</a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
-            <nav class="grid content-start gap-3">
-              <span class="text-xs font-extrabold uppercase">Каталог</span>
-              <ul class="grid content-start gap-2">
-                <li><a class="text-primary-darker block text-xs" href="#">Шапочки для плавания</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Полотенца из микрофибры</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Подарочные наборы</a></li>
-                <li><a class="text-primary-darker block text-xs" href="#">Сувениры ФВВСР</a></li>
-              </ul>
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-catalog">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Каталог</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.29076 0.294666C-0.0983607 0.686347 -0.0967716 1.31946 0.294666 1.70873V1.70971H0.295643L0.31908 1.73314C0.334571 1.7485 0.357806 1.7712 0.387439 1.80053C0.447134 1.8596 0.534824 1.94565 0.646229 2.05541C0.869342 2.27522 1.18865 2.58918 1.57494 2.96556C2.3473 3.71812 3.38873 4.72345 4.46068 5.72924C5.52998 6.73253 6.64031 7.74642 7.54857 8.51342C8.00052 8.89506 8.41893 9.22957 8.76537 9.47338C8.93707 9.5942 9.11169 9.70789 9.27611 9.79467C9.39303 9.85637 9.67252 9.99974 9.99974 9.99974C10.327 9.99974 10.6065 9.85637 10.7234 9.79467C10.8878 9.70789 11.0624 9.5942 11.2341 9.47338C11.5806 9.22957 11.999 8.89506 12.4509 8.51342C13.3592 7.74642 14.4695 6.73253 15.5388 5.72924C16.6108 4.72345 17.6522 3.71812 18.4245 2.96556C18.8108 2.58918 19.1301 2.27522 19.3533 2.05541C19.4647 1.94565 19.5524 1.8596 19.612 1.80053C19.6417 1.7712 19.6649 1.7485 19.6804 1.73314L19.7038 1.70971H19.7048V1.70873C20.0963 1.31946 20.0978 0.686347 19.7087 0.294666C19.3195 -0.0967717 18.6863 -0.0983606 18.2947 0.29076L18.2898 0.295643C18.286 0.299372 18.2797 0.304805 18.2722 0.312244C18.2572 0.32713 18.2351 0.34966 18.2058 0.37865C18.1471 0.436758 18.0604 0.52276 17.9499 0.63158C17.729 0.849223 17.4122 1.16056 17.029 1.53392C16.2619 2.28135 15.2302 3.2761 14.1706 4.27025C13.1086 5.26675 12.0288 6.25317 11.1609 6.98607C10.7248 7.35432 10.358 7.64494 10.0828 7.83861C10.0536 7.85912 10.0251 7.87612 9.99974 7.8933C9.97435 7.87612 9.94588 7.85912 9.91674 7.83861C9.64152 7.64494 9.27469 7.35432 8.83861 6.98607C7.97071 6.25317 6.89091 5.26675 5.82885 4.27025C4.76929 3.2761 3.73754 2.28135 2.97045 1.53392C2.58725 1.16056 2.27047 0.849223 2.04955 0.63158C1.93909 0.52276 1.85241 0.436758 1.79369 0.37865C1.76439 0.34966 1.7423 0.32713 1.72728 0.312244C1.71978 0.304805 1.71346 0.299372 1.70971 0.295643L1.70482 0.29076C1.31314 -0.0983606 0.680032 -0.0967716 0.29076 0.294666Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">Шапочки для плавания</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Полотенца из микрофибры</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Подарочные наборы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Сувениры ФВВСР</a></li>
+                  </ul>
+                </div>
+              </div>
             </nav>
           </div>
           <div data-spoiler="footer-contacts">
             <div class="group/item grid content-start gap-2.5">
               <button
-                class="group/button flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase"
+                class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
                 data-spoiler-button
               >
                 <span class="text-left text-xs transition-colors">Контакты</span>
-                <span class="transition-transform group-data-active/item:rotate-180">
+                <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
                   <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M0.29076 0.294666C-0.0983607 0.686347 -0.0967716 1.31946 0.294666 1.70873V1.70971H0.295643L0.31908 1.73314C0.334571 1.7485 0.357806 1.7712 0.387439 1.80053C0.447134 1.8596 0.534824 1.94565 0.646229 2.05541C0.869342 2.27522 1.18865 2.58918 1.57494 2.96556C2.3473 3.71812 3.38873 4.72345 4.46068 5.72924C5.52998 6.73253 6.64031 7.74642 7.54857 8.51342C8.00052 8.89506 8.41893 9.22957 8.76537 9.47338C8.93707 9.5942 9.11169 9.70789 9.27611 9.79467C9.39303 9.85637 9.67252 9.99974 9.99974 9.99974C10.327 9.99974 10.6065 9.85637 10.7234 9.79467C10.8878 9.70789 11.0624 9.5942 11.2341 9.47338C11.5806 9.22957 11.999 8.89506 12.4509 8.51342C13.3592 7.74642 14.4695 6.73253 15.5388 5.72924C16.6108 4.72345 17.6522 3.71812 18.4245 2.96556C18.8108 2.58918 19.1301 2.27522 19.3533 2.05541C19.4647 1.94565 19.5524 1.8596 19.612 1.80053C19.6417 1.7712 19.6649 1.7485 19.6804 1.73314L19.7038 1.70971H19.7048V1.70873C20.0963 1.31946 20.0978 0.686347 19.7087 0.294666C19.3195 -0.0967717 18.6863 -0.0983606 18.2947 0.29076L18.2898 0.295643C18.286 0.299372 18.2797 0.304805 18.2722 0.312244C18.2572 0.32713 18.2351 0.34966 18.2058 0.37865C18.1471 0.436758 18.0604 0.52276 17.9499 0.63158C17.729 0.849223 17.4122 1.16056 17.029 1.53392C16.2619 2.28135 15.2302 3.2761 14.1706 4.27025C13.1086 5.26675 12.0288 6.25317 11.1609 6.98607C10.7248 7.35432 10.358 7.64494 10.0828 7.83861C10.0536 7.85912 10.0251 7.87612 9.99974 7.8933C9.97435 7.87612 9.94588 7.85912 9.91674 7.83861C9.64152 7.64494 9.27469 7.35432 8.83861 6.98607C7.97071 6.25317 6.89091 5.26675 5.82885 4.27025C4.76929 3.2761 3.73754 2.28135 2.97045 1.53392C2.58725 1.16056 2.27047 0.849223 2.04955 0.63158C1.93909 0.52276 1.85241 0.436758 1.79369 0.37865C1.76439 0.34966 1.7423 0.32713 1.72728 0.312244C1.71978 0.304805 1.71346 0.299372 1.70971 0.295643L1.70482 0.29076C1.31314 -0.0983606 0.680032 -0.0967716 0.29076 0.294666Z"
@@ -2790,7 +2830,10 @@
                   </svg>
                 </span>
               </button>
-              <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+              <div
+                class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                data-spoiler-content
+              >
                 <dl class="grid gap-3">
                   <div class="grid gap-1">
                     <dt class="text-primary-darker text-xs">Телефон</dt>
