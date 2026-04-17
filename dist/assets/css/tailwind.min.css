@@ -341,8 +341,8 @@
   .max-h-screen {
     max-height: 100vh;
   }
-  .min-h-20 {
-    min-height: calc(var(--spacing) * 20);
+  .min-h-24 {
+    min-height: calc(var(--spacing) * 24);
   }
   .min-h-\[60px\] {
     min-height: 60px;
@@ -918,6 +918,11 @@
       margin-bottom: calc(var(--spacing) * 9);
     }
   }
+  .md\:min-h-32 {
+    @media (width >= 48rem) {
+      min-height: calc(var(--spacing) * 32);
+    }
+  }
   .md\:w-6 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 6);
@@ -953,14 +958,14 @@
       gap: calc(var(--spacing) * 2);
     }
   }
-  .md\:gap-3\.5 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 3.5);
-    }
-  }
   .md\:gap-5 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:gap-7\.5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 7.5);
     }
   }
   .md\:gap-10 {
@@ -1125,6 +1130,16 @@
   .lg\:flex-wrap {
     @media (width >= 64rem) {
       flex-wrap: wrap;
+    }
+  }
+  .lg\:px-14 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 14);
+    }
+  }
+  .lg\:py-11 {
+    @media (width >= 64rem) {
+      padding-block: calc(var(--spacing) * 11);
     }
   }
   .lg\:pr-7\.5 {
@@ -2696,21 +2711,27 @@
     list-style-type: disc;
   }
   .input {
-    height: calc(var(--spacing) * 11);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    @media (width >= 48rem) {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+    height: calc(var(--spacing) * 14);
     width: 100%;
     padding-inline: calc(var(--spacing) * 5);
     padding-block: calc(var(--spacing) * 2);
     @media (width >= 48rem) {
-      height: calc(var(--spacing) * 12);
+      height: 68px;
     }
     @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 6);
+      padding-inline: calc(var(--spacing) * 7.5);
     }
-    border-color: var(--color-primary-lightest);
-    background-color: var(--color-primary-lightest);
-    border-radius: calc(infinity * 1px);
+    border-color: var(--color-primary-lighter);
+    background-color: var(--color-white);
+    border-radius: 20px;
     border-style: var(--tw-border-style);
-    border-width: 1px;
+    border-width: 2px;
     &[data-novalid] {
       --tw-shadow: inset 0 0 0 2px var(--tw-shadow-color, var(--color-red-500));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);

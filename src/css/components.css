@@ -107,9 +107,10 @@
   }
 
   .input {
-    @apply h-11 w-full px-5 py-2 md:h-12 md:px-6;
-    @apply border-primary-lightest bg-primary-lightest;
-    @apply rounded-full border;
+    @apply text-sm md:text-xl;
+    @apply h-14 w-full px-5 py-2 md:h-[68px] md:px-7.5;
+    @apply border-primary-lighter bg-white;
+    @apply rounded-[20px] border-2;
     @apply data-novalid:shadow-[inset_0_0_0_2px_var(--color-red-500)] data-valid:shadow-[inset_0_0_0_2px_var(--color-green-600)];
   }
 
