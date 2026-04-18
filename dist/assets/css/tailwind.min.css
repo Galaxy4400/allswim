@@ -417,6 +417,9 @@
   .max-w-\[350px\] {
     max-width: 350px;
   }
+  .max-w-\[430px\] {
+    max-width: 430px;
+  }
   .max-w-\[440px\] {
     max-width: 440px;
   }
@@ -847,6 +850,18 @@
     --btn-shadow: none;
     --btn-shadow-hover: none;
   }
+  .btn-primary-dark {
+    --btn-bg: var(--color-primary);
+    --btn-bg-hover: var(--color-primary-light);
+    --btn-text: var(--color-primary-darkest);
+    --btn-text-hover: var(--color-primary-darker);
+    --btn-border: var(--color-primary);
+    --btn-border-hover: var(--color-primary-light);
+    --btn-bg-image: none;
+    --btn-bg-image-hover: none;
+    --btn-shadow: none;
+    --btn-shadow-hover: none;
+  }
   .btn-secondary {
     --btn-bg: var(--color-secondary);
     --btn-bg-hover: var(--color-secondary-light);
@@ -854,6 +869,18 @@
     --btn-text-hover: var(--color-white);
     --btn-border: var(--color-secondary);
     --btn-border-hover: var(--color-secondary-light);
+    --btn-bg-image: none;
+    --btn-bg-image-hover: none;
+    --btn-shadow: none;
+    --btn-shadow-hover: none;
+  }
+  .btn-white {
+    --btn-bg: var(--color-white);
+    --btn-bg-hover: var(--color-primary-darker);
+    --btn-text: var(--color-primary-darkest);
+    --btn-text-hover: var(--color-white);
+    --btn-border: var(--color-primary-darkest);
+    --btn-border-hover: var(--color-primary-darker);
     --btn-bg-image: none;
     --btn-bg-image-hover: none;
     --btn-shadow: none;
