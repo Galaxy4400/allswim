@@ -2956,15 +2956,56 @@
       </div>
     </div>
 
-    <div data-modal="sizes">
+    <div data-modal="sizes" data-active>
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[685px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          sizes content
+          <div class="grid gap-10">
+            <p class="h2">Таблица размеров</p>
+            <div class="grid gap-5">
+              <div class="grid gap-3">
+                <p class="h4">Arena 3D Soft</p>
+                <table class="text-center text-base" data-table-temp-attr>
+                  <thead>
+                    <tr>
+                      <th class="px-5 py-4 text-left">Размер</th>
+                      <th class="px-5 py-4 text-xl font-bold">S</th>
+                      <th class="px-5 py-4 text-xl font-bold">M</th>
+                      <th class="px-5 py-4 text-xl font-bold">L</th>
+                      <th class="px-5 py-4 text-xl font-bold">XL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="px-5 py-4 text-left">Обхват головы(см)</td>
+                      <td class="px-5 py-4">54-55</td>
+                      <td class="px-5 py-4">56-57</td>
+                      <td class="px-5 py-4">58-59</td>
+                      <td class="px-5 py-4">58-59*</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-sm">*Для объемных волос</p>
+              </div>
+              <div class="grid gap-3">
+                <p class="h4">Tyr Tracer X</p>
+                <table></table>
+              </div>
+              <div class="grid gap-3">
+                <p class="h4">Allswim 3D Softer</p>
+                <table></table>
+              </div>
+              <p class="text-sm">
+                Таблица носит рекомендательный характер и предполагает усредненные значения для выбора нужного размера.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
