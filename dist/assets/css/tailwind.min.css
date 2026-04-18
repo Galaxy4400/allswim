@@ -846,6 +846,11 @@
       }
     }
   }
+  .group-data-abort\:block {
+    &:is(:where(.group)[data-abort] *) {
+      display: block;
+    }
+  }
   .group-data-active\/item\:rotate-180 {
     &:is(:where(.group\/item)[data-active] *) {
       rotate: 180deg;
@@ -856,9 +861,19 @@
       border-bottom-color: var(--color-primary-lighter);
     }
   }
+  .group-data-check\:block {
+    &:is(:where(.group)[data-check] *) {
+      display: block;
+    }
+  }
   .group-data-current\:scale-\[1\.3\] {
     &:is(:where(.group)[data-current] *) {
       scale: 1.3;
+    }
+  }
+  .group-data-dot\:block {
+    &:is(:where(.group)[data-dot] *) {
+      display: block;
     }
   }
   .group-data-novalid\:cursor-default {
@@ -869,6 +884,11 @@
   .group-data-novalid\:bg-gray-300 {
     &:is(:where(.group)[data-novalid] *) {
       background-color: var(--color-gray-300);
+    }
+  }
+  .group-data-time\:block {
+    &:is(:where(.group)[data-time] *) {
+      display: block;
     }
   }
   .before\:absolute {

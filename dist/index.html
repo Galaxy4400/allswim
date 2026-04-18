@@ -33,6 +33,54 @@
   </head>
 
   <body class="data-modal-lock:overflow-hidden">
+    <!-- svg sprite -->
+    <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
+      <!-- close-cross -->
+      <symbol id="close-cross" viewBox="0 0 13 13" fill="none">
+        <path
+          d="M10.9755 0.299539C11.3398 -0.0744183 11.9215 -0.0985624 12.3134 0.229227L12.3895 0.299539L12.4569 0.375711C12.7487 0.743186 12.7484 1.27027 12.4569 1.63743L12.3895 1.7136L7.89638 6.33079L12.7177 11.2868C13.0988 11.6788 13.099 12.3089 12.7177 12.7009C12.3531 13.0756 11.7714 13.0985 11.3798 12.7712L11.3036 12.7009L6.50185 7.76438L1.70009 12.7009C1.33554 13.0756 0.753825 13.0985 0.362201 12.7712L0.286029 12.7009C-0.0953551 12.3089 -0.0953308 11.6789 0.286029 11.2868L5.10536 6.33079L0.614154 1.7136C0.232999 1.32168 0.232751 0.691604 0.614154 0.299539C0.978586 -0.0746994 1.5603 -0.0984075 1.95204 0.229227L2.02822 0.299539L6.50185 4.89622L10.9755 0.299539ZM6.16201 5.98216L6.50087 6.33079L6.14345 5.96263L6.16201 5.98216Z"
+          fill="currentColor"
+        />
+      </symbol>
+
+      <!-- order-status-dot -->
+      <symbol id="order-status-dot" viewBox="0 0 20 20" fill="none">
+        <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
+        <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+      </symbol>
+      <!-- order-status-check -->
+      <symbol id="order-status-check" viewBox="0 0 20 20" fill="none">
+        <path
+          d="M6.66602 10.3024C6.66602 10.3024 8.55995 13.3327 9.16602 13.3327C9.77208 13.3327 13.3327 6.66602 13.3327 6.66602"
+          stroke="currentColor"
+          stroke-width="2.2"
+          stroke-linecap="round"
+        />
+        <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
+      </symbol>
+      <!-- order-status-abort -->
+      <symbol id="order-status-abort" viewBox="0 0 24 24" fill="none">
+        <circle cx="12" cy="12" r="10.9" stroke="currentColor" stroke-width="2.2" />
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M14.5103 8.25818C14.8507 7.91384 15.4031 7.91403 15.7437 8.25818C16.0842 8.60262 16.0842 9.1618 15.7437 9.50623L13.2339 12.0443L15.6577 14.4955C15.998 14.84 15.9982 15.3982 15.6577 15.7426C15.3172 16.0869 14.7649 16.0868 14.4243 15.7426L12.0005 13.2914L9.57765 15.7426C9.23714 16.0869 8.68482 16.0868 8.34425 15.7426C8.00376 15.3982 8.00389 14.8399 8.34425 14.4955L10.7671 12.0443L8.25734 9.50623C7.9168 9.16182 7.91685 8.60263 8.25734 8.25818C8.5978 7.91385 9.15015 7.91406 9.49074 8.25818L12.0005 10.7963L14.5103 8.25818Z"
+          fill="currentColor"
+        />
+        <path
+          d="M14.5103 8.25818L14.7947 8.53944L14.7947 8.53943L14.5103 8.25818ZM15.7437 8.25818L16.0281 7.97694L16.028 7.97682L15.7437 8.25818ZM15.7437 9.50623L16.0281 9.78748L16.0281 9.78747L15.7437 9.50623ZM13.2339 12.0443L12.9495 11.7631L12.6714 12.0443L12.9495 12.3256L13.2339 12.0443ZM15.6577 14.4955L15.9423 14.2144L15.9422 14.2142L15.6577 14.4955ZM15.6577 15.7426L15.9421 16.0238L15.9422 16.0238L15.6577 15.7426ZM14.4243 15.7426L14.1399 16.0238L14.14 16.0239L14.4243 15.7426ZM12.0005 13.2914L12.2849 13.0101L12.0004 12.7224L11.716 13.0102L12.0005 13.2914ZM9.57765 15.7426L9.86207 16.0238L9.86213 16.0238L9.57765 15.7426ZM8.34425 15.7426L8.05982 16.0238L8.05989 16.0239L8.34425 15.7426ZM8.34425 14.4955L8.05977 14.2143L8.05973 14.2143L8.34425 14.4955ZM10.7671 12.0443L11.0516 12.3255L11.3296 12.0443L11.0515 11.7631L10.7671 12.0443ZM8.25734 9.50623L7.9729 9.78747L7.97291 9.78748L8.25734 9.50623ZM8.25734 8.25818L7.9729 7.97694L7.97287 7.97698L8.25734 8.25818ZM9.49074 8.25818L9.77516 7.97693L9.77504 7.97681L9.49074 8.25818ZM12.0005 10.7963L11.7161 11.0775L12.0005 11.3652L12.2849 11.0775L12.0005 10.7963ZM14.5103 8.25818L14.7947 8.53943C14.9785 8.35356 15.2752 8.35345 15.4594 8.53955L15.7437 8.25818L16.028 7.97682C15.531 7.47462 14.723 7.47413 14.2258 7.97694L14.5103 8.25818ZM15.7437 8.25818L15.4592 8.53943C15.6457 8.72802 15.6457 9.03639 15.4592 9.22499L15.7437 9.50623L16.0281 9.78747C16.5228 9.2872 16.5228 8.47721 16.0281 7.97694L15.7437 8.25818ZM15.7437 9.50623L15.4592 9.22498L12.9495 11.7631L13.2339 12.0443L13.5183 12.3256L16.0281 9.78748L15.7437 9.50623ZM13.2339 12.0443L12.9495 12.3256L15.3733 14.7767L15.6577 14.4955L15.9422 14.2142L13.5183 11.7631L13.2339 12.0443ZM15.6577 14.4955L15.3731 14.7766C15.5596 14.9654 15.5595 15.273 15.3733 15.4613L15.6577 15.7426L15.9422 16.0238C16.4369 15.5235 16.4363 14.7145 15.9423 14.2144L15.6577 14.4955ZM15.6577 15.7426L15.3733 15.4613C15.1894 15.6473 14.8928 15.6473 14.7087 15.4612L14.4243 15.7426L14.14 16.0239C14.637 16.5263 15.445 16.5265 15.9421 16.0238L15.6577 15.7426ZM14.4243 15.7426L14.7088 15.4613L12.2849 13.0101L12.0005 13.2914L11.7161 13.5726L14.1399 16.0238L14.4243 15.7426ZM12.0005 13.2914L11.716 13.0102L9.29317 15.4614L9.57765 15.7426L9.86213 16.0238L12.285 13.5726L12.0005 13.2914ZM9.57765 15.7426L9.29323 15.4613C9.10934 15.6473 8.81269 15.6473 8.62862 15.4612L8.34425 15.7426L8.05989 16.0239C8.55695 16.5263 9.36494 16.5265 9.86207 16.0238L9.57765 15.7426ZM8.34425 15.7426L8.62869 15.4613C8.44237 15.2729 8.44229 14.9654 8.62878 14.7766L8.34425 14.4955L8.05973 14.2143C7.56549 14.7145 7.56515 15.5235 8.05982 16.0238L8.34425 15.7426ZM8.34425 14.4955L8.62873 14.7767L11.0516 12.3255L10.7671 12.0443L10.4826 11.7631L8.05977 14.2143L8.34425 14.4955ZM10.7671 12.0443L11.0515 11.7631L8.54176 9.22498L8.25734 9.50623L7.97291 9.78748L10.4827 12.3256L10.7671 12.0443ZM8.25734 9.50623L8.54177 9.22499C8.35535 9.03645 8.35533 8.72804 8.54181 8.53939L8.25734 8.25818L7.97287 7.97698C7.47837 8.47721 7.47824 9.28719 7.9729 9.78747L8.25734 9.50623ZM8.25734 8.25818L8.54177 8.53943C8.72553 8.35358 9.02225 8.35346 9.20644 8.53956L9.49074 8.25818L9.77504 7.97681C9.27805 7.47466 8.47007 7.47413 7.9729 7.97694L8.25734 8.25818ZM9.49074 8.25818L9.20631 8.53944L11.7161 11.0775L12.0005 10.7963L12.2849 10.515L9.77516 7.97693L9.49074 8.25818ZM12.0005 10.7963L12.2849 11.0775L14.7947 8.53944L14.5103 8.25818L14.2258 7.97693L11.7161 10.515L12.0005 10.7963Z"
+          fill="currentColor"
+        />
+      </symbol>
+      <!-- order-status-time -->
+      <symbol id="order-status-time" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M12 0C18.6276 0 24 5.3724 24 12C24 18.6276 18.6276 24 12 24C5.3724 24 0 18.6276 0 12C0 5.3724 5.3724 0 12 0ZM12 2.4C9.45392 2.4 7.01212 3.41143 5.21178 5.21178C3.41143 7.01212 2.4 9.45392 2.4 12C2.4 14.5461 3.41143 16.9879 5.21178 18.7882C7.01212 20.5886 9.45392 21.6 12 21.6C14.5461 21.6 16.9879 20.5886 18.7882 18.7882C20.5886 16.9879 21.6 14.5461 21.6 12C21.6 9.45392 20.5886 7.01212 18.7882 5.21178C16.9879 3.41143 14.5461 2.4 12 2.4ZM12 4.8C12.2939 4.80004 12.5776 4.90795 12.7972 5.10326C13.0169 5.29857 13.1572 5.5677 13.1916 5.8596L13.2 6V11.5032L16.4484 14.7516C16.6636 14.9676 16.7886 15.2573 16.7979 15.5621C16.8072 15.8668 16.7001 16.1637 16.4985 16.3923C16.2969 16.621 16.0157 16.7644 15.7122 16.7933C15.4087 16.8222 15.1056 16.7345 14.8644 16.548L14.7516 16.4484L11.1516 12.8484C10.9651 12.6617 10.8453 12.4188 10.8108 12.1572L10.8 12V6C10.8 5.68174 10.9264 5.37652 11.1515 5.15147C11.3765 4.92643 11.6817 4.8 12 4.8Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
     <!-- header -->
     <header class="fixed top-0 left-0 z-50 w-full bg-white">
       <!-- search -->
@@ -965,11 +1013,8 @@
       <div data-modal-container>
         <div class="relative mx-auto max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-12 shadow-lg">
           <button data-modal-close class="absolute top-7.5 right-7.5 cursor-pointer">
-            <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M10.9755 0.299539C11.3398 -0.0744183 11.9215 -0.0985624 12.3134 0.229227L12.3895 0.299539L12.4569 0.375711C12.7487 0.743186 12.7484 1.27027 12.4569 1.63743L12.3895 1.7136L7.89638 6.33079L12.7177 11.2868C13.0988 11.6788 13.099 12.3089 12.7177 12.7009C12.3531 13.0756 11.7714 13.0985 11.3798 12.7712L11.3036 12.7009L6.50185 7.76438L1.70009 12.7009C1.33554 13.0756 0.753825 13.0985 0.362201 12.7712L0.286029 12.7009C-0.0953551 12.3089 -0.0953308 11.6789 0.286029 11.2868L5.10536 6.33079L0.614154 1.7136C0.232999 1.32168 0.232751 0.691604 0.614154 0.299539C0.978586 -0.0746994 1.5603 -0.0984075 1.95204 0.229227L2.02822 0.299539L6.50185 4.89622L10.9755 0.299539ZM6.16201 5.98216L6.50087 6.33079L6.14345 5.96263L6.16201 5.98216Z"
-                fill="#43608B"
-              />
+            <svg width="13" height="13">
+              <use href="#close-cross"></use>
             </svg>
           </button>
           <div class="mx-auto grid w-[170px] gap-10">
@@ -979,14 +1024,23 @@
             >
               <div
                 class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
               >
                 <div class="text-primary-light">
                   <div
                     class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
                   >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
-                      <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="#order-status-time"></use>
                     </svg>
                   </div>
                 </div>
@@ -997,14 +1051,23 @@
               </div>
               <div
                 class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
               >
                 <div class="text-primary-light">
                   <div
                     class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
                   >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
-                      <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="#order-status-time"></use>
                     </svg>
                   </div>
                 </div>
@@ -1017,14 +1080,23 @@
                 class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
                 data-active
                 data-current
+                data-time
               >
                 <div class="text-primary-light">
                   <div
                     class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
                   >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
-                      <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="#order-status-time"></use>
                     </svg>
                   </div>
                 </div>
@@ -1036,14 +1108,23 @@
               <div
                 class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
                 data-active
+                data-abort
               >
                 <div class="text-primary-light">
                   <div
                     class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
                   >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
-                      <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="#order-status-time"></use>
                     </svg>
                   </div>
                 </div>
@@ -1055,14 +1136,23 @@
               <div
                 class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
                 data-active
+                data-check
               >
                 <div class="text-primary-light">
                   <div
                     class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
                   >
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="10" cy="10" r="8.9" stroke="currentColor" stroke-width="2.2" />
-                      <circle cx="10" cy="10" r="2.5" fill="currentColor" />
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="#order-status-time"></use>
                     </svg>
                   </div>
                 </div>
