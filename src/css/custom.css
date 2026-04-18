@@ -124,3 +124,12 @@ body::before {
 .table-rounded-rows tr th:not(:last-child) {
   @apply border-secondary-lighter border-r-2;
 }
+
+/* Модалки */
+[data-modal] {
+  @apply pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100;
+}
+
+[data-modal-container] {
+  @apply max-w-container mx-auto box-content w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+}
