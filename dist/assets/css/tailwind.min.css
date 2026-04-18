@@ -432,8 +432,8 @@
   .max-w-\[560px\] {
     max-width: 560px;
   }
-  .max-w-\[685px\] {
-    max-width: 685px;
+  .max-w-\[640px\] {
+    max-width: 640px;
   }
   .max-w-\[700px\] {
     max-width: 700px;
@@ -476,6 +476,11 @@
   }
   .table-fixed {
     table-layout: fixed;
+  }
+  .border-spacing-0 {
+    --tw-border-spacing-x: calc(var(--spacing) * 0);
+    --tw-border-spacing-y: calc(var(--spacing) * 0);
+    border-spacing: var(--tw-border-spacing-x) var(--tw-border-spacing-y);
   }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
@@ -625,6 +630,10 @@
     border-block-style: var(--tw-border-style);
     border-block-width: 2px;
   }
+  .border-r-2 {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 2px;
+  }
   .border-b {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
@@ -647,6 +656,9 @@
   }
   .border-b-transparent {
     border-bottom-color: transparent;
+  }
+  .bg-primary {
+    background-color: var(--color-primary);
   }
   .bg-primary-lightest {
     background-color: var(--color-primary-lightest);
@@ -687,8 +699,8 @@
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
-  .px-5 {
-    padding-inline: calc(var(--spacing) * 5);
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
@@ -701,6 +713,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -1038,10 +1053,35 @@
       height: calc(100% + 32px);
     }
   }
+  .after\:h-full {
+    &::after {
+      content: var(--tw-content);
+      height: 100%;
+    }
+  }
   .after\:w-full {
     &::after {
       content: var(--tw-content);
       width: 100%;
+    }
+  }
+  .after\:rounded-\[20px\] {
+    &::after {
+      content: var(--tw-content);
+      border-radius: 20px;
+    }
+  }
+  .after\:border-2 {
+    &::after {
+      content: var(--tw-content);
+      border-style: var(--tw-border-style);
+      border-width: 2px;
+    }
+  }
+  .after\:border-primary-darkest {
+    &::after {
+      content: var(--tw-content);
+      border-color: var(--color-primary-darkest);
     }
   }
   .after\:bg-white\/50 {
@@ -1191,6 +1231,16 @@
   .sm\:w-\[246px\] {
     @media (width >= 40rem) {
       width: 246px;
+    }
+  }
+  .sm\:px-5 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:py-4 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 4);
     }
   }
   .md\:top-\[30px\] {
@@ -3467,6 +3517,16 @@ body::before {
     padding-inline: calc(var(--spacing) * 20);
   }
 }
+@property --tw-border-spacing-x {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-spacing-y {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;
@@ -3588,19 +3648,11 @@ body::before {
   syntax: "*";
   inherits: false;
 }
-@property --tw-border-spacing-x {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-border-spacing-y {
-  syntax: "<length>";
-  inherits: false;
-  initial-value: 0;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-spacing-x: 0;
+      --tw-border-spacing-y: 0;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
@@ -3627,8 +3679,6 @@ body::before {
       --tw-scale-y: 1;
       --tw-scale-z: 1;
       --tw-ease: initial;
-      --tw-border-spacing-x: 0;
-      --tw-border-spacing-y: 0;
     }
   }
 }

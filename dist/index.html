@@ -2959,7 +2959,7 @@
     <div data-modal="sizes" data-active>
       <div data-modal-container>
         <div
-          class="relative mx-auto max-h-[90vh] w-full max-w-[685px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+          class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
@@ -2969,37 +2969,108 @@
           <div class="grid gap-10">
             <p class="h2">Таблица размеров</p>
             <div class="grid gap-5">
-              <div class="grid gap-3">
+              <div class="grid justify-items-start gap-3">
                 <p class="h4">Arena 3D Soft</p>
-                <table class="text-center text-base" data-table-temp-attr>
-                  <thead>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                  data-table-temp-attr
+                >
+                  <thead class="bg-primary">
                     <tr>
-                      <th class="px-5 py-4 text-left">Размер</th>
-                      <th class="px-5 py-4 text-xl font-bold">S</th>
-                      <th class="px-5 py-4 text-xl font-bold">M</th>
-                      <th class="px-5 py-4 text-xl font-bold">L</th>
-                      <th class="px-5 py-4 text-xl font-bold">XL</th>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        S
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        L
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">XL</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td class="px-5 py-4 text-left">Обхват головы(см)</td>
-                      <td class="px-5 py-4">54-55</td>
-                      <td class="px-5 py-4">56-57</td>
-                      <td class="px-5 py-4">58-59</td>
-                      <td class="px-5 py-4">58-59*</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">54-55</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59*</td>
                     </tr>
                   </tbody>
                 </table>
                 <p class="text-sm">*Для объемных волос</p>
               </div>
-              <div class="grid gap-3">
+              <div class="grid justify-items-start gap-3">
                 <p class="h4">Tyr Tracer X</p>
-                <table></table>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                  data-table-temp-attr
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">53-56</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">56-60</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="grid gap-3">
+              <div class="grid justify-items-start gap-3">
                 <p class="h4">Allswim 3D Softer</p>
-                <table></table>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                  data-table-temp-attr
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
               <p class="text-sm">
                 Таблица носит рекомендательный характер и предполагает усредненные значения для выбора нужного размера.
