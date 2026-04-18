@@ -432,6 +432,9 @@
   .max-w-\[560px\] {
     max-width: 560px;
   }
+  .max-w-\[700px\] {
+    max-width: 700px;
+  }
   .max-w-lg {
     max-width: var(--container-lg);
   }
@@ -3053,19 +3056,21 @@
       border-color: var(--color-green-600);
     }
   }
-  .input-light {
+  .input-big {
     height: calc(var(--spacing) * 14);
-    border-color: var(--color-primary-lighter);
-    padding-inline: calc(var(--spacing) * 5);
     @media (width >= 48rem) {
       height: 68px;
     }
     @media (width >= 48rem) {
-      padding-inline: calc(var(--spacing) * 7.5);
-    }
-    @media (width >= 48rem) {
       font-size: var(--text-xl);
       line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+  .input-light {
+    border-color: var(--color-primary-lighter);
+    padding-inline: calc(var(--spacing) * 5);
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 7.5);
     }
   }
   .checkbox {

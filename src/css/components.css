@@ -114,8 +114,12 @@
     @apply data-novalid:border-red-500 data-valid:border-green-600;
   }
 
+  .input-big {
+    @apply h-14 md:h-[68px] md:text-xl;
+  }
+
   .input-light {
-    @apply border-primary-lighter h-14 px-5 md:h-[68px] md:px-7.5 md:text-xl;
+    @apply border-primary-lighter px-5 md:px-7.5;
   }
 
   .checkbox {

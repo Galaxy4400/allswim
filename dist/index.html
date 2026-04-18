@@ -2318,16 +2318,16 @@
                   <div class="grid gap-5 md:gap-7.5">
                     <label class="grid gap-1.5">
                       <input
-                        class="input input-light"
+                        class="input input-light input-big"
                         type="text"
-                        name="first_name"
+                        name="name"
                         placeholder="Как к вам обращаться?"
                         required
                       />
                     </label>
                     <label class="grid gap-1.5">
                       <input
-                        class="input input-light"
+                        class="input input-light input-big"
                         type="email"
                         name="email"
                         placeholder="Действующий адрес электронной почты"
@@ -2335,7 +2335,13 @@
                       />
                     </label>
                     <label class="grid gap-1.5">
-                      <input class="input input-light" type="tel" name="phone" placeholder="Номер телефона" required />
+                      <input
+                        class="input input-light input-big"
+                        type="tel"
+                        name="phone"
+                        placeholder="Номер телефона"
+                        required
+                      />
                     </label>
                     <label class="grid gap-1.5">
                       <textarea
@@ -2750,7 +2756,7 @@
       </div>
     </div>
 
-    <div data-modal="exit" data-active>
+    <div data-modal="exit">
       <div data-modal-container>
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[430px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
@@ -2830,26 +2836,122 @@
 
     <div data-modal="request-form">
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          request-form content
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Оставить заявку</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
 
     <div data-modal="question-form">
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          question-form content
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Задать вопрос</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
