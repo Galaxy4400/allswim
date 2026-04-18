@@ -32,7 +32,7 @@
     <noscript><link rel="stylesheet" href="/assets/css/tailwind.min.css" /></noscript>
   </head>
 
-  <body>
+  <body class="data-modal-lock:overflow-hidden">
     <!-- header -->
     <header class="fixed top-0 left-0 z-50 w-full bg-white">
       <!-- search -->
@@ -391,17 +391,17 @@
       <!-- temp-section -->
       <section class="pb-6 md:pb-[50px]">
         <div class="container-base">
-          <div class="flex gap-5">
-            <button data-modal-open="order-status">order status</button>
-            <button data-modal-open="order-done">order done</button>
-            <button data-modal-open="request-process">request process</button>
-            <button data-modal-open="get-code">get code</button>
-            <button data-modal-open="exit">exit</button>
-            <button data-modal-open="cap-name">cap name</button>
-            <button data-modal-open="forgot-password">forgot password</button>
-            <button data-modal-open="request-form">request form</button>
-            <button data-modal-open="question-form">question form</button>
-            <button data-modal-open="sizes">sizes</button>
+          <div class="flex flex-wrap gap-5 py-10">
+            <button class="btn btn-primary" data-modal-open="order-status">order status</button>
+            <button class="btn btn-primary" data-modal-open="order-done">order done</button>
+            <button class="btn btn-primary" data-modal-open="request-process">request process</button>
+            <button class="btn btn-primary" data-modal-open="get-code">get code</button>
+            <button class="btn btn-primary" data-modal-open="exit">exit</button>
+            <button class="btn btn-primary" data-modal-open="cap-name">cap name</button>
+            <button class="btn btn-primary" data-modal-open="forgot-password">forgot password</button>
+            <button class="btn btn-primary" data-modal-open="request-form">request form</button>
+            <button class="btn btn-primary" data-modal-open="question-form">question form</button>
+            <button class="btn btn-primary" data-modal-open="sizes">sizes</button>
           </div>
         </div>
       </section>
@@ -2913,72 +2913,122 @@
       </div>
     </footer>
 
-    <div data-modal="order-status">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="order-status"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         order-status content
       </div>
     </div>
 
-    <div data-modal="order-done">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="order-done"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         order-done content
       </div>
     </div>
 
-    <div data-modal="request-process">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="request-process"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         request-process content
       </div>
     </div>
 
-    <div data-modal="get-code">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="get-code"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         get-code content
       </div>
     </div>
 
-    <div data-modal="exit">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="exit"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         exit content
       </div>
     </div>
 
-    <div data-modal="cap-name">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="cap-name"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         cap-name content
       </div>
     </div>
 
-    <div data-modal="forgot-password">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="forgot-password"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         forgot-password content
       </div>
     </div>
 
-    <div data-modal="request-form">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="request-form"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         request-form content
       </div>
     </div>
 
-    <div data-modal="question-form">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="question-form"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         question-form content
       </div>
     </div>
 
-    <div data-modal="sizes">
-      <div>
-        <button data-modal-close>X</button>
+    <div
+      data-modal="sizes"
+      class="pointer-events-none fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 transition-opacity duration-300 data-active:pointer-events-auto data-active:opacity-100"
+    >
+      <div
+        class="container-base relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg"
+      >
+        <button data-modal-close class="absolute top-4 right-4 cursor-pointer">X</button>
         sizes content
       </div>
     </div>

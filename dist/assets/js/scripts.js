@@ -121,8 +121,43 @@ const openFooterSpoilers = () => {
 };
 
 //===============================================================
+const initModals = () => {
+  const closeAll = () => {
+    document.querySelectorAll('[data-modal]').forEach((m) => m.removeAttribute('data-active'));
+    document.body.removeAttribute('data-modal-lock');
+  };
+
+  const openModal = (name) => {
+    closeAll();
+    const modal = document.querySelector(`[data-modal="${name}"]`);
+    if (!modal) return;
+    modal.setAttribute('data-active', '');
+    document.body.setAttribute('data-modal-lock', '');
+  };
+
+  document.addEventListener('click', (e) => {
+    const openTrigger = e.target.closest('[data-modal-open]');
+    if (openTrigger) {
+      openModal(openTrigger.dataset.modalOpen);
+      return;
+    }
+
+    if (e.target.closest('[data-modal-close]')) {
+      closeAll();
+      return;
+    }
+
+    // Overlay click: e.target IS the backdrop element, not content inside it
+    if (e.target.hasAttribute('data-modal') && e.target.hasAttribute('data-active')) {
+      closeAll();
+    }
+  });
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
 initSpoilers();
 openFooterSpoilers();
+initModals();
