@@ -3,7 +3,7 @@
 @source '../../dist/**/*.html';
 @source '../../dist/**/*.js';
 
-@import './intlTelInput.min';
+/* @import './intlTelInput.min'; */
 
 @import './theme.css';
 @import './base.css';
