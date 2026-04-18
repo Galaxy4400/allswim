@@ -341,6 +341,9 @@
   .aspect-340\/273 {
     aspect-ratio: 340/273;
   }
+  .aspect-560\/295 {
+    aspect-ratio: 560/295;
+  }
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
@@ -442,6 +445,9 @@
   }
   .min-w-\[650px\] {
     min-width: 650px;
+  }
+  .min-w-full {
+    min-width: 100%;
   }
   .flex-auto {
     flex: auto;
@@ -1210,6 +1216,11 @@
       line-height: var(--tw-leading, var(--text-sm--line-height));
     }
   }
+  .max-sm\:hidden {
+    @media (width < 40rem) {
+      display: none;
+    }
+  }
   .max-sm\:w-full {
     @media (width < 40rem) {
       width: 100%;
@@ -1278,6 +1289,11 @@
   .md\:w-\[400px\] {
     @media (width >= 48rem) {
       width: 400px;
+    }
+  }
+  .md\:min-w-\[280px\] {
+    @media (width >= 48rem) {
+      min-width: 280px;
     }
   }
   .md\:min-w-\[900px\] {
