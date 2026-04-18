@@ -2763,20 +2763,36 @@
       </div>
     </div>
 
-    <div data-modal="cap-name">
+    <div data-modal="cap-name" data-active>
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          cap-name content
+          <div class="grid">
+            <p class="h4 mb-3 font-bold">Укажите имя для печати на шапочке</p>
+            <form
+              name="form"
+              method="post"
+              class="group relative grid w-full justify-items-center"
+              action="#"
+              data-form
+            >
+              <label class="mb-7.5 block w-full">
+                <input class="input" type="text" name="cap-name" placeholder="Укажите имя" required />
+              </label>
+              <button class="btn btn-primary min-w-[215px]" type="submit">Указать</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
 
-    <div data-modal="forgot-password" data-active>
+    <div data-modal="forgot-password">
       <div data-modal-container>
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
