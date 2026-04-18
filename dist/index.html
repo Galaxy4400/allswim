@@ -660,6 +660,17 @@
           fill="#002159"
         />
       </symbol>
+      <!-- check -->
+      <symbol id="check" viewBox="0 0 44 44" fill="none">
+        <rect width="44" height="44" rx="20" fill="currentColor" />
+        <path
+          d="M29.5 16L19 28L14.5 23.5"
+          stroke="white"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </symbol>
     </svg>
 
     <!-- header -->
@@ -2501,7 +2512,9 @@
 
     <div data-modal="order-status">
       <div data-modal-container>
-        <div class="relative mx-auto max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-12 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[350px] overflow-y-auto rounded-2xl bg-white p-12 shadow-lg"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
@@ -2659,26 +2672,55 @@
 
     <div data-modal="order-done">
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-[350px] overflow-y-auto rounded-2xl bg-white p-12 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[560px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          order-done content
+          <div class="grid justify-items-center text-center">
+            <div class="text-primary-light mb-4">
+              <svg width="44" height="44">
+                <use href="#check"></use>
+              </svg>
+            </div>
+            <p class="h1 mb-2 font-bold">Спасибо!</p>
+            <p class="mb-4 text-base font-bold md:text-xl">Ваш заказ оформлен.</p>
+            <p class="mb-10 text-xs">
+              В ближайшее время менеджер свяжется с вами по указанной электронной почте, чтобы уточнить детали заказа.
+              Ждем вас снова!
+            </p>
+            <a class="btn btn-primary" href="#">Вернуться на главную</a>
+          </div>
         </div>
       </div>
     </div>
 
     <div data-modal="request-process">
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
-          <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
-            <svg width="13" height="13">
-              <use href="#cross"></use>
-            </svg>
-          </button>
-          request-process content
+        <div data-modal-container>
+          <div
+            class="relative mx-auto max-h-[90vh] w-full max-w-[480px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+          >
+            <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
+              <svg width="13" height="13">
+                <use href="#cross"></use>
+              </svg>
+            </button>
+            <div class="grid justify-items-center text-center">
+              <div class="text-primary-light mb-4">
+                <svg width="44" height="44">
+                  <use href="#check"></use>
+                </svg>
+              </div>
+              <p class="h1 mb-2 font-bold">Спасибо!</p>
+              <p class="mb-4 text-base font-bold md:text-xl">Запрос в обработке.</p>
+              <p class="mb-10 text-xs">В ближайшее время менеджер свяжется с вами по указанной электронной почте.</p>
+              <a class="btn btn-primary" href="#">Вернуться на главную</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
