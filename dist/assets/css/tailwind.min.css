@@ -3093,6 +3093,12 @@
     background: var(--color-primary-dark);
   }
 }
+body {
+  padding-right: var(--scrollbar-width, 0px);
+}
+header {
+  padding-right: var(--scrollbar-width, 0px);
+}
 body::before {
   content: '';
   position: fixed;

@@ -21,6 +21,15 @@
   }
 }
 
+/* Компенсация ширины скроллбара при блокировке скролла */
+body {
+  padding-right: var(--scrollbar-width, 0px);
+}
+
+header {
+  padding-right: var(--scrollbar-width, 0px);
+}
+
 /* Главный бекграунд */
 body::before {
   content: '';

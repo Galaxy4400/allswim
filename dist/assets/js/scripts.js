@@ -125,7 +125,7 @@ const initModals = () => {
   const closeAll = () => {
     document.querySelectorAll('[data-modal]').forEach((m) => m.removeAttribute('data-active'));
     document.body.removeAttribute('data-modal-lock');
-    document.body.style.paddingRight = '';
+    document.body.style.removeProperty('--scrollbar-width');
   };
 
   const openModal = (name) => {
@@ -133,25 +133,26 @@ const initModals = () => {
     const modal = document.querySelector(`[data-modal="${name}"]`);
     if (!modal) return;
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
+    if (scrollbarWidth > 0) document.body.style.setProperty('--scrollbar-width', `${scrollbarWidth}px`);
     modal.setAttribute('data-active', '');
     document.body.setAttribute('data-modal-lock', '');
   };
 
   document.addEventListener('click', (e) => {
-    const openTrigger = e.target.closest('[data-modal-open]');
+		const target = e.target;
+
+    const openTrigger = target.closest('[data-modal-open]');
     if (openTrigger) {
       openModal(openTrigger.dataset.modalOpen);
       return;
     }
 
-    if (e.target.closest('[data-modal-close]')) {
+    if (target.closest('[data-modal-close]')) {
       closeAll();
       return;
     }
 
-    // Overlay click: e.target IS the backdrop element, not content inside it
-    if (e.target.hasAttribute('data-modal') && e.target.hasAttribute('data-active')) {
+    if (target.hasAttribute('data-modal') && target.hasAttribute('data-active')) {
       closeAll();
     }
   });
