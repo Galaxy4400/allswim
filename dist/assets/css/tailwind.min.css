@@ -305,6 +305,9 @@
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
+  .-ml-2 {
+    margin-left: calc(var(--spacing) * -2);
+  }
   .block {
     display: block;
   }
@@ -1345,6 +1348,11 @@
   .md\:py-\[50px\] {
     @media (width >= 48rem) {
       padding-block: 50px;
+    }
+  }
+  .md\:pt-10 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 10);
     }
   }
   .md\:pt-\[50px\] {
