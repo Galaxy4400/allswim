@@ -125,12 +125,15 @@ const initModals = () => {
   const closeAll = () => {
     document.querySelectorAll('[data-modal]').forEach((m) => m.removeAttribute('data-active'));
     document.body.removeAttribute('data-modal-lock');
+    document.body.style.paddingRight = '';
   };
 
   const openModal = (name) => {
     closeAll();
     const modal = document.querySelector(`[data-modal="${name}"]`);
     if (!modal) return;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    if (scrollbarWidth > 0) document.body.style.paddingRight = `${scrollbarWidth}px`;
     modal.setAttribute('data-active', '');
     document.body.setAttribute('data-modal-lock', '');
   };
