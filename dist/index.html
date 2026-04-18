@@ -936,24 +936,6 @@
 
     <!-- main -->
     <main>
-      <!-- temp-section -->
-      <section class="pb-6 md:pb-[50px]">
-        <div class="container-base">
-          <div class="flex flex-wrap gap-5 py-10">
-            <button class="btn btn-primary" data-modal-open="order-status">order status</button>
-            <button class="btn btn-primary" data-modal-open="order-done">order done</button>
-            <button class="btn btn-primary" data-modal-open="request-process">request process</button>
-            <button class="btn btn-primary" data-modal-open="get-code">get code</button>
-            <button class="btn btn-primary" data-modal-open="exit">exit</button>
-            <button class="btn btn-primary" data-modal-open="cap-name">cap name</button>
-            <button class="btn btn-primary" data-modal-open="forgot-password">forgot password</button>
-            <button class="btn btn-primary" data-modal-open="request-form">request form</button>
-            <button class="btn btn-primary" data-modal-open="question-form">question form</button>
-            <button class="btn btn-primary" data-modal-open="sizes">sizes</button>
-          </div>
-        </div>
-      </section>
-
       <!-- slider -->
       <section class="pb-6 md:pb-[50px]">
         <div class="container-base">
@@ -970,7 +952,9 @@
                         </h1>
                         <p>Покажите, что вы-команда!</p>
                       </div>
-                      <button class="btn btn-big btn-primary max-md:justify-self-center">Хочу шапочки</button>
+                      <button class="btn btn-big btn-primary max-md:justify-self-center" data-modal-open="request-form">
+                        Хочу шапочки
+                      </button>
                     </div>
                     <div class="basis-1/2">
                       <img src="assets/img/slide-1.png" alt="slide" />
@@ -987,7 +971,12 @@
                         </h1>
                         <p>С флагом России и фамилией</p>
                       </div>
-                      <button class="btn btn-big btn-secondary max-md:justify-self-center">Хочу шапочки</button>
+                      <button
+                        class="btn btn-big btn-secondary max-md:justify-self-center"
+                        data-modal-open="request-form"
+                      >
+                        Хочу шапочки
+                      </button>
                     </div>
                     <div class="basis-1/2">
                       <img src="assets/img/slide-2.png" alt="slide" />
@@ -1004,7 +993,9 @@
                         </h1>
                         <p>С вашим логотипом</p>
                       </div>
-                      <button class="btn btn-big btn-primary max-md:justify-self-center">Хочу полотенца</button>
+                      <button class="btn btn-big btn-primary max-md:justify-self-center" data-modal-open="request-form">
+                        Хочу полотенца
+                      </button>
                     </div>
                     <div class="basis-1/2">
                       <img src="assets/img/slide-3.png" alt="slide" />
@@ -2366,6 +2357,7 @@
                     <button
                       class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
                       type="submit"
+                      data-modal-open="request-process"
                     >
                       Отправить
                     </button>
@@ -2956,7 +2948,7 @@
       </div>
     </div>
 
-    <div data-modal="sizes" data-active>
+    <div data-modal="sizes">
       <div data-modal-container>
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
@@ -2973,7 +2965,6 @@
                 <p class="h4">Arena 3D Soft</p>
                 <table
                   class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
-                  data-table-temp-attr
                 >
                   <thead class="bg-primary">
                     <tr>
@@ -3016,7 +3007,6 @@
                 <p class="h4">Tyr Tracer X</p>
                 <table
                   class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
-                  data-table-temp-attr
                 >
                   <thead class="bg-primary">
                     <tr>
@@ -3046,7 +3036,6 @@
                 <p class="h4">Allswim 3D Softer</p>
                 <table
                   class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
-                  data-table-temp-attr
                 >
                   <thead class="bg-primary">
                     <tr>
