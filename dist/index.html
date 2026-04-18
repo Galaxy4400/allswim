@@ -2727,13 +2727,25 @@
 
     <div data-modal="get-code">
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          get-code content
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Вход и регистрация</p>
+            <p class="mb-4 text-sm">На указанный номер телефона поступит СМС с кодом</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <label class="grid gap-2">
+                <span class="text-xs">Телефон</span>
+                <input class="input" type="tel" name="phone" placeholder="Телефон" required />
+              </label>
+              <button class="btn btn-secondary w-full" type="submit">Получить код</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -2764,15 +2776,30 @@
       </div>
     </div>
 
-    <div data-modal="forgot-password">
+    <div data-modal="forgot-password" data-active>
       <div data-modal-container>
-        <div class="relative max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-white p-6 shadow-lg">
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
           <button class="absolute top-7.5 right-7.5 cursor-pointer" data-modal-close>
             <svg width="13" height="13">
               <use href="#cross"></use>
             </svg>
           </button>
-          forgot-password content
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Запрос пароля</p>
+            <p class="mb-4 text-sm">Если вы забыли пароль, введите логин или E-Mail.</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <div class="grid gap-3">
+                <label class="grid gap-2">
+                  <span class="text-xs">Логин/E-mail</span>
+                  <input class="input" type="email" name="email" placeholder="Email" required />
+                </label>
+                <p class="text-sm">Данные для смена пароля будут отправлены на указанную почту.</p>
+              </div>
+              <button class="btn btn-secondary w-full" type="submit">Отправить</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
