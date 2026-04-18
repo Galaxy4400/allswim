@@ -107,11 +107,15 @@
   }
 
   .input {
-    @apply text-sm md:text-xl;
-    @apply h-14 w-full px-5 py-2 md:h-[68px] md:px-7.5;
-    @apply border-primary-lighter bg-white;
+    @apply text-sm;
+    @apply w-full px-5.5 py-2 md:h-11;
+    @apply border-primary-darkest bg-white;
     @apply rounded-[20px] border-2;
-    @apply data-novalid:shadow-[inset_0_0_0_2px_var(--color-red-500)] data-valid:shadow-[inset_0_0_0_2px_var(--color-green-600)];
+    @apply data-novalid:border-red-500 data-valid:border-green-600;
+  }
+
+  .input-light {
+    @apply border-primary-lighter h-14 px-5 md:h-[68px] md:px-7.5 md:text-xl;
   }
 
   .checkbox {
