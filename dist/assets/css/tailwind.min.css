@@ -3137,16 +3137,9 @@
   .breadcrumb-item {
     padding-inline: calc(var(--spacing) * 2);
     padding-block: calc(var(--spacing) * 1);
-    color: var(--color-primary);
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-secondary);
-      }
-    }
   }
   .breadcrumb-item:not(:first-child) {
     padding-left: calc(var(--spacing) * 1);
-    color: var(--color-black);
     &::before {
       content: var(--tw-content);
       margin-right: calc(var(--spacing) * 2);

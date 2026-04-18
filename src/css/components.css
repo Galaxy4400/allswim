@@ -127,11 +127,11 @@
   }
 
   .breadcrumb-item {
-    @apply text-primary hover:text-secondary px-2 py-1;
+    @apply px-2 py-1;
   }
 
   .breadcrumb-item:not(:first-child) {
-    @apply pl-1 text-black before:mr-2 before:content-['/'];
+    @apply pl-1 before:mr-2 before:content-['/'];
   }
 
   .disc {
