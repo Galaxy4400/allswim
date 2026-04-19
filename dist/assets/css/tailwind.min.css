@@ -637,6 +637,10 @@
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
   }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
   .border-r-2 {
     border-right-style: var(--tw-border-style);
     border-right-width: 2px;
@@ -660,6 +664,15 @@
   }
   .border-primary-lighter {
     border-color: var(--color-primary-lighter);
+  }
+  .border-t-primary-dark {
+    border-top-color: var(--color-primary-dark);
+  }
+  .border-t-primary-dark\/30 {
+    border-top-color: color-mix(in srgb, #8294b2 30%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-top-color: color-mix(in oklab, var(--color-primary-dark) 30%, transparent);
+    }
   }
   .border-t-primary-lighter {
     border-top-color: var(--color-primary-lighter);
@@ -708,6 +721,9 @@
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-7\.5 {
+    padding-inline: calc(var(--spacing) * 7.5);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
@@ -940,6 +956,11 @@
   .group-data-active\/item\:rotate-180 {
     &:is(:where(.group\/item)[data-active] *) {
       rotate: 180deg;
+    }
+  }
+  .group-data-active\/item\:border-b-primary-dark {
+    &:is(:where(.group\/item)[data-active] *) {
+      border-bottom-color: var(--color-primary-dark);
     }
   }
   .group-data-active\/item\:border-b-primary-lighter {
