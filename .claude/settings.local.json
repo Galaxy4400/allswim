@@ -7,7 +7,10 @@
       "Bash(npx gulp:*)",
       "Bash(npx prettier:*)",
       "Bash(ls:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(python3 *)",
+      "Bash(curl -s http://localhost:3000/assets/img/svg/sprite.svg)",
+      "Bash(curl -s http://localhost:3002/article.html)"
     ]
   }
 }
