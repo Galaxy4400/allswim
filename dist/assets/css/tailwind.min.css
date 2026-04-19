@@ -365,6 +365,9 @@
   .aspect-560\/295 {
     aspect-ratio: 560/295;
   }
+  .aspect-953\/294 {
+    aspect-ratio: 953/294;
+  }
   .aspect-1279\/379 {
     aspect-ratio: 1279/379;
   }
@@ -804,6 +807,9 @@
   }
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
+  }
+  .py-\[30px\] {
+    padding-block: 30px;
   }
   .py-\[50px\] {
     padding-block: 50px;
@@ -1569,6 +1575,11 @@
       gap: calc(var(--spacing) * 12.5);
     }
   }
+  .md\:rounded-\[40px\] {
+    @media (width >= 48rem) {
+      border-radius: 40px;
+    }
+  }
   .md\:p-2\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 2.5);
@@ -1617,6 +1628,11 @@
   .md\:py-\[50px\] {
     @media (width >= 48rem) {
       padding-block: 50px;
+    }
+  }
+  .md\:py-\[100px\] {
+    @media (width >= 48rem) {
+      padding-block: 100px;
     }
   }
   .md\:pt-10 {
