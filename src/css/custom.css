@@ -21,6 +21,18 @@
   }
 }
 
+/* Убрать дефолтные стрелки на цифровом инпуте */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 /* Компенсация ширины скроллбара при блокировке скролла */
 body {
   padding-right: var(--scrollbar-width, 0px);
