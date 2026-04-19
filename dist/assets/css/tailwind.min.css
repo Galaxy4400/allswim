@@ -401,6 +401,9 @@
   .min-h-24 {
     min-height: calc(var(--spacing) * 24);
   }
+  .min-h-60 {
+    min-height: calc(var(--spacing) * 60);
+  }
   .min-h-\[60px\] {
     min-height: 60px;
   }
@@ -2011,6 +2014,7 @@
   .container-base {
     margin-inline: auto;
     box-sizing: content-box;
+    width: 100%;
     max-width: var(--spacing-container);
     padding-inline: calc(var(--spacing) * 4);
     @media (width >= 40rem) {
