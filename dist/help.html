@@ -296,124 +296,218 @@
 
     <!-- main -->
     <main>
-      <div class="container-base pt-6 pb-6 md:pt-10 md:pb-[50px]">
-        <div class="grid grid-cols-1 gap-5 lg:grid-cols-[305px_1fr]">
-          <aside class="sticky top-[130px] hidden self-start lg:block">
-            <!-- aside -->
-            <div class="rounded-[20px] bg-white px-7.5 py-4" data-spoiler="aside-menu">
-              <div class="group/item overflow-hidden transition-all">
-                <button
-                  class="group/button group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 border-b-transparent py-4 transition-colors"
-                  data-spoiler-button
-                >
-                  <span class="text-primary-darker text-left text-base transition-colors">Шапочки для плавания</span>
-                  <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                    <svg width="8" height="12">
-                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                    </svg>
-                  </span>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                  <ul>
-                    <li class="py-4"><a class="text-primary-darker text-sm" href="#">Силиконовые шапочки</a></li>
-                    <li class="border-t-primary-dark/30 border-t-2 py-4">
-                      <a class="text-primary-darker text-sm" href="#">Стартовые для соревнований</a>
-                    </li>
-                  </ul>
+      <div class="pt-6 pb-6 md:pt-10 md:pb-[50px]">
+        <div class="container-base">
+          <div class="grid grid-cols-1 gap-5 lg:grid-cols-[305px_1fr]">
+            <aside class="sticky top-[130px] hidden self-start lg:block">
+              <!-- aside -->
+              <div class="rounded-[20px] bg-white px-7.5 py-4" data-spoiler="aside-menu">
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors">Шапочки для плавания</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Силиконовые шапочки</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Стартовые для соревнований</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <a
+                    class="border-t-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    href="#"
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors">
+                      Полотенца из микрофибры
+                    </span>
+                  </a>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors"> Товары ФВВСР </span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Значки ФВВСР</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Шапочки ФВВСР</a>
+                      </li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Одежда ФВВСР</a>
+                      </li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Разное</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors"> Подарочные наборы </span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Для пловца</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Для тренера</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-              <div class="group/item overflow-hidden transition-all">
-                <a
-                  class="border-t-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                  href="#"
+            </aside>
+            <div>
+              <!-- breadcrumbs -->
+              <nav class="-ml-2 flex w-full flex-wrap items-center" aria-label="breadcrumbs">
+                <a href="#" class="breadcrumb-item"
+                  >Шапочки для плавания: печать логотипа, рисунка, изображения, флага</a
                 >
-                  <span class="text-primary-darker text-left text-base transition-colors">
-                    Полотенца из микрофибры
-                  </span>
-                </a>
-              </div>
-              <div class="group/item overflow-hidden transition-all">
-                <button
-                  class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                  data-spoiler-button
-                >
-                  <span class="text-primary-darker text-left text-base transition-colors"> Товары ФВВСР </span>
-                  <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                    <svg width="8" height="12">
-                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                    </svg>
-                  </span>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                  <ul>
-                    <li class="py-4"><a class="text-primary-darker text-sm" href="#">Значки ФВВСР</a></li>
-                    <li class="border-t-primary-dark/30 border-t-2 py-4">
-                      <a class="text-primary-darker text-sm" href="#">Шапочки ФВВСР</a>
-                    </li>
-                    <li class="border-t-primary-dark/30 border-t-2 py-4">
-                      <a class="text-primary-darker text-sm" href="#">Одежда ФВВСР</a>
-                    </li>
-                    <li class="border-t-primary-dark/30 border-t-2 py-4">
-                      <a class="text-primary-darker text-sm" href="#">Разное</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="group/item overflow-hidden transition-all">
-                <button
-                  class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                  data-spoiler-button
-                >
-                  <span class="text-primary-darker text-left text-base transition-colors"> Подарочные наборы </span>
-                  <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                    <svg width="8" height="12">
-                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                    </svg>
-                  </span>
-                </button>
-                <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                  <ul>
-                    <li class="py-4"><a class="text-primary-darker text-sm" href="#">Для пловца</a></li>
-                    <li class="border-t-primary-dark/30 border-t-2 py-4">
-                      <a class="text-primary-darker text-sm" href="#">Для тренера</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </aside>
-          <div>
-            <!-- breadcrumbs -->
-            <nav class="-ml-2 flex w-full flex-wrap items-center" aria-label="breadcrumbs">
-              <a href="#" class="breadcrumb-item">Шапочки для плавания: печать логотипа, рисунка, изображения, флага</a>
-              <span class="breadcrumb-item">Помощь</span>
-            </nav>
+                <span class="breadcrumb-item">Помощь</span>
+              </nav>
 
-            <!-- articles -->
-            <section class="grid gap-5 py-6 md:py-[50px]">
-              <div class="grid gap-3">
-                <h2>Помощь</h2>
-              </div>
-              <div class="grid gap-5 md:grid-cols-2">
-                <a class="relative block h-full min-h-60 rounded-2xl bg-white p-5 md:p-7.5" href="#">
-                  <p class="text-base font-bold"></p>
-                  <dl class="grid gap-2 text-xs">
+              <!-- articles -->
+              <section class="grid gap-5 py-6 md:py-[50px]">
+                <div class="grid gap-3">
+                  <h2>Помощь</h2>
+                </div>
+                <div class="grid gap-5 md:grid-cols-2">
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest absolute top-5 right-2 inline-flex h-[68px] w-[68px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="36" height="36">
+                        <use href="assets/img/svg/sprite.svg#help-contact-icon"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Контакты</p>
+                    <ul class="grid grow content-start gap-2 text-xs">
+                      <li><span class="font-bold">Телефон:</span> <a href="tel:+74998990859">+7 (499) 899-08-59</a></li>
+                      <li>
+                        <span class="font-bold">Почта:</span> <a href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+                      </li>
+                      <li><span class="font-bold">Адрес:</span> Боголюбова, 26, Дубна, Московская область</li>
+                    </ul>
                     <div>
-                      <dt class="font-bold">Телефон:</dt>
-                      <dd class="font-medium"><a href="tel:+74998990859">+7 (499) 899-08-59</a></dd>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest absolute top-5 right-2 inline-flex h-[68px] w-[68px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="36" height="36">
+                        <use href="assets/img/svg/sprite.svg#help-return-icon"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Обмен и возврат</p>
+                    <p class="grow text-xs">
+                      Для оформления обмена или возврата <br />
+                      напишите нам на почту
+                      <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+                      <br />
+                      или позвоните по номеру:
+                      <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 (499) 899-08-59</a>
+                    </p>
+                    <div>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest absolute top-5 right-2 inline-flex h-[68px] w-[68px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="36" height="36">
+                        <use href="assets/img/svg/sprite.svg#help-payment-icon"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Доставка и оплата</p>
+                    <ul class="grid grow content-start gap-2 text-xs">
+                      <li><span class="font-bold">450 рублей:</span> До пункта выдачи «СДЭК»</li>
+                      <li><span class="font-bold">850 рублей:</span> Курьером «СДЭК» до двери</li>
+                    </ul>
+                    <div>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest absolute top-5 right-2 inline-flex h-[68px] w-[68px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="36" height="36">
+                        <use href="assets/img/svg/sprite.svg#help-info-icon"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Юридическая информация</p>
+                    <ul class="grid grow content-start gap-2 text-xs">
+                      <li><span class="font-bold">Наименование:</span> ИП КУЗНЕЦОВ<br />ГРИГОРИЙ ВЯЧЕСЛАВОВИЧ</li>
+                      <li><span class="font-bold">ИНН:</span> 501005151320</li>
+                    </ul>
+                    <div>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest absolute top-5 right-2 inline-flex h-[68px] w-[68px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="36" height="36">
+                        <use href="assets/img/svg/sprite.svg#help-faq-icon"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">вопрос - ответ</p>
+                    <div class="grid grow gap-2 text-xs">
+                      <p>Ответы на часто задаваемые вопросы</p>
+                      <p>
+                        Если возник вопрос напишите нам на почту: <br />
+                        <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a> или
+                        позвоните по номеру: <br />
+                        <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 (499) 899-08-59</a>
+                      </p>
                     </div>
                     <div>
-                      <dt class="font-bold">Почта:</dt>
-                      <dd class="font-medium"><a href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a></dd>
+                      <a class="text-xs underline" href="#">Подробнее</a>
                     </div>
-                    <div>
-                      <dt class="font-bold">Адрес:</dt>
-                      <dd class="font-medium">Боголюбова, 26, Дубна, Московская область</dd>
-                    </div>
-                  </dl>
-                </a>
-              </div>
-            </section>
+                  </div>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </div>
