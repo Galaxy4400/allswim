@@ -16,11 +16,11 @@
   }
 
   .h3 {
-    @apply text-sm leading-normal font-bold md:text-[24px];
+    @apply text-lg leading-normal font-bold md:text-[24px];
   }
 
   .h4 {
-    @apply text-sm leading-normal font-bold md:text-xl;
+    @apply text-base leading-normal font-bold md:text-xl;
   }
 
   .label {
