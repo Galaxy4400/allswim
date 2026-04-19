@@ -1734,6 +1734,11 @@
       grid-row-start: 1;
     }
   }
+  .lg\:-ml-5 {
+    @media (width >= 64rem) {
+      margin-left: calc(var(--spacing) * -5);
+    }
+  }
   .lg\:-ml-10 {
     @media (width >= 64rem) {
       margin-left: calc(var(--spacing) * -10);
