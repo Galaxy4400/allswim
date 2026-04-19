@@ -1338,6 +1338,11 @@
       gap: calc(var(--spacing) * 10);
     }
   }
+  .md\:gap-12\.5 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 12.5);
+    }
+  }
   .md\:p-2\.5 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 2.5);
