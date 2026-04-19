@@ -133,7 +133,7 @@ const initSliders = () => {
 	initSlider('sales', { loop: false, slidesToScroll: 1 });
 	initSlider('catalog', { loop: false, slidesToScroll: 1 });
 	initSlider('reviews', { loop: false, slidesToScroll: 1 });
-	initSlider('news', { loop: false, slidesToScroll: 1 });
+	initSlider('articles', { loop: false, slidesToScroll: 1 });
 };
 
 //===============================================================
