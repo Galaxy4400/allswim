@@ -505,6 +505,9 @@
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+  .grid-cols-\[305px_1fr\] {
+    grid-template-columns: 305px 1fr;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -2167,6 +2170,8 @@
   .breadcrumb-item {
     padding-inline: calc(var(--spacing) * 2);
     padding-block: calc(var(--spacing) * 1);
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
   }
   .breadcrumb-item:not(:first-child) {
     padding-left: calc(var(--spacing) * 1);

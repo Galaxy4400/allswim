@@ -127,7 +127,7 @@
   }
 
   .breadcrumb-item {
-    @apply px-2 py-1;
+    @apply px-2 py-1 text-sm;
   }
 
   .breadcrumb-item:not(:first-child) {
