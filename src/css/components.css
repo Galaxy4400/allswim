@@ -195,4 +195,8 @@
     --color-bg: var(--color-white);
     @apply h-6 w-6 rounded-full bg-(--color-bg);
   }
+
+  .size-circle {
+    @apply h-6 w-6 rounded-full;
+  }
 }

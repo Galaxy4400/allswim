@@ -2745,6 +2745,11 @@
     border-radius: calc(infinity * 1px);
     background-color: var(--color-bg);
   }
+  .size-circle {
+    height: calc(var(--spacing) * 6);
+    width: calc(var(--spacing) * 6);
+    border-radius: calc(infinity * 1px);
+  }
 }
 @media (any-hover: hover) {
   ::-webkit-scrollbar {
