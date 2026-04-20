@@ -159,9 +159,33 @@ const initModals = () => {
 };
 
 //===============================================================
+const initColorSelected = () => {
+  const container = document.querySelector('[data-color-selected]');
+  if (!container) return;
+
+  const list = container.querySelector('[data-color-list]');
+  const inputs = document.querySelectorAll('input[name="color[]"]');
+
+  const update = () => {
+    const seen = new Map();
+    inputs.forEach((input) => {
+      if (input.checked && !seen.has(input.value)) {
+        seen.set(input.value, input.dataset.label ?? input.value);
+      }
+    });
+
+    container.classList.toggle('hidden', seen.size === 0);
+    list.textContent = [...seen.values()].join(', ');
+  };
+
+  inputs.forEach((input) => input.addEventListener('change', update));
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
 initSpoilers();
 openFooterSpoilers();
 initModals();
+initColorSelected();
