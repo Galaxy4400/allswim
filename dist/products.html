@@ -572,11 +572,15 @@
                   <div class="flex items-center gap-2.5">
                     <span class="text-primary-darker text-lg">Выводить по</span>
 
-                    <div class="custom-select" data-custom-select>
+                    <div class="group relative" data-custom-select>
                       <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
                         <span data-select-label>12</span>
                       </button>
-                      <ul role="listbox" data-select-list>
+                      <ul
+                        class="absolute top-full left-0 z-50 mt-1 hidden min-w-full rounded-lg bg-white shadow-md group-data-open:block"
+                        role="listbox"
+                        data-select-list
+                      >
                         <li role="option" tabindex="-1" data-select-option data-value="12" data-selected>12</li>
                         <li role="option" tabindex="-1" data-select-option data-value="18">18</li>
                         <li role="option" tabindex="-1" data-select-option data-value="24">24</li>
@@ -588,11 +592,15 @@
                       </select>
                     </div>
 
-                    <div class="custom-select" data-custom-select>
+                    <div class="group relative" data-custom-select>
                       <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
                         <span data-select-label>1</span>
                       </button>
-                      <ul role="listbox" data-select-list>
+                      <ul
+                        class="absolute top-full left-0 z-50 mt-1 hidden min-w-full rounded-lg bg-white shadow-md group-data-open:block"
+                        role="listbox"
+                        data-select-list
+                      >
                         <li role="option" tabindex="-1" data-select-option data-value="1" data-selected>1</li>
                         <li role="option" tabindex="-1" data-select-option data-value="2">2</li>
                         <li role="option" tabindex="-1" data-select-option data-value="3">3</li>
@@ -603,7 +611,6 @@
                         <option value="3">3</option>
                       </select>
                     </div>
-
                   </div>
                 </div>
                 <div class="grid gap-5 md:grid-cols-3">
