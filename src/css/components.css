@@ -197,6 +197,6 @@
   }
 
   .size-circle {
-    @apply h-6 w-6 rounded-full;
+    @apply bg-gray-lightest border-gray inline-flex h-6 w-6 items-center justify-center rounded-full border-2 text-[11px] leading-0 font-extrabold -tracking-widest;
   }
 }
