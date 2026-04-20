@@ -159,6 +159,23 @@ const initModals = () => {
 };
 
 //===============================================================
+const initSizeSelected = () => {
+  const container = document.querySelector('[data-size-selected]');
+  if (!container) return;
+
+  const list = container.querySelector('[data-size-list]');
+  const inputs = document.querySelectorAll('input[name="size[]"]');
+
+  const update = () => {
+    const selected = [...inputs].filter((i) => i.checked).map((i) => i.value);
+    container.toggleAttribute('data-active', selected.length > 0);
+    list.textContent = selected.join(', ');
+  };
+
+  inputs.forEach((input) => input.addEventListener('change', update));
+};
+
+//===============================================================
 const initColorSelected = () => {
   const container = document.querySelector('[data-color-selected]');
   if (!container) return;
@@ -174,7 +191,7 @@ const initColorSelected = () => {
       }
     });
 
-    container.classList.toggle('hidden', seen.size === 0);
+    container.toggleAttribute('data-active', seen.size > 0);
     list.textContent = [...seen.values()].join(', ');
   };
 
@@ -188,4 +205,5 @@ initSearch();
 initSpoilers();
 openFooterSpoilers();
 initModals();
+initSizeSelected();
 initColorSelected();

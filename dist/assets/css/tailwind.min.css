@@ -567,6 +567,10 @@
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
   }
+  .-translate-y-2 {
+    --tw-translate-y: calc(var(--spacing) * -2);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .mirror-x {
     transform: scaleX(-1);
   }
@@ -1347,6 +1351,11 @@
   .data-active\:block {
     &[data-active] {
       display: block;
+    }
+  }
+  .data-active\:flex {
+    &[data-active] {
+      display: flex;
     }
   }
   .data-active\:text-primary-darkest {

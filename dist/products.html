@@ -505,7 +505,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="hidden flex-wrap gap-1 text-xs" data-color-selected>
+                  <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-color-selected>
                     <span class="text-primary-dark">Цвет:</span>
                     <span data-color-list class="inline-flex flex-wrap gap-1"></span>
                   </div>
@@ -540,9 +540,13 @@
                       <span class="size-circle">2XL</span>
                     </label>
                   </div>
+                  <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-size-selected>
+                    <span class="text-primary-dark">Размер:</span>
+                    <span data-size-list class="inline-flex flex-wrap gap-1"></span>
+                  </div>
                 </div>
                 <div class="grid justify-items-center gap-5">
-                  <button class="btn btn-primary" type="submit">Применить</button>
+                  <button class="btn btn-primary w-full" type="submit">Применить</button>
                   <button class="cursor-pointer text-xs underline">Отчистить фильтр</button>
                 </div>
               </form>
