@@ -9,7 +9,6 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
-    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
@@ -2774,6 +2773,9 @@
   .color-checkbox:has(input:checked) .color-circle {
     border-color: var(--color-primary-darkest);
   }
+  .size-checkbox {
+    cursor: pointer;
+  }
   .size-circle {
     display: inline-flex;
     height: calc(var(--spacing) * 6);
@@ -2792,6 +2794,9 @@
     font-weight: var(--font-weight-extrabold);
     --tw-tracking: calc(var(--tracking-widest) * -1);
     letter-spacing: calc(var(--tracking-widest) * -1);
+  }
+  .size-checkbox:has(input:checked) .size-circle {
+    border-color: var(--color-primary-darkest);
   }
 }
 @media (any-hover: hover) {
