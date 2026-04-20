@@ -2807,6 +2807,25 @@
   .size-checkbox:has(input:checked) .size-circle {
     border-color: var(--color-primary-darkest);
   }
+  .custom-select {
+    position: relative;
+  }
+  .custom-select [data-select-list] {
+    position: absolute;
+    top: 100%;
+    left: calc(var(--spacing) * 0);
+    z-index: 50;
+    margin-top: calc(var(--spacing) * 1);
+    display: none;
+    min-width: 100%;
+    border-radius: var(--radius-lg);
+    background-color: var(--color-white);
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .custom-select[data-open] [data-select-list] {
+    display: block;
+  }
 }
 @media (any-hover: hover) {
   ::-webkit-scrollbar {

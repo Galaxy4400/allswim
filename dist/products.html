@@ -11,6 +11,7 @@
     <script src="https://unpkg.com/embla-carousel-auto-scroll@8.6.0/embla-carousel-auto-scroll.umd.js" defer></script>
     <script src="assets/js/lazyload.min.js" defer></script>
     <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/custom-select.js" defer></script>
     <script src="assets/js/forms.js" defer></script>
     <script src="assets/js/sliders.js" defer></script>
     <script src="assets/js/main.js" defer></script>
@@ -570,16 +571,39 @@
                   </p>
                   <div class="flex items-center gap-2.5">
                     <span class="text-primary-darker text-lg">Выводить по</span>
-                    <select name="show-count">
-                      <option value="12">12</option>
-                      <option value="18">18</option>
-                      <option value="24">24</option>
-                    </select>
-                    <select name="show-sort">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                    </select>
+
+                    <div class="custom-select" data-custom-select>
+                      <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
+                        <span data-select-label>12</span>
+                      </button>
+                      <ul role="listbox" data-select-list>
+                        <li role="option" tabindex="-1" data-select-option data-value="12" data-selected>12</li>
+                        <li role="option" tabindex="-1" data-select-option data-value="18">18</li>
+                        <li role="option" tabindex="-1" data-select-option data-value="24">24</li>
+                      </ul>
+                      <select name="show-count" hidden>
+                        <option value="12" selected>12</option>
+                        <option value="18">18</option>
+                        <option value="24">24</option>
+                      </select>
+                    </div>
+
+                    <div class="custom-select" data-custom-select>
+                      <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
+                        <span data-select-label>1</span>
+                      </button>
+                      <ul role="listbox" data-select-list>
+                        <li role="option" tabindex="-1" data-select-option data-value="1" data-selected>1</li>
+                        <li role="option" tabindex="-1" data-select-option data-value="2">2</li>
+                        <li role="option" tabindex="-1" data-select-option data-value="3">3</li>
+                      </ul>
+                      <select name="show-sort" hidden>
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                      </select>
+                    </div>
+
                   </div>
                 </div>
                 <div class="grid gap-5 md:grid-cols-3">

@@ -211,4 +211,16 @@
   .size-checkbox:has(input:checked) .size-circle {
     @apply border-primary-darkest;
   }
+
+  .custom-select {
+    @apply relative;
+  }
+
+  .custom-select [data-select-list] {
+    @apply hidden absolute top-full left-0 z-50 mt-1 min-w-full rounded-lg bg-white shadow-md;
+  }
+
+  .custom-select[data-open] [data-select-list] {
+    @apply block;
+  }
 }
