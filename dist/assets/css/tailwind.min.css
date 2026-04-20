@@ -9,6 +9,7 @@
     --color-red-500: oklch(63.7% 0.237 25.331);
     --color-green-600: oklch(62.7% 0.194 149.214);
     --color-gray-100: oklch(96.7% 0.003 264.542);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-500: oklch(55.1% 0.027 264.364);
     --color-black: #000;
@@ -217,6 +218,17 @@
   }
   .invisible {
     visibility: hidden;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border-width: 0;
   }
   .absolute {
     position: absolute;
@@ -2745,12 +2757,22 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
+  .color-checkbox {
+    cursor: pointer;
+  }
   .color-circle {
     --color-bg: var(--color-white);
+    display: block;
     height: calc(var(--spacing) * 6);
     width: calc(var(--spacing) * 6);
     border-radius: calc(infinity * 1px);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    border-color: var(--color-gray-300);
     background-color: var(--color-bg);
+  }
+  .color-checkbox:has(input:checked) .color-circle {
+    border-color: var(--color-primary-darkest);
   }
   .size-circle {
     display: inline-flex;
