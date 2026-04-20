@@ -190,4 +190,9 @@
   .num-label {
     @apply bg-primary-light absolute right-0 bottom-0 inline-flex h-3 w-3 translate-1/4 items-center justify-center rounded-full text-[6px] font-bold;
   }
+
+  .color-circle {
+    --color-bg: var(--color-white);
+    @apply h-6 w-6 rounded-full bg-(--color-bg);
+  }
 }

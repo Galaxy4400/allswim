@@ -56,6 +56,8 @@
     --color-secondary-light: #ff9533;
     --color-secondary: #ff8a1e;
     --color-secondary-dark: #f27e11;
+    --color-gray-lightest: #f5fbff;
+    --color-gray: #afc0dd;
     --spacing-container: 1280px;
     --background-image-check: url("data:image/svg+xml;utf8,<svg fill='none' stroke='white' stroke-width='3' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><path d='M5 13l4 4L19 7'/></svg>");
   }
@@ -287,6 +289,9 @@
   .-m-1 {
     margin: calc(var(--spacing) * -1);
   }
+  .-m-1\.5 {
+    margin: calc(var(--spacing) * -1.5);
+  }
   .-mx-10 {
     margin-inline: calc(var(--spacing) * -10);
   }
@@ -374,6 +379,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -430,6 +438,9 @@
   }
   .w-6 {
     width: calc(var(--spacing) * 6);
+  }
+  .w-7 {
+    width: calc(var(--spacing) * 7);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
@@ -718,6 +729,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
+  .border-gray {
+    border-color: var(--color-gray);
+  }
   .border-primary-dark {
     border-color: var(--color-primary-dark);
   }
@@ -745,6 +759,9 @@
   .border-b-transparent {
     border-bottom-color: transparent;
   }
+  .bg-gray-lightest {
+    background-color: var(--color-gray-lightest);
+  }
   .bg-primary {
     background-color: var(--color-primary);
   }
@@ -766,14 +783,14 @@
   .p-1 {
     padding: calc(var(--spacing) * 1);
   }
+  .p-1\.5 {
+    padding: calc(var(--spacing) * 1.5);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-  .p-7\.5 {
-    padding: calc(var(--spacing) * 7.5);
   }
   .p-10 {
     padding: calc(var(--spacing) * 10);
@@ -820,6 +837,9 @@
   .py-6 {
     padding-block: calc(var(--spacing) * 6);
   }
+  .py-7\.5 {
+    padding-block: calc(var(--spacing) * 7.5);
+  }
   .py-\[30px\] {
     padding-block: 30px;
   }
@@ -828,6 +848,9 @@
   }
   .pt-0\.5 {
     padding-top: calc(var(--spacing) * 0.5);
+  }
+  .pt-1 {
+    padding-top: calc(var(--spacing) * 1);
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
@@ -838,11 +861,17 @@
   .pr-5 {
     padding-right: calc(var(--spacing) * 5);
   }
+  .pr-12 {
+    padding-right: calc(var(--spacing) * 12);
+  }
   .pr-\[70px\]\! {
     padding-right: 70px !important;
   }
   .pr-\[100px\] {
     padding-right: 100px;
+  }
+  .pb-2 {
+    padding-bottom: calc(var(--spacing) * 2);
   }
   .pb-4 {
     padding-bottom: calc(var(--spacing) * 4);
@@ -864,6 +893,9 @@
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
   }
   .pl-10 {
     padding-left: calc(var(--spacing) * 10);
@@ -1118,6 +1150,12 @@
       top: calc(var(--spacing) * 0);
     }
   }
+  .before\:top-1\/2 {
+    &::before {
+      content: var(--tw-content);
+      top: calc(1/2 * 100%);
+    }
+  }
   .before\:top-10 {
     &::before {
       content: var(--tw-content);
@@ -1140,6 +1178,12 @@
     &::before {
       content: var(--tw-content);
       z-index: calc(1 * -1);
+    }
+  }
+  .before\:h-0\.5 {
+    &::before {
+      content: var(--tw-content);
+      height: calc(var(--spacing) * 0.5);
     }
   }
   .before\:h-1 {
@@ -1176,6 +1220,19 @@
     &::before {
       content: var(--tw-content);
       width: 100%;
+    }
+  }
+  .before\:-translate-y-1\/2 {
+    &::before {
+      content: var(--tw-content);
+      --tw-translate-y: calc(calc(1/2 * 100%) * -1);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .before\:bg-gray {
+    &::before {
+      content: var(--tw-content);
+      background-color: var(--color-gray);
     }
   }
   .before\:bg-primary-light {
@@ -2680,6 +2737,13 @@
     font-size: 6px;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
+  }
+  .color-circle {
+    --color-bg: var(--color-white);
+    height: calc(var(--spacing) * 6);
+    width: calc(var(--spacing) * 6);
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-bg);
   }
 }
 @media (any-hover: hover) {

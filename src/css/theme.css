@@ -15,6 +15,9 @@
   --color-secondary: #ff8a1e;
   --color-secondary-dark: #f27e11;
 
+  --color-gray-lightest: #f5fbff;
+  --color-gray: #afc0dd;
+
   --spacing-container: 1280px;
 
   --default-transition-duration: 300ms;
