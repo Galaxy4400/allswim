@@ -2762,7 +2762,7 @@
     border-style: var(--tw-border-style);
     border-width: 2px;
     border-color: var(--color-gray);
-    background-color: var(--color-gray-lightest);
+    background-color: var(--color-white);
     font-size: 11px;
     --tw-leading: calc(var(--spacing) * 0);
     line-height: calc(var(--spacing) * 0);
