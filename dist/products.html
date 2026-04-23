@@ -591,7 +591,7 @@
                         data-select-list
                       >
                         <li
-                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
                           role="option"
                           tabindex="-1"
                           data-select-option
@@ -606,7 +606,7 @@
                           </span>
                         </li>
                         <li
-                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
                           role="option"
                           tabindex="-1"
                           data-select-option
@@ -620,7 +620,7 @@
                           </span>
                         </li>
                         <li
-                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
                           role="option"
                           tabindex="-1"
                           data-select-option
@@ -641,23 +641,87 @@
                       </select>
                     </div>
 
-                    <div class="group relative" data-custom-select>
-                      <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
-                        <span data-select-label>1</span>
+                    <div class="group relative min-w-[243px] shrink-0" data-custom-select>
+                      <button
+                        class="border-gray bg-gray-lightest flex h-10 w-full cursor-pointer items-center justify-between gap-2.5 rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none group-data-open:border-b-0"
+                        type="button"
+                        data-select-trigger
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span data-select-label>Сначала дешевле</span>
+                        <svg class="transition-transform duration-300 group-data-open:rotate-180" width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
                       </button>
                       <ul
-                        class="absolute top-full left-0 z-50 mt-1 hidden min-w-full rounded-lg bg-white shadow-md group-data-open:block"
+                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 pb-1.5 text-base group-data-open:block"
                         role="listbox"
                         data-select-list
                       >
-                        <li role="option" tabindex="-1" data-select-option data-value="1" data-selected>1</li>
-                        <li role="option" tabindex="-1" data-select-option data-value="2">2</li>
-                        <li role="option" tabindex="-1" data-select-option data-value="3">3</li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="1"
+                          data-selected
+                        >
+                          Сначала дешевле
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="2"
+                        >
+                          Популярные
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="3"
+                        >
+                          Сначала дороже
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="4"
+                        >
+                          Новинки
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
                       </ul>
-                      <select name="show-sort" hidden>
-                        <option value="1" selected>1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                      <select name="show-count" hidden>
+                        <option value="1" selected>Сначала дешевле</option>
+                        <option value="2">Популярные</option>
+                        <option value="3">Сначала дороже</option>
+                        <option value="4">Новинки</option>
                       </select>
                     </div>
                   </div>
