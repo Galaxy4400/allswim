@@ -909,8 +909,8 @@
   .pr-\[100px\] {
     padding-right: 100px;
   }
-  .pb-1 {
-    padding-bottom: calc(var(--spacing) * 1);
+  .pb-1\.5 {
+    padding-bottom: calc(var(--spacing) * 1.5);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -1195,10 +1195,9 @@
       border-bottom-width: 0px;
     }
   }
-  .group-data-open\:border-b-2 {
-    &:is(:where(.group)[data-open] *) {
-      border-bottom-style: var(--tw-border-style);
-      border-bottom-width: 2px;
+  .group-data-selected\/item\:block {
+    &:is(:where(.group\/item)[data-selected] *) {
+      display: block;
     }
   }
   .group-data-time\:block {

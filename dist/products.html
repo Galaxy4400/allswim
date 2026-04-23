@@ -574,32 +574,24 @@
 
                     <div class="group relative min-w-[82px] shrink-0" data-custom-select>
                       <button
-                        class="border-gray bg-gray-lightest h-10 w-full cursor-pointer rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none group-data-open:border-b-0"
+                        class="border-gray bg-gray-lightest flex h-10 w-full cursor-pointer items-center justify-between gap-2.5 rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none group-data-open:border-b-0"
                         type="button"
                         data-select-trigger
                         aria-haspopup="listbox"
                         aria-expanded="false"
                       >
-                        <div
-                          class="border-primary-dark flex w-full items-center justify-between gap-2.5 group-data-open:border-b-2"
-                        >
-                          <span data-select-label>12</span>
-                          <svg
-                            class="transition-transform duration-300 group-data-open:rotate-180"
-                            width="8"
-                            height="7"
-                          >
-                            <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                          </svg>
-                        </div>
+                        <span data-select-label>12</span>
+                        <svg class="transition-transform duration-300 group-data-open:rotate-180" width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
                       </button>
                       <ul
-                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 text-base group-data-open:block"
+                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 pb-1.5 text-base group-data-open:block"
                         role="listbox"
                         data-select-list
                       >
                         <li
-                          class="border-primary-dark border-b-2 pt-1 pb-1"
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
                           role="option"
                           tabindex="-1"
                           data-select-option
@@ -607,17 +599,40 @@
                           data-selected
                         >
                           12
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
                         </li>
                         <li
-                          class="border-primary-dark border-b-2 pt-1 pb-1"
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
                           role="option"
                           tabindex="-1"
                           data-select-option
                           data-value="18"
                         >
                           18
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
                         </li>
-                        <li class="pt-1 pb-1" role="option" tabindex="-1" data-select-option data-value="24">24</li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="24"
+                        >
+                          24
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
                       </ul>
                       <select name="show-count" hidden>
                         <option value="12" selected>12</option>
