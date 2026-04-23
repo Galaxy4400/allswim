@@ -517,6 +517,9 @@
   .min-w-0 {
     min-width: calc(var(--spacing) * 0);
   }
+  .min-w-\[82px\] {
+    min-width: 82px;
+  }
   .min-w-\[215px\] {
     min-width: 215px;
   }
@@ -729,6 +732,10 @@
     border-bottom-right-radius: var(--radius-3xl);
     border-bottom-left-radius: var(--radius-3xl);
   }
+  .rounded-b-\[20px\] {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -740,6 +747,10 @@
   .border-t {
     border-top-style: var(--tw-border-style);
     border-top-width: 1px;
+  }
+  .border-t-0 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 0px;
   }
   .border-t-2 {
     border-top-style: var(--tw-border-style);
@@ -897,6 +908,9 @@
   }
   .pr-\[100px\] {
     padding-right: 100px;
+  }
+  .pb-1 {
+    padding-bottom: calc(var(--spacing) * 1);
   }
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
@@ -1162,6 +1176,29 @@
   .group-data-open\:block {
     &:is(:where(.group)[data-open] *) {
       display: block;
+    }
+  }
+  .group-data-open\:rotate-180 {
+    &:is(:where(.group)[data-open] *) {
+      rotate: 180deg;
+    }
+  }
+  .group-data-open\:rounded-b-none {
+    &:is(:where(.group)[data-open] *) {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .group-data-open\:border-b-0 {
+    &:is(:where(.group)[data-open] *) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 0px;
+    }
+  }
+  .group-data-open\:border-b-2 {
+    &:is(:where(.group)[data-open] *) {
+      border-bottom-style: var(--tw-border-style);
+      border-bottom-width: 2px;
     }
   }
   .group-data-time\:block {

@@ -572,18 +572,52 @@
                   <div class="flex items-center gap-2.5">
                     <span class="text-primary-darker text-lg">Выводить по</span>
 
-                    <div class="group relative" data-custom-select>
-                      <button type="button" data-select-trigger aria-haspopup="listbox" aria-expanded="false">
-                        <span data-select-label>12</span>
+                    <div class="group relative min-w-[82px] shrink-0" data-custom-select>
+                      <button
+                        class="border-gray bg-gray-lightest h-10 w-full cursor-pointer rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none group-data-open:border-b-0"
+                        type="button"
+                        data-select-trigger
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <div
+                          class="border-primary-dark flex w-full items-center justify-between gap-2.5 group-data-open:border-b-2"
+                        >
+                          <span data-select-label>12</span>
+                          <svg
+                            class="transition-transform duration-300 group-data-open:rotate-180"
+                            width="8"
+                            height="7"
+                          >
+                            <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                          </svg>
+                        </div>
                       </button>
                       <ul
-                        class="absolute top-full left-0 z-50 mt-1 hidden min-w-full rounded-lg bg-white shadow-md group-data-open:block"
+                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 text-base group-data-open:block"
                         role="listbox"
                         data-select-list
                       >
-                        <li role="option" tabindex="-1" data-select-option data-value="12" data-selected>12</li>
-                        <li role="option" tabindex="-1" data-select-option data-value="18">18</li>
-                        <li role="option" tabindex="-1" data-select-option data-value="24">24</li>
+                        <li
+                          class="border-primary-dark border-b-2 pt-1 pb-1"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="12"
+                          data-selected
+                        >
+                          12
+                        </li>
+                        <li
+                          class="border-primary-dark border-b-2 pt-1 pb-1"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="18"
+                        >
+                          18
+                        </li>
+                        <li class="pt-1 pb-1" role="option" tabindex="-1" data-select-option data-value="24">24</li>
                       </ul>
                       <select name="show-count" hidden>
                         <option value="12" selected>12</option>
