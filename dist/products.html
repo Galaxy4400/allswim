@@ -569,8 +569,8 @@
                   <p class="text-sm">
                     Материал: 100% микрофибра; Размер: 80 х 130 см; Печать любого количества цветов.
                   </p>
-                  <div class="flex items-center gap-2.5">
-                    <span class="text-primary-darker text-lg">Выводить по</span>
+                  <div class="flex flex-wrap items-center gap-2.5 max-md:justify-between">
+                    <span class="text-primary-darker text-lg max-md:hidden">Выводить по</span>
 
                     <div class="group relative min-w-[82px] shrink-0" data-custom-select>
                       <button
@@ -724,9 +724,20 @@
                         <option value="4">Новинки</option>
                       </select>
                     </div>
+
+                    <button class="cursor-pointer" data-modal-open="filters">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.2891 13.5088C12.1168 13.509 12.9087 13.8541 13.4902 14.4639C13.8351 14.8256 14.0869 15.2635 14.2363 15.7373H19.0195C19.5724 15.7374 20.0007 16.2042 20.001 16.7539C20.0008 17.3039 19.5723 17.7704 19.0195 17.7705H14.2363C14.087 18.2448 13.8357 18.6837 13.4902 19.0459C12.9087 19.6556 12.1168 20.0008 11.2891 20.001C10.46 20.001 9.66771 19.6538 9.08691 19.0449C8.74154 18.6827 8.49083 18.2442 8.3418 17.7705H0.981445C0.462973 17.7705 0.0538789 17.3602 0.00488281 16.8555L0 16.7539C0.000304714 16.2041 0.42849 15.7373 0.981445 15.7373H8.3418C8.49088 15.2638 8.74178 14.8259 9.08691 14.4639C9.66854 13.854 10.4611 13.5088 11.2891 13.5088ZM11.2891 15.542C10.9896 15.542 10.6989 15.6668 10.4834 15.8926C10.2675 16.119 10.1437 16.429 10.1436 16.7539C10.1436 17.0789 10.2675 17.3889 10.4834 17.6152C10.6998 17.842 10.9906 17.9678 11.2891 17.9678C11.5882 17.9676 11.8781 17.8421 12.0938 17.6162C12.3098 17.3895 12.4335 17.0785 12.4336 16.7539C12.4335 16.4298 12.3103 16.1197 12.0938 15.8926C11.8782 15.6667 11.5882 15.5422 11.2891 15.542ZM4.84668 6.75488C5.67415 6.75506 6.46621 7.09915 7.04785 7.70898C7.3932 8.07118 7.64397 8.50975 7.79297 8.9834H19.0195C19.5724 8.9835 20.001 9.44982 20.001 10C20.0008 10.55 19.5723 11.0165 19.0195 11.0166H7.79297C7.64385 11.4901 7.39293 11.9281 7.04785 12.29C6.46637 12.8997 5.67437 13.2449 4.84668 13.2451H4.8457C4.018 13.2449 3.22692 12.8996 2.64551 12.29C2.30028 11.9281 2.0495 11.49 1.90039 11.0166H0.981445C0.428557 11.0166 0.000193138 10.55 0 10C0 9.44976 0.428478 8.9834 0.981445 8.9834H1.89941C2.04866 8.50946 2.30022 8.07107 2.64551 7.70898C3.22702 7.09949 4.01829 6.75506 4.8457 6.75488H4.84668ZM4.84668 8.78809C4.54704 8.78812 4.25737 8.91301 4.04199 9.13867L4.04102 9.1377C3.82509 9.36412 3.70215 9.67484 3.70215 10C3.70224 10.3249 3.82601 10.6339 4.04199 10.8604C4.25763 11.0863 4.54734 11.2119 4.84668 11.2119C5.14606 11.2117 5.43595 11.0862 5.65137 10.8604C5.86693 10.6342 5.99014 10.3251 5.99023 10C5.99023 9.67446 5.86695 9.36381 5.65137 9.1377C5.4363 8.91244 5.14633 8.78826 4.84668 8.78809ZM13.8652 0C14.2745 2.00663e-05 14.68 0.0841704 15.0576 0.248047C15.4353 0.412113 15.7786 0.653358 16.0664 0.955078C16.354 1.25677 16.5822 1.61432 16.7373 2.00684C16.7663 2.08032 16.7911 2.15489 16.8135 2.22852H19.0195C19.5724 2.22862 20.0008 2.69526 20.001 3.24512C20.0009 3.7952 19.5723 4.26161 19.0195 4.26172H16.8135C16.7911 4.33533 16.7663 4.40991 16.7373 4.4834C16.5822 4.87582 16.3543 5.2342 16.0664 5.53613C15.7783 5.83812 15.435 6.07828 15.0576 6.24219C14.6803 6.40594 14.2749 6.49119 13.8652 6.49121C13.0375 6.49115 12.2465 6.14548 11.665 5.53613C11.3197 5.17409 11.0682 4.7356 10.9189 4.26172H0.981445C0.462933 4.26172 0.0538274 3.85146 0.00488281 3.34668L0 3.24512C0.000213906 2.6952 0.428486 2.22852 0.981445 2.22852H10.9199C11.069 1.75502 11.3198 1.31708 11.665 0.955078C12.2465 0.345468 13.0374 5.61848e-05 13.8652 0ZM13.8652 2.0332C13.5659 2.03326 13.2762 2.1587 13.0605 2.38477C12.8448 2.61119 12.7217 2.9203 12.7217 3.24512C12.7217 3.5701 12.8448 3.88009 13.0605 4.10645C13.2762 4.33235 13.5661 4.45795 13.8652 4.45801C14.0134 4.45799 14.1615 4.42626 14.2998 4.36621C14.4379 4.30613 14.5645 4.21803 14.6709 4.10645C14.7773 3.99476 14.8624 3.86084 14.9209 3.71289C14.9791 3.56556 15.0097 3.4062 15.0098 3.24512C15.0097 3.08416 14.9791 2.92478 14.9209 2.77734C14.8625 2.6296 14.7773 2.49547 14.6709 2.38379V2.38477C14.5639 2.27259 14.4372 2.18379 14.2998 2.12402C14.1624 2.06434 14.0143 2.03322 13.8652 2.0332Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
                   </div>
                 </div>
-                <div class="grid gap-5 md:grid-cols-3">
+                <div class="grid gap-2 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
                   <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
                     <button
                       class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
@@ -745,7 +756,7 @@
                       </a>
                     </div>
                     <div class="grid gap-5">
-                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                       <button class="btn btn-secondary w-full" href="#">В корзину</button>
                     </div>
                   </div>
@@ -767,8 +778,8 @@
                       </a>
                     </div>
                     <div class="grid gap-5">
-                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
-                      <button class="btn btn-secondary w-full" href="#">В корзину</button>
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-primary w-full" href="#">Подробнее</button>
                     </div>
                   </div>
                   <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
@@ -787,7 +798,7 @@
                       <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры Трансформер </a>
                     </div>
                     <div class="grid gap-5">
-                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                       <button class="btn btn-secondary w-full" href="#">В корзину</button>
                     </div>
                   </div>
@@ -807,7 +818,7 @@
                       <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры "Ананас" </a>
                     </div>
                     <div class="grid gap-5">
-                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                       <button class="btn btn-secondary w-full" href="#">В корзину</button>
                     </div>
                   </div>
@@ -827,7 +838,7 @@
                       <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры с вашим логотипом </a>
                     </div>
                     <div class="grid gap-5">
-                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                       <button class="btn btn-secondary w-full" href="#">В корзину</button>
                     </div>
                   </div>
@@ -1534,6 +1545,178 @@
                 Таблица носит рекомендательный характер и предполагает усредненные значения для выбора нужного размера.
               </p>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="filters" data-active>
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid gap-5">
+            <div class="border-primary-lightest border-b-2 py-3 font-bold uppercase">Фильтр</div>
+            <form class="grid gap-7.5 rounded-[20px] bg-white">
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Цена
+                </p>
+                <div
+                  class="before:bg-gray relative flex justify-between before:absolute before:top-1/2 before:left-0 before:h-0.5 before:w-full before:-translate-y-1/2"
+                >
+                  <div class="relative -m-1.5 bg-white p-1.5">
+                    <input
+                      class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                      name="price-min"
+                      type="number"
+                      value="1234"
+                    />
+                  </div>
+                  <div class="relative -m-1.5 bg-white p-1.5">
+                    <input
+                      class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                      name="price-max"
+                      type="number"
+                      value="1234"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Цвет
+                </p>
+                <div
+                  class="border-gray text-primary-dark bg-gray-lightest rounded-[20px] border-2 text-base"
+                  data-spoiler="colors"
+                >
+                  <div>
+                    <div class="relative flex h-10 items-center justify-between gap-1 py-1 pr-12 pl-5">
+                      <div class="inline-flex grow gap-2.5">
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#ffffff" data-label="Белый" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #ffffff"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#9ed9d7" data-label="Мятный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #9ed9d7"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#37b7d4" data-label="Голубой" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#e50941" data-label="Красный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #e50941"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#f1e849" data-label="Жёлтый" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #f1e849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#000000" data-label="Чёрный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #000000"></span>
+                        </label>
+                      </div>
+                      <button
+                        class="absolute top-1/2 right-2 inline-flex h-7 w-7 -translate-y-1/2 cursor-pointer items-center justify-center"
+                        type="button"
+                        data-spoiler-button
+                      >
+                        <svg width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                      <div class="inline-flex flex-wrap gap-2.5 pt-1 pr-12 pb-2 pl-5">
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#323245" data-label="Цвет 1" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #323245"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#045849" data-label="Цвет 2" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #045849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#37b7d4" data-label="Цвет 3" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#e50941" data-label="Цвет 4" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #e50941"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#f1e849" data-label="Цвет 5" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #f1e849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#305fa0" data-label="Цвет 6" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #305fa0"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#642985" data-label="Цвет 7" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #642985"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-color-selected>
+                  <span class="text-primary-dark">Цвет:</span>
+                  <span data-color-list class="inline-flex flex-wrap gap-1"></span>
+                </div>
+              </div>
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Размер
+                </p>
+                <div
+                  class="border-gray bg-gray-lightest inline-flex min-h-10 flex-wrap items-center gap-[5px] rounded-[20px] border-2 px-5 py-1 text-base"
+                >
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="S" class="sr-only" />
+                    <span class="size-circle">S</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="M" class="sr-only" />
+                    <span class="size-circle">M</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="L" class="sr-only" />
+                    <span class="size-circle">L</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="XL" class="sr-only" />
+                    <span class="size-circle">XL</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="2XL" class="sr-only" />
+                    <span class="size-circle">2XL</span>
+                  </label>
+                </div>
+                <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-size-selected>
+                  <span class="text-primary-dark">Размер:</span>
+                  <span data-size-list class="inline-flex flex-wrap gap-1"></span>
+                </div>
+              </div>
+              <div class="grid justify-items-center gap-5">
+                <button class="btn btn-primary w-full" type="submit">Применить</button>
+                <button class="cursor-pointer text-xs underline">Отчистить фильтр</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
