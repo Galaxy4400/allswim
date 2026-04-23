@@ -777,6 +777,12 @@
   .border-primary-dark {
     border-color: var(--color-primary-dark);
   }
+  .border-primary-dark\/50 {
+    border-color: color-mix(in srgb, #8294b2 50%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-primary-dark) 50%, transparent);
+    }
+  }
   .border-primary-darkest {
     border-color: var(--color-primary-darkest);
   }
