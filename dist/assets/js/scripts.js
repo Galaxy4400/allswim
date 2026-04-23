@@ -54,13 +54,10 @@ const initSpoilers = () => {
       button?.addEventListener('click', () => {
         const isActive = item.hasAttribute('data-active');
 
-        items.forEach((i) => {
-          i.removeAttribute('data-active');
-          const c = i.querySelector('[data-spoiler-content]');
-          if (c) c.style.maxHeight = '0';
-        });
-
-        if (!isActive) {
+        if (isActive) {
+          item.removeAttribute('data-active');
+          if (content) content.style.maxHeight = '0';
+        } else {
           item.setAttribute('data-active', '');
           if (content) content.style.maxHeight = (content.scrollHeight + 2) + 'px';
         }
