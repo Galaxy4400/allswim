@@ -331,9 +331,6 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
   .mb-7\.5 {
     margin-bottom: calc(var(--spacing) * 7.5);
   }
@@ -549,9 +546,6 @@
   }
   .basis-\[300px\] {
     flex-basis: 300px;
-  }
-  .basis-\[505px\] {
-    flex-basis: 505px;
   }
   .basis-auto {
     flex-basis: auto;
@@ -843,9 +837,6 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .p-7\.5 {
-    padding: calc(var(--spacing) * 7.5);
-  }
   .p-10 {
     padding: calc(var(--spacing) * 10);
   }
@@ -878,6 +869,9 @@
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
   }
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
@@ -1611,6 +1605,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .sm\:grid-cols-\[200px_auto\] {
+    @media (width >= 40rem) {
+      grid-template-columns: 200px auto;
+    }
+  }
   .sm\:px-5 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 5);
@@ -1649,6 +1648,11 @@
   .md\:mb-5 {
     @media (width >= 48rem) {
       margin-bottom: calc(var(--spacing) * 5);
+    }
+  }
+  .md\:mb-6 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 6);
     }
   }
   .md\:mb-9 {
@@ -1719,6 +1723,11 @@
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .md\:grid-cols-\[auto_505px\] {
+    @media (width >= 48rem) {
+      grid-template-columns: auto 505px;
     }
   }
   .md\:gap-2 {
@@ -1988,6 +1997,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .lg\:grid-cols-\[200px_auto\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 200px auto;
+    }
+  }
   .lg\:grid-cols-\[305px_1fr\] {
     @media (width >= 64rem) {
       grid-template-columns: 305px 1fr;
@@ -2100,6 +2114,11 @@
   .xl\:grid-cols-3 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .xl\:grid-cols-\[auto_505px\] {
+    @media (width >= 80rem) {
+      grid-template-columns: auto 505px;
     }
   }
   .xl\:gap-10 {

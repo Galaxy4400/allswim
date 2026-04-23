@@ -397,13 +397,15 @@
               </nav>
 
               <section class="py-6 md:py-[50px]">
-                <div class="flex gap-7.5 rounded-2xl bg-white p-7.5">
-                  <div class="flex-auto md:py-[50px]">
+                <div
+                  class="grid gap-3 rounded-2xl bg-white p-5 sm:grid-cols-[200px_auto] md:grid-cols-[auto_505px] md:gap-7.5 md:p-7.5 lg:grid-cols-[200px_auto] xl:grid-cols-[auto_505px]"
+                >
+                  <div class="md:py-[50px]">
                     <div class="mb-7.5 overflow-hidden rounded-[20px]">
                       <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
                     </div>
                   </div>
-                  <div class="shrink-0 basis-[505px]">
+                  <div>
                     <h2 class="mb-4 text-xl leading-[140%] font-bold md:text-[28px]">
                       Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                     </h2>
@@ -427,6 +429,7 @@
                                     value="#ffffff"
                                     data-label="Белый"
                                     class="sr-only"
+                                    checked
                                   />
                                   <span class="color-circle" style="--color-bg: #ffffff"></span>
                                 </label>
@@ -577,7 +580,7 @@
                           class="border-gray bg-gray-lightest inline-flex min-h-10 flex-wrap items-center gap-[5px] rounded-[20px] border-2 px-5 py-1 text-base"
                         >
                           <label class="size-checkbox">
-                            <input type="radio" name="size[]" value="Универсальный" class="sr-only" />
+                            <input type="radio" name="size[]" value="Универсальный" class="sr-only" checked />
                             <span class="size-circle">-</span>
                           </label>
                           <label class="size-checkbox">
@@ -609,26 +612,26 @@
                         </div>
                       </div>
                     </form>
-                    <div class="mb-6 text-[32px] font-bold">5390₽</div>
-                    <div class="mb-6">
+                    <div class="mb-4 text-[32px] font-bold md:mb-6">5390₽</div>
+                    <div class="mb-4 md:mb-6">
                       <button class="btn btn-secondary btn-big w-full">В корзину</button>
                     </div>
                     <div class="grid" data-spoiler="product">
                       <div class="group/item overflow-hidden transition-all">
                         <button
-                          class="group/button border-primary-dark/50 flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 py-4 transition-colors"
+                          class="group/button border-primary-dark/50 flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 py-2.5 transition-colors"
                           data-spoiler-button
                         >
                           <span class="text-left font-bold transition-colors md:text-xl">Описание</span>
                           <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                            <svg width="20" height="10">
+                            <svg width="8" height="7">
                               <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
                             </svg>
                           </span>
                         </button>
                         <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                           <div class="border-primary-dark/50 border-b-2">
-                            <div class="py-4 pr-5 text-xs">
+                            <div class="py-2.5 text-xs">
                               <p>
                                 Шапочка для плавания Arena Moulded Pro II обладает всеми необходимыми для стартовой
                                 шапочки характеристиками. Выполнена из высококачественного 100% силикона, который
@@ -642,19 +645,19 @@
                       </div>
                       <div class="group/item overflow-hidden transition-all">
                         <button
-                          class="group/button border-primary-dark/50 flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 py-4 transition-colors"
+                          class="group/button border-primary-dark/50 flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 py-2.5 transition-colors"
                           data-spoiler-button
                         >
                           <span class="text-left font-bold transition-colors md:text-xl">Доставка</span>
                           <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                            <svg width="20" height="10">
+                            <svg width="8" height="7">
                               <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
                             </svg>
                           </span>
                         </button>
                         <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
                           <div class="border-primary-dark/50 border-b-2">
-                            <div class="py-4 pr-5 text-xs">
+                            <div class="py-2.5 text-xs">
                               <p>
                                 850 рублей: Курьерская доставка по России 450 рублей: До пункта выдачи "СДЭК". Выберем
                                 ближайший к дому.
@@ -699,12 +702,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -729,12 +732,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -759,12 +762,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -789,12 +792,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -819,12 +822,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -849,12 +852,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -879,12 +882,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -909,12 +912,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -999,12 +1002,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1029,12 +1032,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1059,12 +1062,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1089,12 +1092,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1119,12 +1122,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1149,12 +1152,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1179,12 +1182,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#">
+                              <a class="text-xs md:text-base" href="#">
                                 Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                               </a>
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>
@@ -1209,12 +1212,12 @@
                               />
                             </div>
                             <div class="mb-4 grow">
-                              <a class="text-xs md:text-base lg:text-xl" href="#"
+                              <a class="text-xs md:text-base" href="#"
                                 >Шапочка для плавания с флагом России и фамилией</a
                               >
                             </div>
                             <div class="grid gap-5">
-                              <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                              <span class="text-xs font-bold md:text-xl">От 3550₽/шт.</span>
                               <a class="btn btn-primary w-full" href="#">Подробнее</a>
                             </div>
                           </div>

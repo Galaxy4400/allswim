@@ -170,6 +170,7 @@ const initSizeSelected = () => {
   };
 
   inputs.forEach((input) => input.addEventListener('change', update));
+  update();
 };
 
 //===============================================================
@@ -193,6 +194,7 @@ const initColorSelected = () => {
   };
 
   inputs.forEach((input) => input.addEventListener('change', update));
+  update();
 };
 
 //===============================================================
