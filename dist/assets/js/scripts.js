@@ -62,7 +62,7 @@ const initSpoilers = () => {
 
         if (!isActive) {
           item.setAttribute('data-active', '');
-          if (content) content.style.maxHeight = content.scrollHeight + 'px';
+          if (content) content.style.maxHeight = (content.scrollHeight + 2) + 'px';
         }
       });
     });
