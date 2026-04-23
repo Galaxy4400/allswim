@@ -1185,10 +1185,9 @@
       border-bottom-left-radius: 0;
     }
   }
-  .group-data-open\:border-b-0 {
+  .group-data-open\:border-b-gray-lightest {
     &:is(:where(.group)[data-open] *) {
-      border-bottom-style: var(--tw-border-style);
-      border-bottom-width: 0px;
+      border-bottom-color: var(--color-gray-lightest);
     }
   }
   .group-data-selected\/item\:block {
