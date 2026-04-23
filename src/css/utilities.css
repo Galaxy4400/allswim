@@ -98,12 +98,12 @@
 }
 
 @utility btn-secondary {
-  --btn-bg: var(--color-secondary);
-  --btn-bg-hover: var(--color-secondary-light);
+  --btn-bg: var(--color-secondary-light);
+  --btn-bg-hover: var(--color-secondary);
   --btn-text: var(--color-white);
   --btn-text-hover: var(--color-white);
-  --btn-border: var(--color-secondary);
-  --btn-border-hover: var(--color-secondary-light);
+  --btn-border: var(--color-secondary-light);
+  --btn-border-hover: var(--color-secondary);
   --btn-bg-image: none;
   --btn-bg-image-hover: none;
   --btn-shadow: none;
