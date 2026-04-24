@@ -421,6 +421,9 @@
   .h-20 {
     height: calc(var(--spacing) * 20);
   }
+  .h-\[52px\] {
+    height: 52px;
+  }
   .h-\[60px\] {
     height: 60px;
   }
@@ -486,6 +489,9 @@
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
+  }
+  .w-\[52px\] {
+    width: 52px;
   }
   .w-\[55px\] {
     width: 55px;
@@ -1499,6 +1505,12 @@
   .data-active\:flex {
     &[data-active] {
       display: flex;
+    }
+  }
+  .data-active\:font-bold {
+    &[data-active] {
+      --tw-font-weight: var(--font-weight-bold);
+      font-weight: var(--font-weight-bold);
     }
   }
   .data-active\:text-primary-darkest {
