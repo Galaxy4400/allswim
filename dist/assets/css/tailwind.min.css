@@ -1441,6 +1441,16 @@
       }
     }
   }
+  .disabled\:bg-white {
+    &:disabled {
+      background-color: var(--color-white);
+    }
+  }
+  .disabled\:text-gray {
+    &:disabled {
+      color: var(--color-gray);
+    }
+  }
   .data-active\:block {
     &[data-active] {
       display: block;

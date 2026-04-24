@@ -198,6 +198,46 @@ const initColorSelected = () => {
 };
 
 //===============================================================
+const initCounters = () => {
+  document.querySelectorAll('[data-counter]').forEach((counter) => {
+    const [btnMinus, btnPlus] = counter.querySelectorAll('button');
+    const input = counter.querySelector('input');
+
+    if (!btnMinus || !btnPlus || !input) return;
+
+    const min = input.min !== '' ? Number(input.min) : null;
+    const max = input.max !== '' ? Number(input.max) : null;
+
+    const clamp = (val) => {
+      if (min !== null && val < min) return min;
+      if (max !== null && val > max) return max;
+      return val;
+    };
+
+    const updateButtons = (val) => {
+      btnMinus.disabled = min !== null && val <= min;
+      btnPlus.disabled = max !== null && val >= max;
+    };
+
+    const setValue = (val) => {
+      const clamped = clamp(val);
+      input.value = clamped;
+      updateButtons(clamped);
+    };
+
+    btnMinus.addEventListener('click', () => setValue(Number(input.value) - 1));
+    btnPlus.addEventListener('click', () => setValue(Number(input.value) + 1));
+
+    input.addEventListener('change', () => {
+      const parsed = parseInt(input.value, 10);
+      setValue(isNaN(parsed) ? (min ?? 0) : parsed);
+    });
+
+    setValue(Number(input.value));
+  });
+};
+
+//===============================================================
 initLazyLoad();
 initMobileMenu();
 initSearch();
@@ -206,3 +246,4 @@ openFooterSpoilers();
 initModals();
 initSizeSelected();
 initColorSelected();
+initCounters();
