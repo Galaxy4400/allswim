@@ -390,28 +390,20 @@
                 <a href="#" class="breadcrumb-item"
                   >Шапочки для плавания: печать логотипа, рисунка, изображения, флага</a
                 >
-                <span class="breadcrumb-item">Регистрация</span>
+                <span class="breadcrumb-item">Авторизация</span>
               </nav>
 
               <!-- articles -->
               <section class="grid gap-5 py-6 md:py-[50px]">
                 <div class="grid gap-3">
-                  <h2>Регистрация</h2>
+                  <h2>Авторизация</h2>
                 </div>
                 <div>
                   <form class="grid max-w-[620px] gap-5" action="#">
                     <ul class="text-base font-bold text-red-600">
-                      <li>Пароли не совпадают.</li>
+                      <li>Неверный логин или пароль.</li>
                     </ul>
                     <div class="grid gap-4">
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold">Имя</span>
-                        <input class="input" name="name" type="text" placeholder="Имя" />
-                      </label>
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold">Фамилия</span>
-                        <input class="input" name="name" type="text" placeholder="Фамилия" />
-                      </label>
                       <label class="grid gap-2">
                         <span class="text-sm font-bold">
                           <span class="text-[#FFA756]">*</span> Логин (минимум 3 символа)
@@ -419,9 +411,7 @@
                         <input class="input" name="login" type="text" placeholder="Логин" required />
                       </label>
                       <label class="grid gap-2">
-                        <span class="text-sm font-bold">
-                          <span class="text-[#FFA756]">*</span> Пароль (минимум 6 символов)
-                        </span>
+                        <span class="text-sm font-bold"> <span class="text-[#FFA756]">*</span> Пароль </span>
                         <input
                           class="input"
                           name="password"
@@ -431,50 +421,25 @@
                           data-novalid
                         />
                       </label>
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold">
-                          <span class="text-[#FFA756]">*</span> Подтверждение пароля
-                        </span>
-                        <input
-                          class="input"
-                          name="password_repeat"
-                          type="password"
-                          placeholder="Логин"
-                          required
-                          data-novalid
-                        />
-                      </label>
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> E-mail</span>
-                        <input class="input" name="email" type="email" placeholder="E-mail" required />
-                      </label>
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold"
-                          ><span class="text-[#FFA756]">*</span> Ведите слово на картинке</span
-                        >
-                        <div class="grid grid-cols-2 gap-4">
-                          <div class="flex w-full items-center justify-center rounded-full bg-white">
-                            <img src="assets/img/code-text.jpg" alt="code" />
-                          </div>
-                          <input class="input" name="email" type="email" placeholder="Слово" required />
-                        </div>
-                      </label>
                     </div>
                     <div>
                       <label class="inline-flex items-center gap-2.5">
-                        <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
-                        <span class="label">
-                          Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке
-                          и на условиях, указанных в
-                          <a class="underline" href="#">Политике обработки персональных данных</a>.
-                        </span>
+                        <input class="checkbox shrink-0" type="checkbox" name="remember" value="1" required />
+                        <span class="label">Запомнить меня на этом компьютере.</span>
                       </label>
                     </div>
                     <p class="text-xs"><span class="text-[#FFA756]">*</span> - Поля для обязательного заполнения.</p>
                     <div>
                       <button class="btn btn-secondary w-full max-w-[300px]" type="submit" data-modal-open="get-code">
-                        Регистрация
+                        Войти
                       </button>
+                    </div>
+                    <div class="grid gap-3 text-xs">
+                      <a class="font-bold underline" href="#">Забыли свой пароль?</a>
+                      <p>
+                        Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму. <br />
+                        <a class="font-bold underline" href="#">Зарегистрироваться</a>
+                      </p>
                     </div>
                   </form>
                 </div>
