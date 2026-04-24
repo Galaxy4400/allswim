@@ -305,7 +305,7 @@
           </nav>
           <div class="grid gap-5 py-6 md:py-10">
             <h2>Моя корзина</h2>
-            <div class="flex gap-2.5">
+            <div class="flex flex-wrap gap-2.5">
               <a
                 class="border-gray bg-gray-lightest inline-flex h-11 min-w-[250px] items-center justify-center rounded-full border-2 p-10 px-2 py-1 text-center text-base"
                 href="#"
@@ -320,21 +320,24 @@
               </a>
             </div>
             <div class="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_305px]">
-              <div class="rounded-2xl bg-white p-5 md:p-7.5">
-                <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5">
-                  <div class="flex gap-7.5">
-                    <div class="shrink-0 basis-40 overflow-hidden">
+              <div class="rounded-2xl bg-white px-5 py-2.5 md:px-7.5 md:py-2.5">
+                <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5 max-lg:flex-wrap">
+                  <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
+                    <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
                       <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
                     </div>
-                    <div class="grid max-w-[356px]">
+                    <div class="grid content-start xl:w-[356px]">
                       <a class="text-base font-bold" href="#">
                         Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                       </a>
-                      <ul class="grid gap-1 text-xs">
+                      <ul class="grid gap-1 text-xs max-lg:mb-3">
                         <li>Имя на шапочке: <span>ALLSWIM</span></li>
                         <li>Цвет: <span>Черный</span></li>
                         <li>Размер: <span>Универсальный</span></li>
                       </ul>
+                      <div class="lg:hidden">
+                        <span class="text-xl font-bold">5390₽</span>
+                      </div>
                     </div>
                   </div>
                   <div>
@@ -365,8 +368,75 @@
                       </button>
                     </div>
                   </div>
-                  <div class="flex flex-col items-end gap-4">
-                    <div></div>
+                  <div class="flex flex-col items-end justify-center gap-4">
+                    <div class="grow max-lg:hidden">
+                      <span class="text-xl font-bold">5390₽</span>
+                    </div>
+                    <div class="flex items-center gap-5">
+                      <button
+                        class="data-active:text-primary-darkest text-gray w-5 cursor-pointer"
+                        onclick="this.toggleAttribute('data-active')"
+                      >
+                        <svg width="20" height="18">
+                          <use href="assets/img/svg/sprite.svg#heart-2"></use>
+                        </svg>
+                      </button>
+                      <button class="text-gray cursor-pointer hover:text-red-700">
+                        <svg width="16" height="18">
+                          <use href="assets/img/svg/sprite.svg#trash"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex justify-between gap-3 py-5 max-lg:flex-wrap">
+                  <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
+                    <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
+                      <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="grid content-start xl:w-[356px]">
+                      <a class="text-base font-bold" href="#"> Шапочка для плавания "Плавбубу" </a>
+                      <ul class="grid gap-1 text-xs max-lg:mb-3">
+                        <li>Цвет: <span>Сиреневый</span></li>
+                        <li>Размер: <span>Универсальный</span></li>
+                      </ul>
+                      <div class="lg:hidden">
+                        <span class="text-xl font-bold">1490₽</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div
+                      class="border-gray bg-gray-lightest inline-flex h-9 overflow-hidden rounded-2xl border-2 text-center text-base"
+                      data-counter
+                    >
+                      <button
+                        class="border-gray disabled:text-gray inline-flex w-9 cursor-pointer items-center justify-center border-r-2 text-center disabled:bg-white"
+                      >
+                        <svg width="10" height="2">
+                          <use href="assets/img/svg/sprite.svg#minus"></use>
+                        </svg>
+                      </button>
+                      <input
+                        class="inline-flex w-9 items-center justify-center text-center"
+                        type="number"
+                        value="1"
+                        min="1"
+                        max="99"
+                      />
+                      <button
+                        class="border-gray disabled:text-gray inline-flex w-9 cursor-pointer items-center justify-center border-l-2 text-center disabled:bg-white"
+                      >
+                        <svg width="10" height="10">
+                          <use href="assets/img/svg/sprite.svg#plus"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="flex flex-col items-end justify-center gap-4">
+                    <div class="grow max-lg:hidden">
+                      <span class="text-xl font-bold">1490₽</span>
+                    </div>
                     <div class="flex items-center gap-5">
                       <button
                         class="data-active:text-primary-darkest text-gray w-5 cursor-pointer"
@@ -397,7 +467,7 @@
                 <div class="mb-5.5" data-spoiler="promo">
                   <div class="group/item grid content-start gap-2.5">
                     <button
-                      class="group/button border-primary-lighter flex w-full cursor-pointer items-center gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                      class="group/button border-primary-lighter flex w-full cursor-pointer items-center gap-4 text-xs font-extrabold uppercase max-lg:py-4"
                       data-spoiler-button
                     >
                       <span class="text-left text-xs transition-colors">Промокод</span>

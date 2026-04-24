@@ -510,9 +510,6 @@
   .max-w-\[350px\] {
     max-width: 350px;
   }
-  .max-w-\[356px\] {
-    max-width: 356px;
-  }
   .max-w-\[430px\] {
     max-width: 430px;
   }
@@ -566,9 +563,6 @@
   }
   .basis-1\/2 {
     flex-basis: calc(1/2 * 100%);
-  }
-  .basis-40 {
-    flex-basis: calc(var(--spacing) * 40);
   }
   .basis-\[150px\] {
     flex-basis: 150px;
@@ -1500,9 +1494,19 @@
       overflow: hidden;
     }
   }
+  .max-\[430px\]\:flex-wrap {
+    @media (width < 430px) {
+      flex-wrap: wrap;
+    }
+  }
   .max-xl\:flex-col {
     @media (width < 80rem) {
       flex-direction: column;
+    }
+  }
+  .max-lg\:mb-3 {
+    @media (width < 64rem) {
+      margin-bottom: calc(var(--spacing) * 3);
     }
   }
   .max-lg\:hidden {
@@ -1530,6 +1534,11 @@
       flex-basis: 200px;
     }
   }
+  .max-lg\:basis-full {
+    @media (width < 64rem) {
+      flex-basis: 100%;
+    }
+  }
   .max-lg\:grid-cols-\[80px_1fr\] {
     @media (width < 64rem) {
       grid-template-columns: 80px 1fr;
@@ -1538,6 +1547,11 @@
   .max-lg\:flex-col {
     @media (width < 64rem) {
       flex-direction: column;
+    }
+  }
+  .max-lg\:flex-wrap {
+    @media (width < 64rem) {
+      flex-wrap: wrap;
     }
   }
   .max-lg\:overflow-x-scroll {
@@ -1658,6 +1672,16 @@
   .max-sm\:w-full {
     @media (width < 40rem) {
       width: 100%;
+    }
+  }
+  .min-\[430px\]\:shrink-0 {
+    @media (width >= 430px) {
+      flex-shrink: 0;
+    }
+  }
+  .min-\[430px\]\:basis-40 {
+    @media (width >= 430px) {
+      flex-basis: calc(var(--spacing) * 40);
     }
   }
   .sm\:w-\[246px\] {
@@ -1868,6 +1892,16 @@
   .md\:px-7 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 7);
+    }
+  }
+  .md\:px-7\.5 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 7.5);
+    }
+  }
+  .md\:py-2\.5 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 2.5);
     }
   }
   .md\:py-4 {
@@ -2161,6 +2195,11 @@
   .xl\:right-7\.5 {
     @media (width >= 80rem) {
       right: calc(var(--spacing) * 7.5);
+    }
+  }
+  .xl\:w-\[356px\] {
+    @media (width >= 80rem) {
+      width: 356px;
     }
   }
   .xl\:basis-\[724px\] {
