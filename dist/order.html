@@ -305,11 +305,13 @@
           </nav>
           <div class="grid gap-5 py-6 md:py-10">
             <h2>Оформление заказа</h2>
-            <div class="grid grid-cols-1 items-start gap-5 lg:grid-cols-[1fr_305px]">
+            <form class="grid grid-cols-1 items-start gap-5 lg:grid-cols-[1fr_305px]" action="#">
               <div class="rounded-2xl bg-white p-5 md:p-7.5">
                 <div class="border-gray border-b-2">
-                  <div class="flex items-end justify-between gap-4">
-                    <p class="inline-flex gap-3 text-2xl font-bold"><span class="num-circle">1</span> Товары</p>
+                  <div class="flex flex-wrap items-end justify-between gap-4">
+                    <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
+                      <span class="num-circle">1</span> Товары
+                    </p>
                     <a class="text-xs font-bold underline" href="#">Изменить</a>
                   </div>
                   <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5 max-lg:flex-wrap">
@@ -364,8 +366,8 @@
                   </div>
                 </div>
                 <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
-                  <div class="flex items-end justify-between gap-4">
-                    <p class="inline-flex gap-3 text-2xl font-bold">
+                  <div class="flex flex-wrap items-end justify-between gap-4">
+                    <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">2</span> Ваш город: <span>Дубна</span>
                     </p>
                     <a class="text-xs font-bold underline" href="#">Изменить</a>
@@ -381,12 +383,14 @@
                   </div>
                 </div>
                 <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
-                  <div class="flex items-end justify-between gap-4">
-                    <p class="inline-flex gap-3 text-2xl font-bold"><span class="num-circle">3</span> Доставка</p>
+                  <div class="flex flex-wrap items-end justify-between gap-4">
+                    <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
+                      <span class="num-circle">3</span> Доставка
+                    </p>
                     <a class="text-xs font-bold underline" href="#">Изменить</a>
                   </div>
-                  <div class="grid grid-cols-[auto_34%] gap-7.5">
-                    <div class="grid grid-cols-2 gap-5">
+                  <div class="grid gap-7.5 md:grid-cols-[auto_34%]">
+                    <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
                       <label class="order-radio-custom">
                         <input type="radio" name="delivery" value="sdek-pickup" class="sr-only" checked />
                         <div class="text-primary mb-2">
@@ -459,12 +463,14 @@
                   </div>
                 </div>
                 <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
-                  <div class="flex items-end justify-between gap-4">
-                    <p class="inline-flex gap-3 text-2xl font-bold"><span class="num-circle">4</span> Оплата</p>
+                  <div class="flex flex-wrap items-end justify-between gap-4">
+                    <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
+                      <span class="num-circle">4</span> Оплата
+                    </p>
                     <a class="text-xs font-bold underline" href="#">Изменить</a>
                   </div>
-                  <div class="grid grid-cols-[auto_34%] gap-7.5">
-                    <div class="grid grid-cols-2 gap-5">
+                  <div class="grid gap-7.5 md:grid-cols-[auto_34%]">
+                    <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
                       <label class="order-radio-custom">
                         <input type="radio" name="payment" value="now" class="sr-only" checked />
                         <div class="text-primary mb-2">
@@ -562,7 +568,7 @@
                     <div class="max-h-0 overflow-hidden" data-spoiler-content>
                       <div class="flex gap-4">
                         <input class="input" type="text" placeholder="Промокод" />
-                        <button class="btn btn-primary w-14 shrink-0 px-4">
+                        <button class="btn btn-primary w-14 shrink-0 px-4" type="button">
                           <svg width="18" height="15">
                             <use href="assets/img/svg/sprite.svg#check-mark"></use>
                           </svg>
@@ -572,10 +578,10 @@
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-secondary w-full">Оформить заказ</button>
+                  <button class="btn btn-secondary w-full" type="submit">Оформить заказ</button>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
