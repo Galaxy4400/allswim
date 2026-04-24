@@ -2321,6 +2321,9 @@
     background-color: transparent;
     color: var(--color-primary);
   }
+  button {
+    cursor: pointer;
+  }
 }
 @layer utilities {
   .no-arrows::-webkit-inner-spin-button, .no-arrows::-webkit-outer-spin-button {

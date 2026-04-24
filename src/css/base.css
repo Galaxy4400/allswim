@@ -42,4 +42,8 @@
   mark {
     @apply text-primary bg-transparent;
   }
+
+  button {
+    @apply cursor-pointer;
+  }
 }
