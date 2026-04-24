@@ -79,7 +79,7 @@
     --btn-shadow-hover: none;
 
     @apply inline-flex items-center justify-center;
-    @apply min-h-10 px-8 py-1.5 md:min-h-11;
+    @apply min-h-10 px-7 py-1.5 md:min-h-11;
     @apply rounded-full;
     @apply text-sm leading-none font-extrabold md:text-xl;
     @apply cursor-pointer transition-all;

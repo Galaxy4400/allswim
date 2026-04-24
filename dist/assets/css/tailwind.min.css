@@ -334,6 +334,9 @@
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
   }
+  .mb-5\.5 {
+    margin-bottom: calc(var(--spacing) * 5.5);
+  }
   .mb-7\.5 {
     margin-bottom: calc(var(--spacing) * 7.5);
   }
@@ -363,6 +366,9 @@
   }
   .inline-grid {
     display: inline-grid;
+  }
+  .aspect-4\/3 {
+    aspect-ratio: 4/3;
   }
   .aspect-34\/20 {
     aspect-ratio: 34/20;
@@ -399,6 +405,9 @@
   }
   .h-8 {
     height: calc(var(--spacing) * 8);
+  }
+  .h-9 {
+    height: calc(var(--spacing) * 9);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
@@ -460,8 +469,14 @@
   .w-7 {
     width: calc(var(--spacing) * 7);
   }
+  .w-9 {
+    width: calc(var(--spacing) * 9);
+  }
   .w-10 {
     width: calc(var(--spacing) * 10);
+  }
+  .w-14 {
+    width: calc(var(--spacing) * 14);
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
@@ -526,6 +541,9 @@
   .min-w-\[243px\] {
     min-width: 243px;
   }
+  .min-w-\[250px\] {
+    min-width: 250px;
+  }
   .min-w-\[650px\] {
     min-width: 650px;
   }
@@ -543,6 +561,9 @@
   }
   .basis-1\/2 {
     flex-basis: calc(1/2 * 100%);
+  }
+  .basis-40 {
+    flex-basis: calc(var(--spacing) * 40);
   }
   .basis-\[150px\] {
     flex-basis: 150px;
@@ -768,6 +789,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
+  .border-l-2 {
+    border-left-style: var(--tw-border-style);
+    border-left-width: 2px;
+  }
   .border-gray {
     border-color: var(--color-gray);
   }
@@ -854,6 +879,9 @@
   }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
   }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
@@ -989,6 +1017,9 @@
   }
   .text-\[8px\] {
     font-size: 8px;
+  }
+  .text-\[22px\] {
+    font-size: 22px;
   }
   .text-\[32px\] {
     font-size: 32px;
@@ -1813,6 +1844,11 @@
       padding-block: calc(var(--spacing) * 4);
     }
   }
+  .md\:py-10 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 10);
+    }
+  }
   .md\:py-12\.5 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 12.5);
@@ -1998,6 +2034,11 @@
   .lg\:grid-cols-4 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .lg\:grid-cols-\[1fr_305px\] {
+    @media (width >= 64rem) {
+      grid-template-columns: 1fr 305px;
     }
   }
   .lg\:grid-cols-\[200px_auto\] {
@@ -2511,7 +2552,7 @@
     align-items: center;
     justify-content: center;
     min-height: calc(var(--spacing) * 10);
-    padding-inline: calc(var(--spacing) * 8);
+    padding-inline: calc(var(--spacing) * 7);
     padding-block: calc(var(--spacing) * 1.5);
     @media (width >= 48rem) {
       min-height: calc(var(--spacing) * 11);
