@@ -631,6 +631,9 @@
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -1085,6 +1088,12 @@
   }
   .whitespace-nowrap {
     white-space: nowrap;
+  }
+  .text-\[\#0EA70E\] {
+    color: #0EA70E;
+  }
+  .text-\[\#FA4E4E\] {
+    color: #FA4E4E;
   }
   .text-\[\#FFA756\] {
     color: #FFA756;
