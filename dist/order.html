@@ -481,6 +481,41 @@
                     </div>
                   </div>
                 </div>
+                <div class="border-gray grid gap-5 py-6 md:py-7.5">
+                  <div class="flex flex-wrap items-end justify-between gap-4">
+                    <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
+                      <span class="num-circle">5</span> Покупатель
+                    </p>
+                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                  </div>
+                  <div class="grid gap-4">
+                    <label class="grid gap-2">
+                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> ФИО</span>
+                      <input class="input" type="text" placeholder="ФИО" required />
+                    </label>
+                    <label class="grid gap-2">
+                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> E-mail</span>
+                      <input class="input" type="email" placeholder="E-mail" required />
+                    </label>
+                    <label class="grid gap-2">
+                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Телефон</span>
+                      <input class="input" type="tel" placeholder="Телефон" required />
+                    </label>
+                    <label class="grid gap-2">
+                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Адрес доставки</span>
+                      <textarea class="input min-h-22" placeholder="Адрес доставки" name="address" required></textarea>
+                    </label>
+                    <label class="grid gap-2">
+                      <span class="text-sm font-bold">Комментарий к заказу</span>
+                      <textarea
+                        class="input min-h-22"
+                        placeholder="Комментарий к заказу"
+                        name="message"
+                        required
+                      ></textarea>
+                    </label>
+                  </div>
+                </div>
               </div>
               <div class="rounded-2xl bg-white p-5 md:p-7.5">
                 <div class="mb-3 flex justify-between gap-4">
@@ -499,6 +534,7 @@
                   <div class="group/item grid content-start gap-2.5">
                     <button
                       class="group/button border-primary-lighter flex w-full cursor-pointer items-center gap-4 text-xs font-extrabold uppercase max-lg:py-4"
+                      type="button"
                       data-spoiler-button
                     >
                       <span class="text-left text-xs transition-colors">Промокод</span>
@@ -521,7 +557,9 @@
                   </div>
                 </div>
                 <div>
-                  <button class="btn btn-secondary w-full" type="submit">Оформить заказ</button>
+                  <button class="btn btn-secondary w-full" type="submit" data-modal-open="order-done">
+                    Оформить заказ
+                  </button>
                 </div>
               </div>
             </form>

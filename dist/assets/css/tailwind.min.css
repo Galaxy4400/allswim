@@ -447,6 +447,9 @@
   .min-h-10 {
     min-height: calc(var(--spacing) * 10);
   }
+  .min-h-22 {
+    min-height: calc(var(--spacing) * 22);
+  }
   .min-h-24 {
     min-height: calc(var(--spacing) * 24);
   }
@@ -1069,6 +1072,9 @@
   }
   .whitespace-nowrap {
     white-space: nowrap;
+  }
+  .text-\[\#FFA756\] {
+    color: #FFA756;
   }
   .text-gray {
     color: var(--color-gray);
