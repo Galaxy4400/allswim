@@ -321,16 +321,16 @@
             </div>
             <div class="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_305px]">
               <div class="rounded-2xl bg-white p-5 md:p-7.5">
-                <div class="border-primary-dark flex justify-between gap-3 border-b-2 py-5">
+                <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5">
                   <div class="flex gap-7.5">
                     <div class="shrink-0 basis-40 overflow-hidden">
                       <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
                     </div>
-                    <div class="grid">
+                    <div class="grid max-w-[356px]">
                       <a class="text-base font-bold" href="#">
                         Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
                       </a>
-                      <ul class="grid gap-1">
+                      <ul class="grid gap-1 text-xs">
                         <li>Имя на шапочке: <span>ALLSWIM</span></li>
                         <li>Цвет: <span>Черный</span></li>
                         <li>Размер: <span>Универсальный</span></li>
@@ -366,7 +366,24 @@
                       </button>
                     </div>
                   </div>
-                  <div></div>
+                  <div class="flex flex-col items-end gap-4">
+                    <div></div>
+                    <div class="flex items-center gap-5">
+                      <button
+                        class="data-active:text-primary-darkest text-gray w-5 cursor-pointer"
+                        onclick="this.toggleAttribute('data-active')"
+                      >
+                        <svg width="20" height="18">
+                          <use href="assets/img/svg/sprite.svg#heart-2"></use>
+                        </svg>
+                      </button>
+                      <button class="text-gray hover:text-red-700">
+                        <svg width="16" height="18">
+                          <use href="assets/img/svg/sprite.svg#trash"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="rounded-2xl bg-white p-5 md:p-7.5">
