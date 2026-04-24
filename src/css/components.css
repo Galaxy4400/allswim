@@ -211,4 +211,8 @@
   .size-checkbox:has(input:checked) .size-circle {
     @apply border-primary-darkest;
   }
+
+  .num-circle {
+    @apply bg-primary-darkest inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white;
+  }
 }
