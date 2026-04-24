@@ -212,6 +212,13 @@
     @apply border-primary-darkest;
   }
 
+  .order-radio-custom {
+    @apply border-gray flex cursor-pointer flex-col items-center justify-center rounded-2xl border-2 bg-white p-5 text-center;
+  }
+  .order-radio-custom:has(input:checked) {
+    @apply border-primary-darkest bg-gray-lightest;
+  }
+
   .num-circle {
     @apply bg-primary-darkest inline-flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold text-white;
   }
