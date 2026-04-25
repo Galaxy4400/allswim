@@ -10,7 +10,8 @@
       "Bash(npm uninstall:*)",
       "Bash(python3 *)",
       "Bash(curl -s http://localhost:3000/assets/img/svg/sprite.svg)",
-      "Bash(curl -s http://localhost:3002/article.html)"
+      "Bash(curl -s http://localhost:3002/article.html)",
+      "Bash(awk '{print $9, $5}')"
     ]
   }
 }
