@@ -1,0 +1,2414 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allswim</title>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+    <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+    <script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
+    <script src="https://unpkg.com/embla-carousel-auto-scroll@8.6.0/embla-carousel-auto-scroll.umd.js" defer></script>
+    <script src="assets/js/lazyload.min.js" defer></script>
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/custom-select.js" defer></script>
+    <script src="assets/js/forms.js" defer></script>
+    <script src="assets/js/sliders.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/preloader.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/css/tailwind.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/assets/css/tailwind.min.css" /></noscript>
+  </head>
+
+  <body class="data-modal-lock:overflow-hidden">
+    <!-- header -->
+    <header class="fixed top-0 left-0 z-50 w-full bg-white">
+      <!-- search -->
+      <div
+        class="absolute top-0 left-0 z-60 hidden max-h-screen w-full bg-white data-active:block"
+        data-search-container
+      >
+        <div class="container-base">
+          <div class="flex h-[60px] items-center lg:h-[105px]">
+            <div class="flex w-full gap-6">
+              <div class="relative grow">
+                <input
+                  class="border-primary-darkest h-11 w-full rounded-[20px] border-2 py-1 pr-[100px] pl-10 text-xl lg:h-12"
+                  type="text"
+                  placeholder="Поиск"
+                  data-search-input
+                />
+                <div class="absolute top-1/2 right-10 flex -translate-y-1/2 items-center gap-5">
+                  <button class="text-primary-darker cursor-pointer" data-search-clear>
+                    <svg width="10" height="10">
+                      <use href="assets/img/svg/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                  <button class="cursor-pointer" data-search-action>
+                    <svg width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="cursor-pointer" data-search-close>
+                <svg width="22" height="22">
+                  <use href="assets/img/svg/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="-mx-10 grid max-h-[calc(100vh-105px)] gap-10 overflow-y-auto p-10">
+            <div class="border-primary-lighter grid gap-5 border-b-2 pb-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                <p class="text-base font-bold">Шапочки для плавания</p>
+                <div class="overflow-hidden rounded-[20px]">
+                  <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-1.jpg" alt="img" />
+                </div>
+              </a>
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                <p class="text-base font-bold">Полотенца</p>
+                <div class="overflow-hidden rounded-[20px]">
+                  <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                </div>
+              </a>
+            </div>
+            <div class="grid gap-10">
+              <div class="flex items-center gap-7.5">
+                <div class="shrink-0 basis-[150px] overflow-hidden">
+                  <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                </div>
+                <div class="relative flex flex-col gap-5">
+                  <a class="text-base" href="#"
+                    >Стартовая шапочка Arena Moulded Pro II <br />
+                    с флагом России и фамилией</a
+                  >
+                  <span class="text-xl font-bold">от 5390₽</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-7.5">
+                <div class="shrink-0 basis-[150px] overflow-hidden">
+                  <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                </div>
+                <div class="relative flex flex-col gap-5">
+                  <a class="text-base" href="#"
+                    >Стартовая шапочка Arena Moulded Pro II <br />
+                    с флагом России и фамилией</a
+                  >
+                  <span class="text-xl font-bold">от 5390₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mobile-menu" data-mobile-menu>
+        <div class="container-base h-full">
+          <div class="flex h-full w-full flex-col pb-16">
+            <div class="after-line flex h-[60px] items-center justify-between gap-5">
+              <span class="text-xs underline">Дубна</span>
+              <button class="cursor-pointer" data-menu-close>
+                <svg width="22" height="22">
+                  <use href="assets/img/svg/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+            <nav class="grow">
+              <ul class="after-line grid gap-6 py-6">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Подарочные наборы</a>
+                </li>
+              </ul>
+              <ul class="after-line grid gap-6 py-6">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Помощь</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="grid gap-6">
+              <div class="grid gap-2">
+                <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 499 899-08-59</a>
+                <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+              </div>
+              <div class="flex gap-2.5">
+                <a class="w-6" href="#">
+                  <svg width="20" height="20">
+                    <use href="assets/img/svg/sprite.svg#social-tg"></use>
+                  </svg>
+                </a>
+                <a class="w-6" href="#">
+                  <svg width="20" height="20">
+                    <use href="assets/img/svg/sprite.svg#social-vk"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- header line -->
+      <div class="container-base">
+        <div class="relative flex min-h-[60px] items-center justify-between gap-10 lg:min-h-[105px]">
+          <button class="basis-[300px] cursor-pointer lg:hidden lg:basis-1/2" data-menu-icon>
+            <svg width="26" height="20">
+              <use href="assets/img/svg/sprite.svg#menu-icon"></use>
+            </svg>
+          </button>
+          <div class="flex items-center gap-10">
+            <a class="w-[55px] shrink-0 lg:w-[100px]" href="#">
+              <img src="assets/img/svg/logo.svg" alt="logo" />
+            </a>
+            <nav class="max-lg:hidden">
+              <ul class="flex flex-wrap justify-center gap-x-6 gap-y-1">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                </li>
+                <li class="group">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                    каталог
+                    <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
+                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="invisible absolute top-full left-0 w-full rounded-b-3xl bg-white p-14 group-hover:visible before:absolute before:-top-10 before:left-0 before:h-10 before:w-full"
+                  >
+                    <div class="grid grid-cols-4 gap-5 xl:gap-10">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Шапочки для плавания</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-1.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Полотенца</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Товары ВФП</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-1.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Подарочные наборы</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="group relative">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                    еще
+                    <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
+                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="invisible absolute top-full left-0 w-[150px] rounded-b-2xl bg-white p-4 group-hover:visible"
+                  >
+                    <ul>
+                      <li class="border-primary-light border-b py-2"><a href="#">Помощь</a></li>
+                      <li class="py-2"><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex items-center justify-end gap-7.5 max-lg:basis-1/2">
+            <div class="flex gap-2.5 max-lg:hidden">
+              <a class="w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#social-tg"></use>
+                </svg>
+              </a>
+              <a class="w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#social-vk"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="grid gap-2 max-lg:hidden">
+              <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 499 899-08-59</a>
+              <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+            </div>
+            <div class="relative flex gap-5">
+              <button class="w-5 cursor-pointer" data-search-open>
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <a class="relative w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#cart"></use>
+                </svg>
+                <span class="num-label">2</span>
+              </a>
+              <a class="relative w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#persone"></use>
+                </svg>
+                <span class="num-label">1</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <!-- slider -->
+      <section class="pb-6 md:pb-[50px]">
+        <div class="container-base">
+          <div class="relative grid gap-5 md:gap-2">
+            <div class="overflow-hidden" data-slider="main">
+              <div class="flex">
+                <div class="min-w-0 shrink-0 basis-full">
+                  <div class="flex h-full items-center justify-center max-md:flex-col-reverse">
+                    <div class="grid h-full basis-1/2 content-center justify-items-start gap-5 md:gap-10 md:py-4">
+                      <div class="grid gap-3 max-md:gap-2 max-md:text-center">
+                        <h1>
+                          Шапочки для плавания <br />
+                          с вашим логотипом
+                        </h1>
+                        <p>Покажите, что вы-команда!</p>
+                      </div>
+                      <button class="btn btn-big btn-primary max-md:justify-self-center" data-modal-open="request-form">
+                        Хочу шапочки
+                      </button>
+                    </div>
+                    <div class="basis-1/2">
+                      <img src="assets/img/slide-1.png" alt="slide" />
+                    </div>
+                  </div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full">
+                  <div class="flex h-full items-center justify-center max-md:flex-col-reverse">
+                    <div class="grid h-full basis-1/2 content-center justify-items-start gap-5 md:gap-10 md:py-4">
+                      <div class="grid gap-3 max-md:gap-2 max-md:text-center">
+                        <h1>
+                          Стартовые шапочки <br />
+                          “Как у сборной”
+                        </h1>
+                        <p>С флагом России и фамилией</p>
+                      </div>
+                      <button
+                        class="btn btn-big btn-secondary max-md:justify-self-center"
+                        data-modal-open="request-form"
+                      >
+                        Хочу шапочки
+                      </button>
+                    </div>
+                    <div class="basis-1/2">
+                      <img src="assets/img/slide-2.png" alt="slide" />
+                    </div>
+                  </div>
+                </div>
+                <div class="min-w-0 shrink-0 basis-full">
+                  <div class="flex h-full items-center justify-center max-md:flex-col-reverse">
+                    <div class="grid h-full basis-1/2 content-center justify-items-start gap-5 md:gap-10 md:py-4">
+                      <div class="grid gap-3 max-md:gap-2 max-md:text-center">
+                        <h1>
+                          Полотенца <br />
+                          из микрофибры
+                        </h1>
+                        <p>С вашим логотипом</p>
+                      </div>
+                      <button class="btn btn-big btn-primary max-md:justify-self-center" data-modal-open="request-form">
+                        Хочу полотенца
+                      </button>
+                    </div>
+                    <div class="basis-1/2">
+                      <img src="assets/img/slide-3.png" alt="slide" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between gap-8 max-md:hidden"
+            >
+              <button
+                class="arrow-btn mirror-x -translate-x-1/2 xl:-translate-x-[50px] 2xl:-translate-x-[100px]"
+                data-prev="main"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+              <button class="arrow-btn translate-x-1/2 xl:translate-x-[50px] 2xl:translate-x-[100px]" data-next="main">
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="paggination" data-paggination="main"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- service -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Выбор профессиональных спортсменов</h2>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="overflow-scroll-p-md max-lg:overflow-x-scroll max-lg:overflow-y-hidden">
+            <div class="-m-1 flex md:-m-2.5 lg:flex-wrap">
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-1"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Гарантия</h4>
+                    <p class="text-small leading-5 md:leading-6">
+                      Вы получите гарантию быстрой замены. Если тираж большой, то сразу добавим несколько запасных.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-2"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Долго выглядят новыми</h4>
+                    <p class="text-small leading-5 md:leading-6">
+                      Изображение наносится силиконовой краской промышленным методом. Устойчивы к хлору.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-3"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Для тренировок и соревнований</h4>
+                    <p class="text-small leading-5 md:leading-6">
+                      Мягкие тренировочные или плотные стартовые 3D шапочки.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/2">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-4"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Качество для спортивного плавания</h4>
+                    <p class="text-small leading-5 md:leading-6">
+                      100% плотные силиконовые шапочки. Без лого производителя и брендовые 3D Arena. Качество уровня
+                      ведущих мировых плавательных брендов Arena, TYR, Speedo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/2">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-5"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Разнообразие и индивидуальность</h4>
+                    <p class="text-small leading-5 md:leading-6">
+                      15 цветов шапочек на выбор, любое количество цветов нанесения рисунка. Нанесение золотом,
+                      блестками, глиттером различных оттенков.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-6"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Персональные условия</h4>
+                    <p class="text-small leading-5 md:leading-6">Цена от 650 рублей. Срок изготовления до 14 дней.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-7"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Отрисовка рисунка в векторе</h4>
+                    <p class="text-small leading-5 md:leading-6">Вы получите готовые макеты в векторном формате.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 basis-auto p-1 md:p-2.5 lg:basis-1/3">
+                <div
+                  class="grid h-full content-start gap-5 rounded-[20px] bg-white p-5 transition-shadow hover:shadow-xl max-lg:w-[300px]"
+                >
+                  <div>
+                    <svg width="60" height="50">
+                      <use href="assets/img/svg/sprite.svg#service-8"></use>
+                    </svg>
+                  </div>
+                  <div class="grid content-start gap-2.5">
+                    <h4>Быстрая доставка по России</h4>
+                    <p class="text-small leading-5 md:leading-6">Почта России, CDEK, курьер.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- team -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Покажите, что вы команда!</h2>
+            <p>Смотрите больше фото и видео в нашей группе <a class="underline" href="#">ВКонтакте</a>.</p>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="overflow-scroll-p-md max-lg:overflow-x-scroll max-lg:overflow-y-hidden">
+            <div class="flex gap-2 md:gap-5 lg:grid lg:grid-cols-4">
+              <div
+                class="shrink-0 overflow-hidden rounded-[20px] transition-transform hover:scale-[1.05] max-lg:basis-[200px]"
+              >
+                <img class="aspect-square w-full object-cover" src="assets/img/team-1.jpg" alt="img" />
+              </div>
+              <div
+                class="shrink-0 overflow-hidden rounded-[20px] transition-transform hover:scale-[1.05] max-lg:basis-[200px]"
+              >
+                <img class="aspect-square w-full object-cover" src="assets/img/team-2.jpg" alt="img" />
+              </div>
+              <div
+                class="shrink-0 overflow-hidden rounded-[20px] transition-transform hover:scale-[1.05] max-lg:basis-[200px]"
+              >
+                <img class="aspect-square w-full object-cover" src="assets/img/team-3.jpg" alt="img" />
+              </div>
+              <div
+                class="shrink-0 overflow-hidden rounded-[20px] transition-transform hover:scale-[1.05] max-lg:basis-[200px]"
+              >
+                <img class="aspect-square w-full object-cover" src="assets/img/team-4.jpg" alt="img" />
+              </div>
+              <div
+                class="shrink-0 overflow-hidden rounded-[20px] transition-transform hover:scale-[1.05] max-lg:basis-[200px] lg:col-span-2 lg:col-start-3 lg:row-span-2 lg:row-start-1"
+              >
+                <img class="h-full w-full object-cover" src="assets/img/team-5.jpg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- partners -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base">
+          <div class="grid gap-1.5 pb-4 md:gap-5 lg:pb-8.5">
+            <h2>Всегда остаются довольны</h2>
+          </div>
+          <div class="grid gap-5 max-lg:hidden">
+            <div class="flex h-[120px] justify-around gap-5 rounded-[20px] bg-white p-5">
+              <div class="flex items-center">
+                <svg width="120" height="80">
+                  <use href="assets/img/svg/sprite.svg#partner-1"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="32">
+                  <use href="assets/img/svg/sprite.svg#partner-2"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="45">
+                  <use href="assets/img/svg/sprite.svg#partner-3"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="22">
+                  <use href="assets/img/svg/sprite.svg#partner-4"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="flex h-[120px] justify-around gap-5 rounded-[20px] bg-white p-5">
+              <div class="flex items-center">
+                <svg width="120" height="17">
+                  <use href="assets/img/svg/sprite.svg#partner-5"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="56">
+                  <use href="assets/img/svg/sprite.svg#partner-6"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="30">
+                  <use href="assets/img/svg/sprite.svg#partner-7"></use>
+                </svg>
+              </div>
+              <div class="flex items-center">
+                <svg width="120" height="54">
+                  <use href="assets/img/svg/sprite.svg#partner-8"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid gap-5 lg:hidden">
+          <div class="h-[120px] overflow-hidden bg-white" data-slider="partners">
+            <div class="flex h-full items-center">
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="80">
+                  <use href="assets/img/svg/sprite.svg#partner-1"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="32">
+                  <use href="assets/img/svg/sprite.svg#partner-2"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="45">
+                  <use href="assets/img/svg/sprite.svg#partner-3"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="22">
+                  <use href="assets/img/svg/sprite.svg#partner-4"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="17">
+                  <use href="assets/img/svg/sprite.svg#partner-5"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="56">
+                  <use href="assets/img/svg/sprite.svg#partner-6"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="30">
+                  <use href="assets/img/svg/sprite.svg#partner-7"></use>
+                </svg>
+              </div>
+              <div class="flex shrink-0 basis-[300px] items-center px-8">
+                <svg width="120" height="54">
+                  <use href="assets/img/svg/sprite.svg#partner-8"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- top -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>ТОП-продаж</h2>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="relative">
+            <div class="grid gap-1.5" data-slider="sales">
+              <div class="-pl-2 md:-pl-5 lg:-ml-10">
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#"
+                        >Шапочка для плавания с флагом России и фамилией</a
+                      >
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#"
+                        >Шапочка для плавания с флагом России и фамилией</a
+                      >
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#"
+                        >Шапочка для плавания с флагом России и фамилией</a
+                      >
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 5390₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div
+                    class="relative flex h-full w-[200px] flex-col rounded-2xl bg-white p-5 md:w-[300px] md:p-7.5 lg:w-[400px]"
+                  >
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base lg:text-xl" href="#"
+                        >Шапочка для плавания с флагом России и фамилией</a
+                      >
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-base lg:text-2xl">От 3550₽/шт.</span>
+                      <a class="btn btn-primary w-full" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between gap-8 max-md:hidden"
+            >
+              <button
+                class="arrow-btn mirror-x -translate-x-1/2 xl:-translate-x-[50px] 2xl:-translate-x-[100px]"
+                data-prev="sales"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+              <button class="arrow-btn translate-x-1/2 xl:translate-x-[50px] 2xl:translate-x-[100px]" data-next="sales">
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- prices -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Цены на тиражи</h2>
+            <p>Классические шапочки ALLSWIM (без логотипа бренда). 15+ цветов на выбор. Печать с двух сторон.</p>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="overflow-scroll-p-md mb-1.5 max-lg:overflow-x-scroll max-lg:overflow-y-hidden md:mb-9">
+            <div class="min-w-[650px] rounded-[20px] bg-white p-5 md:min-w-[900px] md:p-7.5">
+              <table class="table-rounded-rows w-full table-fixed">
+                <thead>
+                  <tr class="bg-secondary-light text-white">
+                    <th class="relative w-1/6 px-1 py-4 text-left text-xs md:px-2 md:text-2xl">
+                      Тираж, шт./<br />кол-во цветов
+                    </th>
+                    <th class="relative w-1/6 px-1 py-4 text-base md:px-3 md:text-2xl">1 цвет</th>
+                    <th class="relative w-1/6 px-1 py-4 text-base md:px-3 md:text-2xl">2 цвета</th>
+                    <th class="relative w-1/6 px-1 py-4 text-base md:px-3 md:text-2xl">3 цвета</th>
+                    <th class="relative w-1/6 px-1 py-4 text-base md:px-3 md:text-2xl">4 цвета</th>
+                    <th class="relative w-1/6 px-1 py-4 text-base md:px-3 md:text-2xl">5+ цветов</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center text-base md:text-2xl">
+                  <tr>
+                    <td class="relative p-4 font-bold">1-5</td>
+                    <td class="relative p-4">3150₽</td>
+                    <td class="relative p-4">3350₽</td>
+                    <td class="relative p-4">3550₽</td>
+                    <td class="relative p-4">5990₽</td>
+                    <td class="relative p-4">-</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">6-10</td>
+                    <td class="relative p-4">2090₽</td>
+                    <td class="relative p-4">2300₽</td>
+                    <td class="relative p-4">2600₽</td>
+                    <td class="relative p-4">4200₽</td>
+                    <td class="relative p-4">-</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">11-15</td>
+                    <td class="relative p-4">1300₽</td>
+                    <td class="relative p-4">1700₽</td>
+                    <td class="relative p-4">1840₽</td>
+                    <td class="relative p-4">1900₽</td>
+                    <td class="relative p-4">2300₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">16-25</td>
+                    <td class="relative p-4">1210₽</td>
+                    <td class="relative p-4">1350₽</td>
+                    <td class="relative p-4">1580₽</td>
+                    <td class="relative p-4">1700₽</td>
+                    <td class="relative p-4">1980₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">26-50</td>
+                    <td class="relative p-4">990₽</td>
+                    <td class="relative p-4">1100₽</td>
+                    <td class="relative p-4">1200₽</td>
+                    <td class="relative p-4">1400₽</td>
+                    <td class="relative p-4">1650₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">51-100</td>
+                    <td class="relative p-4">890₽</td>
+                    <td class="relative p-4">990₽</td>
+                    <td class="relative p-4">1100₽</td>
+                    <td class="relative p-4">1200₽</td>
+                    <td class="relative p-4">1300₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">101-200</td>
+                    <td class="relative p-4">790₽</td>
+                    <td class="relative p-4">890₽</td>
+                    <td class="relative p-4">990₽</td>
+                    <td class="relative p-4">1090₽</td>
+                    <td class="relative p-4">1150₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">201-300</td>
+                    <td class="relative p-4">760₽</td>
+                    <td class="relative p-4">850₽</td>
+                    <td class="relative p-4">890₽</td>
+                    <td class="relative p-4">950₽</td>
+                    <td class="relative p-4">990₽</td>
+                  </tr>
+                  <tr>
+                    <td class="relative p-4 font-bold">300+</td>
+                    <td class="relative p-4">650₽</td>
+                    <td class="relative p-4">715₽</td>
+                    <td class="relative p-4">780₽</td>
+                    <td class="relative p-4">840₽</td>
+                    <td class="relative p-4">870₽</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="h3 text-right">*Добавление фамилии +850₽/шт.</p>
+        </div>
+      </section>
+
+      <!-- catalog -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Каталог товаров</h2>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="relative">
+            <div class="grid gap-1.5" data-slider="catalog">
+              <div class="-pl-2 md:-pl-5 lg:-ml-10">
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <h3 class="mb-7.5 grow">Шапочки для плавания</h3>
+                    <div class="mb-7.5">
+                      <ul class="inline-grid gap-3">
+                        <li><a class="inline-block text-sm underline" href="#">Силиконовые шапочки</a></li>
+                        <li>
+                          <a class="inline-block text-sm underline" href="#">Стартовые шапочки для соревнований</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mb-5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/273 w-full object-cover" src="assets/img/cat-1.jpg" alt="cat" />
+                    </div>
+                    <a class="btn btn-primary w-full" href="#">Посмотреть</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <h3 class="mb-7.5 grow">Полотенца</h3>
+                    <div class="mb-7.5">
+                      <ul class="inline-grid gap-3">
+                        <li><a class="inline-block text-sm underline" href="#">Полотенца из микрофибры</a></li>
+                        <li><a class="inline-block text-sm underline" href="#">Полотенца с вашим логотипом</a></li>
+                      </ul>
+                    </div>
+                    <div class="mb-5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/273 w-full object-cover" src="assets/img/cat-2.jpg" alt="cat" />
+                    </div>
+                    <a class="btn btn-primary w-full" href="#">Посмотреть</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <h3 class="mb-7.5 grow">Товары ВФП</h3>
+                    <div class="mb-7.5">
+                      <ul class="inline-grid grid-cols-2 gap-x-5 gap-y-3">
+                        <li><a class="inline-block text-sm underline" href="#">Шапочки ВФП</a></li>
+                        <li><a class="inline-block text-sm underline" href="#">Значки ВФП</a></li>
+                        <li><a class="inline-block text-sm underline" href="#">Одежда ВФП</a></li>
+                        <li><a class="inline-block text-sm underline" href="#">Разное</a></li>
+                      </ul>
+                    </div>
+                    <div class="mb-5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/273 w-full object-cover" src="assets/img/cat-3.jpg" alt="cat" />
+                    </div>
+                    <a class="btn btn-primary w-full" href="#">Посмотреть</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <h3 class="mb-7.5 grow">Подарочные наборы</h3>
+                    <div class="mb-7.5">
+                      <ul class="inline-grid gap-3">
+                        <li><a class="inline-block text-sm underline" href="#">Подарочные наборы для пловца </a></li>
+                        <li><a class="inline-block text-sm underline" href="#">Подарочные наборы для тренера</a></li>
+                      </ul>
+                    </div>
+                    <div class="mb-5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/273 w-full object-cover" src="assets/img/cat-4.jpg" alt="cat" />
+                    </div>
+                    <a class="btn btn-primary w-full" href="#">Посмотреть</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between gap-8 max-md:hidden"
+            >
+              <button
+                class="arrow-btn mirror-x -translate-x-1/2 xl:-translate-x-[50px] 2xl:-translate-x-[100px]"
+                data-prev="catalog"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+              <button
+                class="arrow-btn translate-x-1/2 xl:translate-x-[50px] 2xl:translate-x-[100px]"
+                data-next="catalog"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- reviews -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Отзывы</h2>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="relative">
+            <div class="grid gap-1.5" data-slider="reviews">
+              <div class="-pl-2 md:-pl-5 lg:-ml-5">
+                <div class="basis-auto pl-2 md:pl-5">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[305px] md:p-7.5">
+                    <div class="mb-7.5 grid grow content-start gap-2.5">
+                      <div class="mb-2.5">
+                        <svg width="108" height="20">
+                          <use href="assets/img/svg/sprite.svg#stars"></use>
+                        </svg>
+                      </div>
+                      <p class="text-primary-darker text-xs leading-4">
+                        Несколько раз заказывали шапочки, одину с логотипом команды и фамилией, другую просто
+                        тренировочную с интересным принтом. Качество шапочек очень хорошее. У дочери длинные, густые
+                        волосы, бывает, шапка просто лопается со временем, эта выдерживает всё. Не просвечивает.
+                      </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-primary-darker text-xs font-bold underline">София Мильская</span>
+                      <div
+                        class="bg-primary-lightest text-primary-darker inline-flex h-10 w-10 items-center justify-center rounded-full"
+                      >
+                        <svg width="18" height="18">
+                          <use href="assets/img/svg/sprite.svg#avatar"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[305px] md:p-7.5">
+                    <div class="mb-7.5 grid grow content-start gap-2.5">
+                      <div class="mb-2.5">
+                        <svg width="108" height="20">
+                          <use href="assets/img/svg/sprite.svg#stars"></use>
+                        </svg>
+                      </div>
+                      <p class="text-primary-darker text-xs leading-4">
+                        Заказал именную шапочку именную. Изгатовленно как надо 👍. Ребенок доволен - это главное. 😎 Что
+                        сказать о характеристике изготовления шапочки- 5+🤝. Ребята молодцы изготовили быстро и
+                        качественно. Успехов и процветания.
+                      </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-primary-darker text-xs font-bold underline">Юрий Г.</span>
+                      <div
+                        class="bg-primary-lightest text-primary-darker inline-flex h-10 w-10 items-center justify-center rounded-full"
+                      >
+                        <svg width="18" height="18">
+                          <use href="assets/img/svg/sprite.svg#avatar"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[305px] md:p-7.5">
+                    <div class="mb-7.5 grid grow content-start gap-2.5">
+                      <div class="mb-2.5">
+                        <svg width="108" height="20">
+                          <use href="assets/img/svg/sprite.svg#stars"></use>
+                        </svg>
+                      </div>
+                      <p class="text-primary-darker text-xs leading-4">
+                        Заказывали плавательную шапочку с логотипом и фамилией, получили очень быстро. Так же хочу
+                        отметить качество - материал плотный, не просвечивает, не растягивается. Будем еще обращаться в
+                        данную компанию, спасибо за достойный товар.
+                      </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-primary-darker text-xs font-bold underline">Наталья Г.</span>
+                      <div
+                        class="bg-primary-lightest text-primary-darker inline-flex h-10 w-10 items-center justify-center rounded-full"
+                      >
+                        <svg width="18" height="18">
+                          <use href="assets/img/svg/sprite.svg#avatar"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[305px] md:p-7.5">
+                    <div class="mb-7.5 grid grow content-start gap-2.5">
+                      <div class="mb-2.5">
+                        <svg width="108" height="20">
+                          <use href="assets/img/svg/sprite.svg#stars"></use>
+                        </svg>
+                      </div>
+                      <p class="text-primary-darker text-xs leading-4">
+                        Отличные шапочки, заказывали на команду, качество логотипов 💥. Стойкие, все детали видно, как
+                        на макете. Спортсмен доволен😀 изготовление и доставка быстрые.
+                      </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-primary-darker text-xs font-bold underline">Max</span>
+                      <div
+                        class="bg-primary-lightest text-primary-darker inline-flex h-10 w-10 items-center justify-center rounded-full"
+                      >
+                        <svg width="18" height="18">
+                          <use href="assets/img/svg/sprite.svg#avatar"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[305px] md:p-7.5">
+                    <div class="mb-7.5 grid grow content-start gap-2.5">
+                      <div class="mb-2.5">
+                        <svg width="108" height="20">
+                          <use href="assets/img/svg/sprite.svg#stars"></use>
+                        </svg>
+                      </div>
+                      <p class="text-primary-darker text-xs leading-4">
+                        Отличные шапочки, заказывали на команду, качество логотипов 💥. Стойкие, все детали видно, как
+                        на макете. Спортсмен доволен😀 изготовление и доставка быстрые.
+                      </p>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-primary-darker text-xs font-bold underline">Max</span>
+                      <div
+                        class="bg-primary-lightest text-primary-darker inline-flex h-10 w-10 items-center justify-center rounded-full"
+                      >
+                        <svg width="18" height="18">
+                          <use href="assets/img/svg/sprite.svg#avatar"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between gap-8 max-md:hidden"
+            >
+              <button
+                class="arrow-btn mirror-x -translate-x-1/2 xl:-translate-x-[50px] 2xl:-translate-x-[100px]"
+                data-prev="reviews"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+              <button
+                class="arrow-btn translate-x-1/2 xl:translate-x-[50px] 2xl:translate-x-[100px]"
+                data-next="reviews"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- articles -->
+      <section class="py-6 md:py-[50px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 md:gap-5">
+            <h2>Полезная информация</h2>
+          </div>
+        </div>
+        <div class="container-base max-lg:px-0">
+          <div class="relative">
+            <div class="grid gap-1.5" data-slider="articles">
+              <div class="-pl-2 md:-pl-5 lg:-ml-10">
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <div class="mb-7.5 grid gap-2">
+                      <p class="h4">Виды спортивного плавания: обзор стилей</p>
+                      <div class="inline-flex items-center gap-1">
+                        <div class="w-5 md:w-6">
+                          <svg width="24" height="24">
+                            <use href="assets/img/svg/sprite.svg#clock"></use>
+                          </svg>
+                        </div>
+                        <span class="text-sm">4 минуты</span>
+                      </div>
+                    </div>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/162 w-full object-cover" src="assets/img/new-1.jpg" alt="new" />
+                    </div>
+                    <div class="mb-7.5 grow text-sm">
+                      <p>
+                        На соревнованиях выступают в нескольких основных спортивных стилях плавания: вольный, брасс,
+                        баттерфляй, кроль на спине и комбинированное плавание. Каждый...
+                      </p>
+                    </div>
+                    <a class="text-sm font-bold underline" href="#">Читать дальше</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <div class="mb-7.5 grid gap-2">
+                      <p class="h4">Какой способ плавания называется кроль на спине?</p>
+                      <div class="inline-flex items-center gap-1">
+                        <div class="w-5 md:w-6">
+                          <svg width="24" height="24">
+                            <use href="assets/img/svg/sprite.svg#clock"></use>
+                          </svg>
+                        </div>
+                        <span class="text-sm">4 минуты</span>
+                      </div>
+                    </div>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/162 w-full object-cover" src="assets/img/new-2.jpg" alt="new" />
+                    </div>
+                    <div class="mb-7.5 grow text-sm">
+                      <p>
+                        Кроль на спине — это способ плавания, при котором спортсмен движется по воде, лежа на спине.
+                        Руки совершают чередующиеся гребки, а ноги работают...
+                      </p>
+                    </div>
+                    <a class="text-sm font-bold underline" href="#">Читать дальше</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <div class="mb-7.5 grid gap-2">
+                      <p class="h4">Плавание на волне недели: Медаль на медаль!</p>
+                      <div class="inline-flex items-center gap-1">
+                        <div class="w-5 md:w-6">
+                          <svg width="24" height="24">
+                            <use href="assets/img/svg/sprite.svg#clock"></use>
+                          </svg>
+                        </div>
+                        <span class="text-sm">4 минуты</span>
+                      </div>
+                    </div>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/162 w-full object-cover" src="assets/img/new-1.jpg" alt="new" />
+                    </div>
+                    <div class="mb-7.5 grow text-sm">
+                      <p>
+                        Российские юниоры завоевали 36 золотых, 13 серебряных и 7 бронзовых медалей на Играх стран СНГ,
+                        которые проходили в Азербайджане...
+                      </p>
+                    </div>
+                    <a class="text-sm font-bold underline" href="#">Читать дальше</a>
+                  </div>
+                </div>
+                <div class="basis-auto pl-2 md:pl-5 lg:pl-10">
+                  <div class="relative flex h-full w-[300px] flex-col rounded-2xl bg-white p-5 md:w-[400px] md:p-7.5">
+                    <div class="mb-7.5 grid gap-2">
+                      <p class="h4">Плавание на волне недели: Медаль на медаль!</p>
+                      <div class="inline-flex items-center gap-1">
+                        <div class="w-5 md:w-6">
+                          <svg width="24" height="24">
+                            <use href="assets/img/svg/sprite.svg#clock"></use>
+                          </svg>
+                        </div>
+                        <span class="text-sm">4 минуты</span>
+                      </div>
+                    </div>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-340/162 w-full object-cover" src="assets/img/new-2.jpg" alt="new" />
+                    </div>
+                    <div class="mb-7.5 grow text-sm">
+                      <p>
+                        Российские юниоры завоевали 36 золотых, 13 серебряных и 7 бронзовых медалей на Играх стран СНГ,
+                        которые проходили в Азербайджане...
+                      </p>
+                    </div>
+                    <a class="text-sm font-bold underline" href="#">Читать дальше</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="pointer-events-none absolute top-1/2 left-0 flex w-full -translate-y-1/2 justify-between gap-8 max-md:hidden"
+            >
+              <button
+                class="arrow-btn mirror-x -translate-x-1/2 xl:-translate-x-[50px] 2xl:-translate-x-[100px]"
+                data-prev="articles"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+              <button
+                class="arrow-btn translate-x-1/2 xl:translate-x-[50px] 2xl:translate-x-[100px]"
+                data-next="articles"
+              >
+                <svg width="12" height="21">
+                  <use href="assets/img/svg/sprite.svg#slider-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faq -->
+      <section class="pt-6 pb-12 md:pt-[50px] md:pb-[100px]">
+        <div class="container-base pb-4 lg:pb-8.5">
+          <div class="grid gap-1.5 pb-4 md:gap-5 lg:pb-8.5">
+            <h2>Часто задаваемые вопросы</h2>
+          </div>
+          <div class="max-xl flex gap-7 max-xl:flex-col md:gap-10">
+            <div class="grid flex-auto content-start justify-items-start gap-7 xl:gap-12">
+              <p class="max-w-[440px] max-md:text-sm">
+                Мы собрали ответы на самые частые вопросы, которые возникают у наших клиентов. Если вы не нашли ответ на
+                свой вопрос, пожалуйста, свяжитесь с нами!
+              </p>
+              <button class="btn btn-primary max-sm:w-full">Задать вопрос</button>
+            </div>
+            <div class="shrink-0 xl:basis-[724px]">
+              <div class="border-primary-lighter grid border-b-2" data-spoiler="faq">
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg"
+                      >Какие стандартные сроки изготовления?</span
+                    >
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>
+                        Стандартный срок изготовления от 7 до 14 дней. Но можем сделать быстрее, если заказ нужен
+                        срочно. Сроки можете согласовать с менеджером.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg">От чего зависят сроки доставки?</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>
+                        Сроки доставки зависят от сезона (в декабре бывают задержки) и текущей загрузки транспортной
+                        компании.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg">Какой минимальный объем заказа?</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>Изготавливаем от 1 штуки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg"
+                      >На каких моделях шапочек печатаете ?</span
+                    >
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>
+                        Мы предлагаем классические силиконовые шапочки своего производства (без логотипа бренда на
+                        шапочках), а также силиконовые стартовые шапочки Arena, TYR, Jaked, MadWave, Speedo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg">Цена с учетом шапочки?</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>Цена с учетом классической силиконовой шапочки и одинаковой печати с двух сторон.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg">Печать с двух сторон?</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>Стандартная печать с двух сторон, но при желании можете выбрать односторонную печать.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg">Насколько долговечна печать?</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>Мы даем гарантию, что печать сохранится на весь жизненный цикл шапочки.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg"
+                      >Как мне предоставить дизайн для печати?</span
+                    >
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>
+                        Напишите нам на почту <a class="underline" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-lighter group-data-active/item:border-b-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors lg:pr-7.5"
+                    data-spoiler-button
+                  >
+                    <span class="text-left text-sm transition-colors md:text-lg"
+                      >Можете ли вы помочь с разработкой дизайна?</span
+                    >
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="20" height="10">
+                        <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="py-4 pr-5 text-xs">
+                      <p>
+                        Мы предлагаем услуги разработки или отрисовки логотипов в векторный формат. Стоимость зависит от
+                        объема работы.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- form -->
+      <section class="bg-white py-6 md:py-[50px]">
+        <div class="container-base">
+          <div class="grid gap-1.5 pb-4 md:gap-5 lg:pb-8.5">
+            <h2>Нужен совет?</h2>
+            <p>Получите консультацию от наших дизайн-менеджеров!</p>
+          </div>
+          <div class="grid gap-y-7 md:grid-cols-2">
+            <div class="md:px-5 lg:px-14 lg:py-11">
+              <img src="assets/img/form-img.jpg" alt="img" />
+            </div>
+            <div class="lg:pl-[70px]">
+              <form name="form" method="post" class="group relative" action="#" data-form>
+                <div class="grid gap-6">
+                  <div class="grid gap-5 md:gap-7.5">
+                    <label class="grid gap-1.5">
+                      <input
+                        class="input input-light input-big"
+                        type="text"
+                        name="name"
+                        placeholder="Как к вам обращаться?"
+                        required
+                      />
+                    </label>
+                    <label class="grid gap-1.5">
+                      <input
+                        class="input input-light input-big"
+                        type="email"
+                        name="email"
+                        placeholder="Действующий адрес электронной почты"
+                        required
+                      />
+                    </label>
+                    <label class="grid gap-1.5">
+                      <input
+                        class="input input-light input-big"
+                        type="tel"
+                        name="phone"
+                        placeholder="Номер телефона"
+                        required
+                      />
+                    </label>
+                    <label class="grid gap-1.5">
+                      <textarea
+                        class="input input-light input-big min-h-24 md:min-h-32"
+                        placeholder="Ваш вопрос"
+                        name="message"
+                        required
+                      ></textarea>
+                    </label>
+                  </div>
+                  <div class="">
+                    <label class="inline-flex items-center gap-2.5">
+                      <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                      <span class="label">
+                        Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и
+                        на условиях, указанных в
+                        <a class="underline" href="#">Политике обработки персональных данных</a>.
+                      </span>
+                    </label>
+                  </div>
+                  <div class="grid justify-items-start">
+                    <button
+                      class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                      type="submit"
+                      data-modal-open="request-process"
+                    >
+                      Отправить
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="py-[50px]">
+        <div class="container-base flex justify-between gap-6 max-lg:flex-col">
+          <div class="flex lg:flex-col">
+            <div class="grow">
+              <a class="block w-[55px] lg:w-[100px]" href="#">
+                <img src="assets/img/svg/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <div class="flex gap-3">
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#whatsup"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#vkontakte"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="flex gap-x-10 gap-y-6 max-lg:flex-col">
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-help">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Помощь</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10">
+                      <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">О компании</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Доставка и оплата</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Вопросы и ответы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Обмен и возврат</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Юридическая информация</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Статьи</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-catalog">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Каталог</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10">
+                      <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">Шапочки для плавания</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Полотенца из микрофибры</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Подарочные наборы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Сувениры ФВВСР</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div data-spoiler="footer-contacts">
+            <div class="group/item grid content-start gap-2.5">
+              <button
+                class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                data-spoiler-button
+              >
+                <span class="text-left text-xs transition-colors">Контакты</span>
+                <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                  <svg width="20" height="10">
+                    <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                data-spoiler-content
+              >
+                <dl class="grid gap-3">
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Телефон</dt>
+                    <dd class="text-base font-bold"><a href="tel:+74998990859">+7 499 899-08-59</a></dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Email</dt>
+                    <dd class="text-base font-bold"><a href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a></dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Адрес</dt>
+                    <dd class="text-base font-bold">
+                      Московская область <br />
+                      Дубна, проспект Боголюбова, 26
+                    </dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Режим работы</dt>
+                    <dd class="text-base font-bold">10:00-20:00</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white py-5">
+        <div class="container-base flex justify-between gap-3 max-md:flex-col">
+          <p class="text-xs">© 2017—2025, Шапочки для спортивного плавания с вашим логотипом</p>
+          <ul>
+            <li><a class="text-xs underline" href="#">Согласие на обработку персональных данных</a></li>
+            <li><a class="text-xs underline" href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div data-modal="order-status">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[350px] overflow-y-auto rounded-2xl bg-white p-12 shadow-lg"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="mx-auto grid w-[170px] gap-10">
+            <p class="h4 text-center">Статус заказа</p>
+            <div
+              class="before:bg-primary-light relative grid gap-7.5 before:absolute before:top-0 before:left-[9px] before:h-full before:w-0.5"
+            >
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Доставлен</span>
+                  <span class="text-primary-dark text-[8px]">__</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Доставка</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-current
+                data-time
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Отправлен в работу</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-abort
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">В обработке</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-check
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Создан</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="order-done">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[560px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid justify-items-center text-center">
+            <div class="text-primary-light mb-4">
+              <svg width="44" height="44">
+                <use href="assets/img/svg/sprite.svg#check"></use>
+              </svg>
+            </div>
+            <p class="h1 mb-2 font-bold">Спасибо!</p>
+            <p class="mb-4 text-base font-bold md:text-xl">Ваш заказ оформлен.</p>
+            <p class="mb-10 text-xs">
+              В ближайшее время менеджер свяжется с вами по указанной электронной почте, чтобы уточнить детали заказа.
+              Ждем вас снова!
+            </p>
+            <a class="btn btn-primary" href="#">Вернуться на главную</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="request-process">
+      <div data-modal-container>
+        <div data-modal-container>
+          <div
+            class="relative mx-auto max-h-[90vh] w-full max-w-[480px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+          >
+            <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+              <svg width="13" height="13">
+                <use href="assets/img/svg/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="grid justify-items-center text-center">
+              <div class="text-primary-light mb-4">
+                <svg width="44" height="44">
+                  <use href="assets/img/svg/sprite.svg#check"></use>
+                </svg>
+              </div>
+              <p class="h1 mb-2 font-bold">Спасибо!</p>
+              <p class="mb-4 text-base font-bold md:text-xl">Запрос в обработке.</p>
+              <p class="mb-10 text-xs">В ближайшее время менеджер свяжется с вами по указанной электронной почте.</p>
+              <a class="btn btn-primary" href="#">Вернуться на главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="get-code">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Вход и регистрация</p>
+            <p class="mb-4 text-sm">На указанный номер телефона поступит СМС с кодом</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <label class="grid gap-2">
+                <span class="text-xs">Телефон</span>
+                <input class="input" type="tel" name="phone" placeholder="Телефон" required />
+              </label>
+              <button class="btn btn-secondary w-full" type="submit">Получить код</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="exit">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[430px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="mb-5 text-base font-bold">Действительно хочешь выйти?</p>
+            <div class="grid gap-4">
+              <button class="btn btn-white text-base font-bold">Да</button>
+              <button class="btn btn-primary-dark text-base font-bold">Нет</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="cap-name">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h4 mb-3 font-bold">Укажите имя для печати на шапочке</p>
+            <form
+              name="form"
+              method="post"
+              class="group relative grid w-full justify-items-center"
+              action="#"
+              data-form
+            >
+              <label class="mb-7.5 block w-full">
+                <input class="input" type="text" name="cap-name" placeholder="Укажите имя" required />
+              </label>
+              <button class="btn btn-primary min-w-[215px]" type="submit">Указать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="forgot-password">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Запрос пароля</p>
+            <p class="mb-4 text-sm">Если вы забыли пароль, введите логин или E-Mail.</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <div class="grid gap-3">
+                <label class="grid gap-2">
+                  <span class="text-xs">Логин/E-mail</span>
+                  <input class="input" type="email" name="email" placeholder="Email" required />
+                </label>
+                <p class="text-sm">Данные для смена пароля будут отправлены на указанную почту.</p>
+              </div>
+              <button class="btn btn-secondary w-full" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="request-form">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Оставить заявку</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="question-form">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Задать вопрос</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="sizes">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid gap-10">
+            <p class="h2">Таблица размеров</p>
+            <div class="grid gap-5">
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Arena 3D Soft</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        S
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        L
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">XL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">54-55</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59*</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-sm">*Для объемных волос</p>
+              </div>
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Tyr Tracer X</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">53-56</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">56-60</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Allswim 3D Softer</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-sm">
+                Таблица носит рекомендательный характер и предполагает усредненные значения для выбора нужного размера.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

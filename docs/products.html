@@ -1,0 +1,1773 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Allswim</title>
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+
+    <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
+    <script src="https://unpkg.com/embla-carousel-fade@8.6.0/embla-carousel-fade.umd.js" defer></script>
+    <script src="https://unpkg.com/embla-carousel-auto-scroll@8.6.0/embla-carousel-auto-scroll.umd.js" defer></script>
+    <script src="assets/js/lazyload.min.js" defer></script>
+    <script src="assets/js/scripts.js" defer></script>
+    <script src="assets/js/custom-select.js" defer></script>
+    <script src="assets/js/forms.js" defer></script>
+    <script src="assets/js/sliders.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/preloader.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="preload"
+      href="/assets/css/tailwind.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/assets/css/tailwind.min.css" /></noscript>
+  </head>
+
+  <body class="data-modal-lock:overflow-hidden">
+    <!-- header -->
+    <header class="fixed top-0 left-0 z-50 w-full bg-white">
+      <!-- search -->
+      <div
+        class="absolute top-0 left-0 z-60 hidden max-h-screen w-full bg-white data-active:block"
+        data-search-container
+      >
+        <div class="container-base">
+          <div class="flex h-[60px] items-center lg:h-[105px]">
+            <div class="flex w-full gap-6">
+              <div class="relative grow">
+                <input
+                  class="border-primary-darkest h-11 w-full rounded-[20px] border-2 py-1 pr-[100px] pl-10 text-xl lg:h-12"
+                  type="text"
+                  placeholder="Поиск"
+                  data-search-input
+                />
+                <div class="absolute top-1/2 right-10 flex -translate-y-1/2 items-center gap-5">
+                  <button class="text-primary-darker cursor-pointer" data-search-clear>
+                    <svg width="10" height="10">
+                      <use href="assets/img/svg/sprite.svg#cross"></use>
+                    </svg>
+                  </button>
+                  <button class="cursor-pointer" data-search-action>
+                    <svg width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <button class="cursor-pointer" data-search-close>
+                <svg width="22" height="22">
+                  <use href="assets/img/svg/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="-mx-10 grid max-h-[calc(100vh-105px)] gap-10 overflow-y-auto p-10">
+            <div class="border-primary-lighter grid grid-cols-4 gap-5 border-b-2 pb-10 xl:gap-10">
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                <p class="text-base font-bold">Шапочки для плавания</p>
+                <div class="overflow-hidden rounded-[20px]">
+                  <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
+                </div>
+              </a>
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                <p class="text-base font-bold">Полотенца</p>
+                <div class="overflow-hidden rounded-[20px]">
+                  <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                </div>
+              </a>
+            </div>
+            <div class="grid gap-10">
+              <div class="flex items-center gap-7.5">
+                <div class="shrink-0 basis-[150px] overflow-hidden">
+                  <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                </div>
+                <div class="relative flex gap-5">
+                  <a class="text-base" href="#"
+                    >Стартовая шапочка Arena Moulded Pro II <br />
+                    с флагом России и фамилией</a
+                  >
+                  <span class="text-xl font-bold">от 5390₽</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-7.5">
+                <div class="shrink-0 basis-[150px] overflow-hidden">
+                  <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                </div>
+                <div class="relative flex gap-5">
+                  <a class="text-base" href="#"
+                    >Стартовая шапочка Arena Moulded Pro II <br />
+                    с флагом России и фамилией</a
+                  >
+                  <span class="text-xl font-bold">от 5390₽</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- mobile menu -->
+      <div class="mobile-menu" data-mobile-menu>
+        <div class="container-base h-full">
+          <div class="flex h-full w-full flex-col pb-16">
+            <div class="after-line flex h-[60px] items-center justify-between gap-5">
+              <span class="text-xs underline">Дубна</span>
+              <button class="cursor-pointer" data-menu-close>
+                <svg width="22" height="22">
+                  <use href="assets/img/svg/sprite.svg#cross"></use>
+                </svg>
+              </button>
+            </div>
+            <nav class="grow">
+              <ul class="after-line grid gap-6 py-6">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Подарочные наборы</a>
+                </li>
+              </ul>
+              <ul class="after-line grid gap-6 py-6">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Помощь</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="grid gap-6">
+              <div class="grid gap-2">
+                <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 499 899-08-59</a>
+                <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+              </div>
+              <div class="flex gap-2.5">
+                <a class="w-6" href="#">
+                  <svg width="20" height="20">
+                    <use href="assets/img/svg/sprite.svg#social-tg"></use>
+                  </svg>
+                </a>
+                <a class="w-6" href="#">
+                  <svg width="20" height="20">
+                    <use href="assets/img/svg/sprite.svg#social-vk"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- header line -->
+      <div class="container-base">
+        <div class="relative flex min-h-[60px] items-center justify-between gap-10 lg:min-h-[105px]">
+          <button class="basis-[300px] cursor-pointer lg:hidden lg:basis-1/2" data-menu-icon>
+            <svg width="26" height="20">
+              <use href="assets/img/svg/sprite.svg#menu-icon"></use>
+            </svg>
+          </button>
+          <div class="flex items-center gap-10">
+            <a class="w-[55px] shrink-0 lg:w-[100px]" href="#">
+              <img src="assets/img/svg/logo.svg" alt="logo" />
+            </a>
+            <nav class="max-lg:hidden">
+              <ul class="flex flex-wrap justify-center gap-x-6 gap-y-1">
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                </li>
+                <li>
+                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                </li>
+                <li class="group">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                    каталог
+                    <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
+                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="invisible absolute top-full left-0 w-full rounded-b-3xl bg-white p-14 group-hover:visible before:absolute before:-top-10 before:left-0 before:h-10 before:w-full"
+                  >
+                    <div class="grid grid-cols-4 gap-5 xl:gap-10">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Шапочки для плавания</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Полотенца</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Товары ВФП</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
+                        </div>
+                      </a>
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                        <p class="text-base font-bold">Подарочные наборы</p>
+                        <div class="overflow-hidden rounded-[20px]">
+                          <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </li>
+                <li class="group relative">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                    еще
+                    <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
+                      <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                    </svg>
+                  </a>
+                  <div
+                    class="invisible absolute top-full left-0 w-[150px] rounded-b-2xl bg-white p-4 group-hover:visible"
+                  >
+                    <ul>
+                      <li class="border-primary-light border-b py-2"><a href="#">Помощь</a></li>
+                      <li class="py-2"><a href="#">Контакты</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="flex items-center justify-end gap-7.5 max-lg:basis-1/2">
+            <div class="flex gap-2.5 max-lg:hidden">
+              <a class="w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#social-tg"></use>
+                </svg>
+              </a>
+              <a class="w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#social-vk"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="grid gap-2 max-lg:hidden">
+              <a class="font-bold whitespace-nowrap" href="tel:+74998990859">+7 499 899-08-59</a>
+              <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
+            </div>
+            <div class="relative flex gap-5">
+              <button class="w-5 cursor-pointer" data-search-open>
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#search"></use>
+                </svg>
+              </button>
+              <a class="relative w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#cart"></use>
+                </svg>
+                <span class="num-label">2</span>
+              </a>
+              <a class="relative w-5" href="#">
+                <svg width="20" height="20">
+                  <use href="assets/img/svg/sprite.svg#persone"></use>
+                </svg>
+                <span class="num-label">1</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="pt-6 pb-6 md:pt-10 md:pb-[50px]">
+        <div class="container-base">
+          <div class="grid grid-cols-1 gap-5 lg:grid-cols-[305px_1fr]">
+            <aside class="sticky top-[130px] hidden gap-5 self-start lg:grid">
+              <!-- aside -->
+              <div class="rounded-[20px] bg-white px-7.5 py-4" data-spoiler="aside-menu">
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors">Шапочки для плавания</span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Силиконовые шапочки</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Стартовые для соревнований</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <a
+                    class="border-t-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    href="#"
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors">
+                      Полотенца из микрофибры
+                    </span>
+                  </a>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors"> Товары ФВВСР </span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Значки ФВВСР</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Шапочки ФВВСР</a>
+                      </li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Одежда ФВВСР</a>
+                      </li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Разное</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="group/item overflow-hidden transition-all">
+                  <button
+                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
+                    data-spoiler-button
+                  >
+                    <span class="text-primary-darker text-left text-base transition-colors"> Подарочные наборы </span>
+                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
+                      <svg width="8" height="12">
+                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                      </svg>
+                    </span>
+                  </button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <ul>
+                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Для пловца</a></li>
+                      <li class="border-t-primary-dark/30 border-t-2 py-4">
+                        <a class="text-primary-darker text-sm" href="#">Для тренера</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <form class="grid gap-7.5 rounded-[20px] bg-white px-5 py-7.5">
+                <div class="grid gap-5">
+                  <p
+                    class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                  >
+                    Цена
+                  </p>
+                  <div
+                    class="before:bg-gray relative flex justify-between before:absolute before:top-1/2 before:left-0 before:h-0.5 before:w-full before:-translate-y-1/2"
+                  >
+                    <div class="relative -m-1.5 bg-white p-1.5">
+                      <input
+                        class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                        name="price-min"
+                        type="number"
+                        value="1234"
+                      />
+                    </div>
+                    <div class="relative -m-1.5 bg-white p-1.5">
+                      <input
+                        class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                        name="price-max"
+                        type="number"
+                        value="1234"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="grid gap-5">
+                  <p
+                    class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                  >
+                    Цвет
+                  </p>
+                  <div
+                    class="border-gray text-primary-dark bg-gray-lightest rounded-[20px] border-2 text-base"
+                    data-spoiler="colors"
+                  >
+                    <div>
+                      <div class="relative flex h-10 items-center justify-between gap-1 py-1 pr-12 pl-5">
+                        <div class="inline-flex grow gap-2.5">
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#ffffff" data-label="Белый" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #ffffff"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#9ed9d7" data-label="Мятный" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #9ed9d7"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input
+                              type="checkbox"
+                              name="color[]"
+                              value="#37b7d4"
+                              data-label="Голубой"
+                              class="sr-only"
+                            />
+                            <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input
+                              type="checkbox"
+                              name="color[]"
+                              value="#e50941"
+                              data-label="Красный"
+                              class="sr-only"
+                            />
+                            <span class="color-circle" style="--color-bg: #e50941"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#f1e849" data-label="Жёлтый" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #f1e849"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#000000" data-label="Чёрный" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #000000"></span>
+                          </label>
+                        </div>
+                        <button
+                          class="absolute top-1/2 right-2 inline-flex h-7 w-7 -translate-y-1/2 cursor-pointer items-center justify-center"
+                          type="button"
+                          data-spoiler-button
+                        >
+                          <svg width="8" height="7">
+                            <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                          </svg>
+                        </button>
+                      </div>
+                      <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                        <div class="inline-flex flex-wrap gap-2.5 pt-1 pr-12 pb-2 pl-5">
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#323245" data-label="Цвет 1" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #323245"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#045849" data-label="Цвет 2" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #045849"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#37b7d4" data-label="Цвет 3" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#e50941" data-label="Цвет 4" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #e50941"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#f1e849" data-label="Цвет 5" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #f1e849"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#305fa0" data-label="Цвет 6" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #305fa0"></span>
+                          </label>
+                          <label class="color-checkbox">
+                            <input type="checkbox" name="color[]" value="#642985" data-label="Цвет 7" class="sr-only" />
+                            <span class="color-circle" style="--color-bg: #642985"></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-color-selected>
+                    <span class="text-primary-dark">Цвет:</span>
+                    <span data-color-list class="inline-flex flex-wrap gap-1"></span>
+                  </div>
+                </div>
+                <div class="grid gap-5">
+                  <p
+                    class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                  >
+                    Размер
+                  </p>
+                  <div
+                    class="border-gray bg-gray-lightest inline-flex min-h-10 flex-wrap items-center gap-[5px] rounded-[20px] border-2 px-5 py-1 text-base"
+                  >
+                    <label class="size-checkbox">
+                      <input type="checkbox" name="size[]" value="S" class="sr-only" />
+                      <span class="size-circle">S</span>
+                    </label>
+                    <label class="size-checkbox">
+                      <input type="checkbox" name="size[]" value="M" class="sr-only" />
+                      <span class="size-circle">M</span>
+                    </label>
+                    <label class="size-checkbox">
+                      <input type="checkbox" name="size[]" value="L" class="sr-only" />
+                      <span class="size-circle">L</span>
+                    </label>
+                    <label class="size-checkbox">
+                      <input type="checkbox" name="size[]" value="XL" class="sr-only" />
+                      <span class="size-circle">XL</span>
+                    </label>
+                    <label class="size-checkbox">
+                      <input type="checkbox" name="size[]" value="2XL" class="sr-only" />
+                      <span class="size-circle">2XL</span>
+                    </label>
+                  </div>
+                  <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-size-selected>
+                    <span class="text-primary-dark">Размер:</span>
+                    <span data-size-list class="inline-flex flex-wrap gap-1"></span>
+                  </div>
+                </div>
+                <div class="grid justify-items-center gap-5">
+                  <button class="btn btn-primary w-full" type="submit">Применить</button>
+                  <button class="cursor-pointer text-xs underline">Отчистить фильтр</button>
+                </div>
+              </form>
+            </aside>
+            <div>
+              <!-- breadcrumbs -->
+              <nav class="-ml-2 flex w-full flex-wrap items-center" aria-label="breadcrumbs">
+                <a href="#" class="breadcrumb-item">
+                  Шапочки для плавания: печать логотипа, рисунка, изображения, флага
+                </a>
+                <a href="#" class="breadcrumb-item">Каталог</a>
+                <span class="breadcrumb-item">Полотенца из микрофибры</span>
+              </nav>
+
+              <!-- products -->
+              <section class="grid gap-5 py-6 md:py-[50px]">
+                <div class="grid gap-3">
+                  <h2>Полотенца из микрофибры</h2>
+                  <p class="text-sm">
+                    Материал: 100% микрофибра; Размер: 80 х 130 см; Печать любого количества цветов.
+                  </p>
+                  <div class="flex flex-wrap items-center gap-2.5 max-md:justify-between">
+                    <span class="text-primary-darker text-lg max-md:hidden">Выводить по</span>
+
+                    <div class="group relative min-w-[82px] shrink-0" data-custom-select>
+                      <button
+                        class="border-gray bg-gray-lightest group-data-open:border-b-gray-lightest flex h-10 w-full cursor-pointer items-center justify-between gap-2.5 rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none"
+                        type="button"
+                        data-select-trigger
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span data-select-label>12</span>
+                        <svg class="transition-transform duration-300 group-data-open:rotate-180" width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
+                      </button>
+                      <ul
+                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 pb-1.5 text-base group-data-open:block"
+                        role="listbox"
+                        data-select-list
+                      >
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="12"
+                          data-selected
+                        >
+                          12
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="18"
+                        >
+                          18
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="24"
+                        >
+                          24
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                      </ul>
+                      <select name="show-count" hidden>
+                        <option value="12" selected>12</option>
+                        <option value="18">18</option>
+                        <option value="24">24</option>
+                      </select>
+                    </div>
+
+                    <div class="group relative min-w-[243px] shrink-0" data-custom-select>
+                      <button
+                        class="border-gray bg-gray-lightest group-data-open:border-b-gray-lightest flex h-10 w-full cursor-pointer items-center justify-between gap-2.5 rounded-[20px] border-2 px-5 py-1 text-center text-base group-data-open:rounded-b-none"
+                        type="button"
+                        data-select-trigger
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span data-select-label>Сначала дешевле</span>
+                        <svg class="transition-transform duration-300 group-data-open:rotate-180" width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
+                      </button>
+                      <ul
+                        class="bg-gray-lightest border-gray absolute top-full left-0 z-50 hidden min-w-full rounded-b-[20px] border-2 border-t-0 px-5 pb-1.5 text-base group-data-open:block"
+                        role="listbox"
+                        data-select-list
+                      >
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="1"
+                          data-selected
+                        >
+                          Сначала дешевле
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="2"
+                        >
+                          Популярные
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="3"
+                        >
+                          Сначала дороже
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                        <li
+                          class="border-primary-dark group/item flex cursor-pointer items-center justify-between border-t-2 py-1.5"
+                          role="option"
+                          tabindex="-1"
+                          data-select-option
+                          data-value="4"
+                        >
+                          Новинки
+                          <span class="hidden group-data-selected/item:block">
+                            <svg width="6" height="6">
+                              <use href="assets/img/svg/sprite.svg#dot"></use>
+                            </svg>
+                          </span>
+                        </li>
+                      </ul>
+                      <select name="show-count" hidden>
+                        <option value="1" selected>Сначала дешевле</option>
+                        <option value="2">Популярные</option>
+                        <option value="3">Сначала дороже</option>
+                        <option value="4">Новинки</option>
+                      </select>
+                    </div>
+
+                    <button class="cursor-pointer lg:hidden" data-modal-open="filters">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11.2891 13.5088C12.1168 13.509 12.9087 13.8541 13.4902 14.4639C13.8351 14.8256 14.0869 15.2635 14.2363 15.7373H19.0195C19.5724 15.7374 20.0007 16.2042 20.001 16.7539C20.0008 17.3039 19.5723 17.7704 19.0195 17.7705H14.2363C14.087 18.2448 13.8357 18.6837 13.4902 19.0459C12.9087 19.6556 12.1168 20.0008 11.2891 20.001C10.46 20.001 9.66771 19.6538 9.08691 19.0449C8.74154 18.6827 8.49083 18.2442 8.3418 17.7705H0.981445C0.462973 17.7705 0.0538789 17.3602 0.00488281 16.8555L0 16.7539C0.000304714 16.2041 0.42849 15.7373 0.981445 15.7373H8.3418C8.49088 15.2638 8.74178 14.8259 9.08691 14.4639C9.66854 13.854 10.4611 13.5088 11.2891 13.5088ZM11.2891 15.542C10.9896 15.542 10.6989 15.6668 10.4834 15.8926C10.2675 16.119 10.1437 16.429 10.1436 16.7539C10.1436 17.0789 10.2675 17.3889 10.4834 17.6152C10.6998 17.842 10.9906 17.9678 11.2891 17.9678C11.5882 17.9676 11.8781 17.8421 12.0938 17.6162C12.3098 17.3895 12.4335 17.0785 12.4336 16.7539C12.4335 16.4298 12.3103 16.1197 12.0938 15.8926C11.8782 15.6667 11.5882 15.5422 11.2891 15.542ZM4.84668 6.75488C5.67415 6.75506 6.46621 7.09915 7.04785 7.70898C7.3932 8.07118 7.64397 8.50975 7.79297 8.9834H19.0195C19.5724 8.9835 20.001 9.44982 20.001 10C20.0008 10.55 19.5723 11.0165 19.0195 11.0166H7.79297C7.64385 11.4901 7.39293 11.9281 7.04785 12.29C6.46637 12.8997 5.67437 13.2449 4.84668 13.2451H4.8457C4.018 13.2449 3.22692 12.8996 2.64551 12.29C2.30028 11.9281 2.0495 11.49 1.90039 11.0166H0.981445C0.428557 11.0166 0.000193138 10.55 0 10C0 9.44976 0.428478 8.9834 0.981445 8.9834H1.89941C2.04866 8.50946 2.30022 8.07107 2.64551 7.70898C3.22702 7.09949 4.01829 6.75506 4.8457 6.75488H4.84668ZM4.84668 8.78809C4.54704 8.78812 4.25737 8.91301 4.04199 9.13867L4.04102 9.1377C3.82509 9.36412 3.70215 9.67484 3.70215 10C3.70224 10.3249 3.82601 10.6339 4.04199 10.8604C4.25763 11.0863 4.54734 11.2119 4.84668 11.2119C5.14606 11.2117 5.43595 11.0862 5.65137 10.8604C5.86693 10.6342 5.99014 10.3251 5.99023 10C5.99023 9.67446 5.86695 9.36381 5.65137 9.1377C5.4363 8.91244 5.14633 8.78826 4.84668 8.78809ZM13.8652 0C14.2745 2.00663e-05 14.68 0.0841704 15.0576 0.248047C15.4353 0.412113 15.7786 0.653358 16.0664 0.955078C16.354 1.25677 16.5822 1.61432 16.7373 2.00684C16.7663 2.08032 16.7911 2.15489 16.8135 2.22852H19.0195C19.5724 2.22862 20.0008 2.69526 20.001 3.24512C20.0009 3.7952 19.5723 4.26161 19.0195 4.26172H16.8135C16.7911 4.33533 16.7663 4.40991 16.7373 4.4834C16.5822 4.87582 16.3543 5.2342 16.0664 5.53613C15.7783 5.83812 15.435 6.07828 15.0576 6.24219C14.6803 6.40594 14.2749 6.49119 13.8652 6.49121C13.0375 6.49115 12.2465 6.14548 11.665 5.53613C11.3197 5.17409 11.0682 4.7356 10.9189 4.26172H0.981445C0.462933 4.26172 0.0538274 3.85146 0.00488281 3.34668L0 3.24512C0.000213906 2.6952 0.428486 2.22852 0.981445 2.22852H10.9199C11.069 1.75502 11.3198 1.31708 11.665 0.955078C12.2465 0.345468 13.0374 5.61848e-05 13.8652 0ZM13.8652 2.0332C13.5659 2.03326 13.2762 2.1587 13.0605 2.38477C12.8448 2.61119 12.7217 2.9203 12.7217 3.24512C12.7217 3.5701 12.8448 3.88009 13.0605 4.10645C13.2762 4.33235 13.5661 4.45795 13.8652 4.45801C14.0134 4.45799 14.1615 4.42626 14.2998 4.36621C14.4379 4.30613 14.5645 4.21803 14.6709 4.10645C14.7773 3.99476 14.8624 3.86084 14.9209 3.71289C14.9791 3.56556 15.0097 3.4062 15.0098 3.24512C15.0097 3.08416 14.9791 2.92478 14.9209 2.77734C14.8625 2.6296 14.7773 2.49547 14.6709 2.38379V2.38477C14.5639 2.27259 14.4372 2.18379 14.2998 2.12402C14.1624 2.06434 14.0143 2.03322 13.8652 2.0332Z"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="grid gap-2 sm:grid-cols-2 md:gap-5 lg:grid-cols-3">
+                  <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-secondary w-full" href="#">В корзину</button>
+                    </div>
+                  </div>
+                  <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-2.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base" href="#">
+                        Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                      </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-primary w-full" href="#">Подробнее</button>
+                    </div>
+                  </div>
+                  <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-3.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры Трансформер </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-secondary w-full" href="#">В корзину</button>
+                    </div>
+                  </div>
+                  <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-4.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры "Ананас" </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-secondary w-full" href="#">В корзину</button>
+                    </div>
+                  </div>
+                  <div class="relative flex h-full flex-col rounded-2xl bg-white p-5 md:p-7.5">
+                    <button
+                      class="data-active:text-primary-darkest absolute top-5 right-5 w-5 cursor-pointer text-white md:top-[30px] md:right-[30px] md:w-8"
+                      onclick="this.toggleAttribute('data-active')"
+                    >
+                      <svg width="34" height="31">
+                        <use href="assets/img/svg/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                    <div class="mb-7.5 overflow-hidden rounded-[20px]">
+                      <img class="aspect-34/26 w-full object-contain" src="assets/img/prod-5.jpg" alt="product" />
+                    </div>
+                    <div class="mb-4 grow">
+                      <a class="text-xs md:text-base" href="#"> Полотенце из микрофибры с вашим логотипом </a>
+                    </div>
+                    <div class="grid gap-5">
+                      <span class="text-xs font-bold md:text-xl">От 5390₽/шт.</span>
+                      <button class="btn btn-secondary w-full" href="#">В корзину</button>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <!-- text -->
+              <div class="grid gap-5 py-6 md:gap-12.5 md:py-[50px]">
+                <div class="grid gap-5">
+                  <h3 class="h2">Почему выбирают силиконовую шапочку?</h3>
+                  <p>
+                    Силиконовая шапочка для плавания — это выбор тех, кто ценит удобство, долговечность и надежную
+                    защиту в воде. В отличие от тканевых аналогов, силикон обеспечивает плотное прилегание и
+                    минимизирует сопротивление, что особенно важно как на тренировке, так и во время соревнований.
+                  </p>
+                </div>
+                <div class="grid gap-5">
+                  <h3 class="h2">Ассортимент для всех возрастов</h3>
+                  <p>
+                    Мы предлагаем модели для взрослых и детей, в классических расцветках и с оригинальными принтами.
+                    Материал не тянется со временем, устойчив к воздействию хлорированной воды, легко надевается и
+                    подходит для продолжительных тренировок без ощущения стянутости.
+                  </p>
+                  <p>
+                    Особенно популярны детские силиконовые шапочки для плавания — они легкие, прочные и яркие. Мы
+                    понимаем, насколько важно, чтобы ребенку было комфортно в бассейне, поэтому подбираем модели с
+                    мягким краем, который не давит и не натирает.
+                  </p>
+                </div>
+                <div class="grid gap-5">
+                  <h3 class="h2">Разнообразие дизайнов</h3>
+                  <p>
+                    В наличии — как однотонные шапочки так и варианты с дизайном, подходящие как для ежедневных занятий,
+                    так и для спортивных мероприятий. Все модели изготовлены из гипоаллергенного силикона, легко моются
+                    и быстро сохнут. Шапочка не рвется при растяжении, сохраняет форму и не теряет цвет даже после
+                    десятков часов в хлорированной воде.
+                  </p>
+                  <p>
+                    Силиконовая шапочка — это не просто элемент экипировки. Это защита волос, комфорт во время заплыва и
+                    уверенность в себе. А для тех, кто хочет выделиться, компания Allswim предлагает индивидуальную
+                    печать на шапочках: от логотипов до уникальных авторских иллюстраций.
+                  </p>
+                </div>
+                <div class="grid gap-5">
+                  <h3 class="h2">Как выбрать подходящую модель?</h3>
+                  <p>
+                    Если вы ищете силиконовую шапочку для плавания — для себя, ребенка или всей команды — мы поможем
+                    подобрать модель, которая будет соответствовать вашим требованиям по дизайну и размеру и бюджету.
+                    Закажите шапочку у нас и почувствуйте разницу уже на следующем заплыве.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="border-primary-dark border-t">
+      <div class="py-[50px]">
+        <div class="container-base flex justify-between gap-6 max-lg:flex-col">
+          <div class="flex lg:flex-col">
+            <div class="grow">
+              <a class="block w-[55px] lg:w-[100px]" href="#">
+                <img src="assets/img/svg/logo.svg" alt="logo" />
+              </a>
+            </div>
+            <div class="flex gap-3">
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#whatsup"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#telegram"></use>
+                </svg>
+              </a>
+              <a href="#">
+                <svg width="32" height="32">
+                  <use href="assets/img/svg/sprite.svg#vkontakte"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="flex gap-x-10 gap-y-6 max-lg:flex-col">
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-help">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Помощь</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10">
+                      <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">О компании</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Доставка и оплата</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Вопросы и ответы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Обмен и возврат</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Юридическая информация</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Статьи</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <nav class="grid content-start gap-2.5" data-spoiler="footer-catalog">
+              <div class="group/item grid content-start gap-2.5">
+                <button
+                  class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                  data-spoiler-button
+                >
+                  <span class="text-left text-xs transition-colors">Каталог</span>
+                  <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                    <svg width="20" height="10">
+                      <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                    </svg>
+                  </span>
+                </button>
+                <div
+                  class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                  data-spoiler-content
+                >
+                  <ul class="grid content-start gap-2">
+                    <li><a class="text-primary-darker block text-xs" href="#">Шапочки для плавания</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Полотенца из микрофибры</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Подарочные наборы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="#">Сувениры ФВВСР</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <div data-spoiler="footer-contacts">
+            <div class="group/item grid content-start gap-2.5">
+              <button
+                class="group/button border-primary-lighter flex w-full cursor-pointer items-center justify-between gap-4 text-xs font-extrabold uppercase max-lg:border-y-2 max-lg:py-4"
+                data-spoiler-button
+              >
+                <span class="text-left text-xs transition-colors">Контакты</span>
+                <span class="w-2.5 transition-transform group-data-active/item:rotate-180 lg:hidden">
+                  <svg width="20" height="10">
+                    <use href="assets/img/svg/sprite.svg#spoiler-arrow"></use>
+                  </svg>
+                </span>
+              </button>
+              <div
+                class="max-h-0 overflow-hidden transition-all lg:max-h-none! lg:overflow-visible"
+                data-spoiler-content
+              >
+                <dl class="grid gap-3">
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Телефон</dt>
+                    <dd class="text-base font-bold"><a href="tel:+74998990859">+7 499 899-08-59</a></dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Email</dt>
+                    <dd class="text-base font-bold"><a href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a></dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Адрес</dt>
+                    <dd class="text-base font-bold">
+                      Московская область <br />
+                      Дубна, проспект Боголюбова, 26
+                    </dd>
+                  </div>
+                  <div class="grid gap-1">
+                    <dt class="text-primary-darker text-xs">Режим работы</dt>
+                    <dd class="text-base font-bold">10:00-20:00</dd>
+                  </div>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white py-5">
+        <div class="container-base flex justify-between gap-3 max-md:flex-col">
+          <p class="text-xs">© 2017—2025, Шапочки для спортивного плавания с вашим логотипом</p>
+          <ul>
+            <li><a class="text-xs underline" href="#">Согласие на обработку персональных данных</a></li>
+            <li><a class="text-xs underline" href="#">Политика конфиденциальности</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <div data-modal="order-status">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[350px] overflow-y-auto rounded-2xl bg-white p-12 shadow-lg"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="mx-auto grid w-[170px] gap-10">
+            <p class="h4 text-center">Статус заказа</p>
+            <div
+              class="before:bg-primary-light relative grid gap-7.5 before:absolute before:top-0 before:left-[9px] before:h-full before:w-0.5"
+            >
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Доставлен</span>
+                  <span class="text-primary-dark text-[8px]">__</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-dot
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Доставка</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-current
+                data-time
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Отправлен в работу</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-abort
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">В обработке</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+              <div
+                class="group relative flex gap-5 after:absolute after:top-0 after:left-0 after:h-[calc(100%+32px)] after:w-full after:bg-white/50 data-active:after:hidden"
+                data-active
+                data-check
+              >
+                <div class="text-primary-light">
+                  <div
+                    class="relative inline-flex w-5 items-center justify-center bg-white py-1.5 group-data-current:scale-[1.3]"
+                  >
+                    <svg class="hidden group-data-dot:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-dot"></use>
+                    </svg>
+                    <svg class="hidden group-data-check:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-check"></use>
+                    </svg>
+                    <svg class="hidden group-data-abort:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-abort"></use>
+                    </svg>
+                    <svg class="hidden group-data-time:block" width="20" height="20">
+                      <use href="assets/img/svg/sprite.svg#order-status-time"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="grid flex-auto gap-0.5 pt-0.5">
+                  <span class="text-xs">Создан</span>
+                  <span class="text-primary-dark text-[8px]">01.01.2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="order-done">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[560px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid justify-items-center text-center">
+            <div class="text-primary-light mb-4">
+              <svg width="44" height="44">
+                <use href="assets/img/svg/sprite.svg#check"></use>
+              </svg>
+            </div>
+            <p class="h1 mb-2 font-bold">Спасибо!</p>
+            <p class="mb-4 text-base font-bold md:text-xl">Ваш заказ оформлен.</p>
+            <p class="mb-10 text-xs">
+              В ближайшее время менеджер свяжется с вами по указанной электронной почте, чтобы уточнить детали заказа.
+              Ждем вас снова!
+            </p>
+            <a class="btn btn-primary" href="#">Вернуться на главную</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="request-process">
+      <div data-modal-container>
+        <div data-modal-container>
+          <div
+            class="relative mx-auto max-h-[90vh] w-full max-w-[480px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+          >
+            <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+              <svg width="13" height="13">
+                <use href="assets/img/svg/sprite.svg#cross"></use>
+              </svg>
+            </button>
+            <div class="grid justify-items-center text-center">
+              <div class="text-primary-light mb-4">
+                <svg width="44" height="44">
+                  <use href="assets/img/svg/sprite.svg#check"></use>
+                </svg>
+              </div>
+              <p class="h1 mb-2 font-bold">Спасибо!</p>
+              <p class="mb-4 text-base font-bold md:text-xl">Запрос в обработке.</p>
+              <p class="mb-10 text-xs">В ближайшее время менеджер свяжется с вами по указанной электронной почте.</p>
+              <a class="btn btn-primary" href="#">Вернуться на главную</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="get-code">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Вход и регистрация</p>
+            <p class="mb-4 text-sm">На указанный номер телефона поступит СМС с кодом</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <label class="grid gap-2">
+                <span class="text-xs">Телефон</span>
+                <input class="input" type="tel" name="phone" placeholder="Телефон" required />
+              </label>
+              <button class="btn btn-secondary w-full" type="submit">Получить код</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="exit">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[430px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="mb-5 text-base font-bold">Действительно хочешь выйти?</p>
+            <div class="grid gap-4">
+              <button class="btn btn-white text-base font-bold">Да</button>
+              <button class="btn btn-primary-dark text-base font-bold">Нет</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="cap-name">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h4 mb-3 font-bold">Укажите имя для печати на шапочке</p>
+            <form
+              name="form"
+              method="post"
+              class="group relative grid w-full justify-items-center"
+              action="#"
+              data-form
+            >
+              <label class="mb-7.5 block w-full">
+                <input class="input" type="text" name="cap-name" placeholder="Укажите имя" required />
+              </label>
+              <button class="btn btn-primary min-w-[215px]" type="submit">Указать</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="forgot-password">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid">
+            <p class="h2 mb-5 font-bold">Запрос пароля</p>
+            <p class="mb-4 text-sm">Если вы забыли пароль, введите логин или E-Mail.</p>
+            <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
+              <div class="grid gap-3">
+                <label class="grid gap-2">
+                  <span class="text-xs">Логин/E-mail</span>
+                  <input class="input" type="email" name="email" placeholder="Email" required />
+                </label>
+                <p class="text-sm max-sm:hidden">Данные для смена пароля будут отправлены на указанную почту.</p>
+              </div>
+              <button class="btn btn-secondary w-full" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="request-form">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Оставить заявку</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="question-form">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <form name="form" method="post" class="group relative" action="#" data-form>
+            <div class="grid gap-10">
+              <p class="h2">Задать вопрос</p>
+              <div class="grid gap-5 md:gap-7.5">
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="text" name="name" placeholder="Как к вам обращаться?" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <input
+                    class="input input-big"
+                    type="email"
+                    name="email"
+                    placeholder="Действующий адрес электронной почты"
+                    required
+                  />
+                </label>
+                <label class="grid gap-1.5">
+                  <input class="input input-big" type="tel" name="phone" placeholder="Номер телефона" required />
+                </label>
+                <label class="grid gap-1.5">
+                  <textarea
+                    class="input input-big min-h-24 md:min-h-32"
+                    placeholder="Ваш вопрос"
+                    name="message"
+                    required
+                  ></textarea>
+                </label>
+              </div>
+              <div class="">
+                <label class="inline-flex items-center gap-2.5">
+                  <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
+                  <span class="label">
+                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                  </span>
+                </label>
+              </div>
+              <div class="grid justify-items-start">
+                <button
+                  class="btn btn-primary w-full group-data-novalid:cursor-default group-data-novalid:bg-gray-300 sm:w-[246px]"
+                  type="submit"
+                >
+                  Отправить
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="sizes">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid gap-10">
+            <p class="h2">Таблица размеров</p>
+            <div class="mb-7.5 grid gap-5 md:mb-10">
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Arena 3D Soft</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        S
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        L
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">XL</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">54-55</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59*</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-sm max-sm:hidden">*Для объемных волос</p>
+              </div>
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Tyr Tracer X</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">53-56</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">56-60</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="grid justify-items-start gap-3">
+                <p class="h4">Allswim 3D Softer</p>
+                <table
+                  class="after:border-primary-darkest relative border-spacing-0 overflow-hidden rounded-[20px] text-center text-base after:absolute after:top-0 after:left-0 after:h-full after:w-full after:rounded-[20px] after:border-2"
+                >
+                  <thead class="bg-primary">
+                    <tr>
+                      <th class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Размер
+                      </th>
+                      <th
+                        class="border-primary-darkest border-r-2 border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4"
+                      >
+                        M
+                      </th>
+                      <th class="border-primary-darkest border-b-2 px-2 py-3 text-xl font-bold sm:px-5 sm:py-4">L</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 text-left sm:px-5 sm:py-4">
+                        Обхват головы(см)
+                      </td>
+                      <td class="border-primary-darkest border-r-2 px-2 py-3 sm:px-5 sm:py-4">56-57</td>
+                      <td class="border-primary-darkest px-2 py-3 sm:px-5 sm:py-4">58-59</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="text-sm max-sm:hidden">
+                Таблица носит рекомендательный характер и предполагает усредненные значения для выбора нужного размера.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-modal="filters">
+      <div data-modal-container>
+        <div
+          class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
+        >
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <svg width="13" height="13">
+              <use href="assets/img/svg/sprite.svg#cross"></use>
+            </svg>
+          </button>
+          <div class="grid gap-5">
+            <div class="border-primary-lightest border-b-2 py-3 font-bold uppercase">Фильтр</div>
+            <form class="grid gap-7.5 rounded-[20px] bg-white">
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Цена
+                </p>
+                <div
+                  class="before:bg-gray relative flex justify-between before:absolute before:top-1/2 before:left-0 before:h-0.5 before:w-full before:-translate-y-1/2"
+                >
+                  <div class="relative -m-1.5 bg-white p-1.5">
+                    <input
+                      class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                      name="price-min"
+                      type="number"
+                      value="1234"
+                    />
+                  </div>
+                  <div class="relative -m-1.5 bg-white p-1.5">
+                    <input
+                      class="border-gray text-primary-dark bg-gray-lightest h-10 w-[108px] rounded-full border-2 px-2 py-1 text-center text-base"
+                      name="price-max"
+                      type="number"
+                      value="1234"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Цвет
+                </p>
+                <div
+                  class="border-gray text-primary-dark bg-gray-lightest rounded-[20px] border-2 text-base"
+                  data-spoiler="colors"
+                >
+                  <div>
+                    <div class="relative flex h-10 items-center justify-between gap-1 py-1 pr-12 pl-5">
+                      <div class="inline-flex grow gap-2.5">
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#ffffff" data-label="Белый" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #ffffff"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#9ed9d7" data-label="Мятный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #9ed9d7"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#37b7d4" data-label="Голубой" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#e50941" data-label="Красный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #e50941"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#f1e849" data-label="Жёлтый" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #f1e849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#000000" data-label="Чёрный" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #000000"></span>
+                        </label>
+                      </div>
+                      <button
+                        class="absolute top-1/2 right-2 inline-flex h-7 w-7 -translate-y-1/2 cursor-pointer items-center justify-center"
+                        type="button"
+                        data-spoiler-button
+                      >
+                        <svg width="8" height="7">
+                          <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                      <div class="inline-flex flex-wrap gap-2.5 pt-1 pr-12 pb-2 pl-5">
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#323245" data-label="Цвет 1" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #323245"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#045849" data-label="Цвет 2" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #045849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#37b7d4" data-label="Цвет 3" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #37b7d4"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#e50941" data-label="Цвет 4" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #e50941"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#f1e849" data-label="Цвет 5" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #f1e849"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#305fa0" data-label="Цвет 6" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #305fa0"></span>
+                        </label>
+                        <label class="color-checkbox">
+                          <input type="checkbox" name="color[]" value="#642985" data-label="Цвет 7" class="sr-only" />
+                          <span class="color-circle" style="--color-bg: #642985"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-color-selected>
+                  <span class="text-primary-dark">Цвет:</span>
+                  <span data-color-list class="inline-flex flex-wrap gap-1"></span>
+                </div>
+              </div>
+              <div class="grid gap-5">
+                <p
+                  class="bg-secondary-light h-8 rounded-full px-2 py-1 text-center text-base font-extrabold text-white"
+                >
+                  Размер
+                </p>
+                <div
+                  class="border-gray bg-gray-lightest inline-flex min-h-10 flex-wrap items-center gap-[5px] rounded-[20px] border-2 px-5 py-1 text-base"
+                >
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="S" class="sr-only" />
+                    <span class="size-circle">S</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="M" class="sr-only" />
+                    <span class="size-circle">M</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="L" class="sr-only" />
+                    <span class="size-circle">L</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="XL" class="sr-only" />
+                    <span class="size-circle">XL</span>
+                  </label>
+                  <label class="size-checkbox">
+                    <input type="checkbox" name="size[]" value="2XL" class="sr-only" />
+                    <span class="size-circle">2XL</span>
+                  </label>
+                </div>
+                <div class="hidden -translate-y-2 flex-wrap gap-1 text-xs data-active:flex" data-size-selected>
+                  <span class="text-primary-dark">Размер:</span>
+                  <span data-size-list class="inline-flex flex-wrap gap-1"></span>
+                </div>
+              </div>
+              <div class="grid justify-items-center gap-5">
+                <button class="btn btn-primary w-full" type="submit">Применить</button>
+                <button class="cursor-pointer text-xs underline">Отчистить фильтр</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
