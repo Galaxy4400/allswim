@@ -19,6 +19,10 @@
   --color-gray-light: #d4e2f9;
   --color-gray: #afc0dd;
 
+  --color-success: #0ea70e;
+  --color-warning: #fb9e48;
+  --color-error: #fa4e4e;
+
   --spacing-container: 1280px;
 
   --default-transition-duration: 300ms;
