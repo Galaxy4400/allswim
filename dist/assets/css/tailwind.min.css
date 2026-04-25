@@ -1537,6 +1537,11 @@
       overflow: hidden;
     }
   }
+  .data-novalid\:block {
+    &[data-novalid] {
+      display: block;
+    }
+  }
   .max-\[430px\]\:flex-wrap {
     @media (width < 430px) {
       flex-wrap: wrap;
