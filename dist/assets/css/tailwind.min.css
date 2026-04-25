@@ -349,6 +349,9 @@
   .mb-7\.5 {
     margin-bottom: calc(var(--spacing) * 7.5);
   }
+  .mb-9 {
+    margin-bottom: calc(var(--spacing) * 9);
+  }
   .mb-10 {
     margin-bottom: calc(var(--spacing) * 10);
   }
@@ -558,6 +561,9 @@
   }
   .max-w-\[560px\] {
     max-width: 560px;
+  }
+  .max-w-\[586px\] {
+    max-width: 586px;
   }
   .max-w-\[620px\] {
     max-width: 620px;
