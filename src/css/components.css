@@ -69,7 +69,7 @@
     --btn-text-hover: var(--color-white);
     --btn-border: var(--color-text);
     --btn-border-hover: var(--color-secondary-light);
-    --btn-border-width: 1px;
+    --btn-border-width: 2px;
 
     --btn-bg: var(--color-text);
     --btn-bg-hover: var(--color-secondary-light);
