@@ -145,3 +145,27 @@ body::before {
 [data-modal-container] {
   @apply max-w-container mx-auto box-content w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
 }
+
+/* Прелоадер */
+[data-preloader] {
+  @apply fixed inset-0 z-9999 flex items-center justify-center bg-black/30;
+  @apply pointer-events-none opacity-0;
+  @apply transition-opacity duration-300 ease-out;
+}
+
+[data-preloader][data-active] {
+  @apply pointer-events-auto opacity-100;
+}
+
+[data-preloader] svg path {
+  fill: var(--color-primary-darkest);
+  transition: fill 0.3s ease;
+}
+
+[data-preloader] svg path[data-lit] {
+  fill: var(--color-primary);
+}
+
+[data-preloader][data-resetting] svg path {
+  transition: none;
+}
