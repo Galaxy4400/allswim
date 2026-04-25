@@ -442,6 +442,9 @@
   .h-\[68px\] {
     height: 68px;
   }
+  .h-\[108px\] {
+    height: 108px;
+  }
   .h-\[120px\] {
     height: 120px;
   }
@@ -501,6 +504,9 @@
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
+  }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
   }
   .w-\[52px\] {
     width: 52px;
