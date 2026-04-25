@@ -367,7 +367,7 @@
                 <div class="grid gap-5">
                   <div class="grid gap-5 rounded-2xl bg-white p-5 md:p-7.5">
                     <div class="flex justify-between gap-5">
-                      <div class="flex gap-5">
+                      <div class="flex gap-x-5 gap-y-1.5 max-md:flex-col">
                         <div class="shrink-0">
                           <div
                             class="bg-primary-lightest text-primary inline-flex h-[52px] w-[52px] items-center justify-center rounded-full"
@@ -377,23 +377,25 @@
                             </svg>
                           </div>
                         </div>
-                        <div class="grid w-full max-w-[500px] gap-3 pt-2">
-                          <p class="h3">Заказ №Q23T678 от 01.01.2026</p>
-                          <div>
-                            <div class="tag" data-warning>Ожидает оплаты</div>
-                          </div>
-                          <button class="inline-flex items-center gap-1" type="button" data-modal-open="order-status">
-                            <div class="text-primary">
-                              <svg width="12" height="12">
-                                <use href="assets/img/svg/sprite.svg#clock"></use>
-                              </svg>
+                        <div class="flex grow justify-baseline gap-2">
+                          <div class="grid w-full max-w-[500px] gap-3 pt-2">
+                            <p class="h3">Заказ №Q23T678 от 01.01.2026</p>
+                            <div>
+                              <div class="tag" data-warning>Ожидает оплаты</div>
                             </div>
-                            <span class="text-primary-darker text-xs underline">В обработке</span>
-                          </button>
+                            <button class="inline-flex items-center gap-1" type="button" data-modal-open="order-status">
+                              <div class="text-primary">
+                                <svg width="12" height="12">
+                                  <use href="assets/img/svg/sprite.svg#clock"></use>
+                                </svg>
+                              </div>
+                              <span class="text-primary-darker text-xs underline">В обработке</span>
+                            </button>
+                          </div>
+                          <div class="pt-3">
+                            <p class="text-xl font-bold md:text-[22px]">7330₽</p>
+                          </div>
                         </div>
-                      </div>
-                      <div class="pt-3">
-                        <p class="text-xl font-bold md:text-[22px]">7330₽</p>
                       </div>
                     </div>
                     <div class="grid content-start gap-2.5" data-spoiler="order">
@@ -402,10 +404,10 @@
                           <div class="grid gap-5">
                             <div class="border-gray-light grid gap-5 border-t-2 pt-5">
                               <p class="text-xl font-bold">Покупатель</p>
-                              <div class="flex gap-7.5">
+                              <div class="flex gap-2 md:gap-7.5">
                                 <div class="shrink-0">
                                   <div
-                                    class="text-primary bg-primary-lightest flex h-[108px] w-40 items-center justify-center overflow-hidden rounded-lg p-1"
+                                    class="text-primary-light bg-primary-lightest flex h-[108px] w-[133px] items-center justify-center overflow-hidden rounded-lg p-1 md:w-40"
                                   >
                                     <svg width="48" height="48">
                                       <use href="assets/img/svg/sprite.svg#cabinet-icon-1"></use>
@@ -424,10 +426,10 @@
                             <div class="border-gray-light grid gap-5 border-t-2 pt-5">
                               <p class="text-xl font-bold">Товары в заказе</p>
                               <div class="grid gap-7">
-                                <div class="flex gap-7.5">
+                                <div class="flex gap-2 md:gap-7.5">
                                   <div class="shrink-0">
                                     <div
-                                      class="border-gray-light flex h-[108px] w-40 items-center justify-center overflow-hidden rounded-lg border p-1"
+                                      class="border-gray-light flex h-[108px] w-[133px] items-center justify-center overflow-hidden rounded-lg border p-1 md:w-40"
                                     >
                                       <img
                                         class="aspect-62/46 h-full w-full object-contain"
@@ -436,19 +438,105 @@
                                       />
                                     </div>
                                   </div>
-                                  <div class="grid flex-auto content-start gap-3">
-                                    <a class="text-base font-bold" href="#"
-                                      >Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией</a
+                                  <div class="flex grow justify-between gap-2 max-lg:flex-col">
+                                    <div class="grid max-w-[360px] flex-auto content-start gap-3">
+                                      <a class="text-base font-bold" href="#"
+                                        >Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией</a
+                                      >
+                                      <ul class="text-primary-darker grid gap-1 text-xs">
+                                        <li class="flex gap-1">
+                                          Имя на шапочке: <span class="text-primary-darkest">ALLSWIM</span>
+                                        </li>
+                                        <li class="flex gap-1">
+                                          Цвет: <span class="text-primary-darkest">Черный</span>
+                                        </li>
+                                        <li class="flex gap-1">
+                                          Размер: <span class="text-primary-darkest">Универсальный</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <span class="text-primary-darker text-base font-bold">5390₽</span>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="flex gap-2 md:gap-7.5">
+                                  <div class="shrink-0">
+                                    <div
+                                      class="border-gray-light flex h-[108px] w-[133px] items-center justify-center overflow-hidden rounded-lg border p-1 md:w-40"
                                     >
+                                      <img
+                                        class="aspect-62/46 h-full w-full object-contain"
+                                        src="assets/img/prod-2.jpg"
+                                        alt="img"
+                                      />
+                                    </div>
+                                  </div>
+                                  <div class="flex grow justify-between gap-2 max-lg:flex-col">
+                                    <div class="grid max-w-[360px] flex-auto content-start gap-3">
+                                      <a class="text-base font-bold" href="#">Шапочка для плавания "Плавбубу"</a>
+                                      <ul class="text-primary-darker grid gap-1 text-xs">
+                                        <li class="flex gap-1">
+                                          Цвет: <span class="text-primary-darkest">Сиреневый</span>
+                                        </li>
+                                        <li class="flex gap-1">
+                                          Размер: <span class="text-primary-darkest">Универсальный</span>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <span class="text-primary-darker text-base font-bold">1490₽</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="border-gray-light grid gap-5 border-t-2 pt-5">
+                              <p class="text-xl font-bold">Доставка</p>
+                              <div class="flex gap-2 md:gap-7.5">
+                                <div class="shrink-0">
+                                  <div
+                                    class="text-primary-light bg-primary-lightest flex h-[108px] w-[133px] items-center justify-center overflow-hidden rounded-lg p-1 md:w-40"
+                                  >
+                                    <svg width="48" height="40">
+                                      <use href="assets/img/svg/sprite.svg#order-icon-1"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="flex grow justify-between gap-2 max-lg:flex-col">
+                                  <div class="grid flex-auto content-start gap-3">
+                                    <p class="text-base font-bold">Пункт выдачи заказов “СДЭК”</p>
+                                    <svg width="71" height="20">
+                                      <use href="assets/img/svg/sprite.svg#cdek"></use>
+                                    </svg>
+                                  </div>
+                                  <div>
+                                    <span class="text-primary-darker text-base font-bold">450₽</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="border-gray-light grid gap-5 border-t-2 pt-5">
+                              <p class="text-xl font-bold">Доставка</p>
+                              <div class="flex gap-2 md:gap-7.5">
+                                <div class="shrink-0">
+                                  <div
+                                    class="text-primary-light bg-primary-lightest flex h-[108px] w-[133px] items-center justify-center overflow-hidden rounded-lg p-1 md:w-40"
+                                  >
+                                    <svg width="48" height="40">
+                                      <use href="assets/img/svg/sprite.svg#order-icon-2"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                                <div class="flex grow justify-between gap-2 max-lg:flex-col">
+                                  <div class="grid flex-auto content-start gap-3">
+                                    <p class="text-base font-bold">Оплата после подтверждения</p>
                                     <ul class="text-primary-darker grid gap-1 text-xs">
-                                      <li class="flex gap-1">
-                                        Имя на шапочке: <span class="text-primary-darkest">ALLSWIM</span>
-                                      </li>
-                                      <li class="flex gap-1">Цвет: <span class="text-primary-darkest">Черный</span></li>
-                                      <li class="flex gap-1">
-                                        Размер: <span class="text-primary-darkest">Универсальный</span>
-                                      </li>
+                                      <li class="flex gap-1">Данные для оплаты отправлены на указанную почту.</li>
                                     </ul>
+                                  </div>
+                                  <div>
+                                    <span class="text-warning text-base font-bold">Не оплачен</span>
                                   </div>
                                 </div>
                               </div>
