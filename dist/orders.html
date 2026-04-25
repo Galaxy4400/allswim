@@ -412,10 +412,42 @@
                           </div>
                         </div>
                         <div>
-                          <button class="text-xs underline" data-spoiler-button>
-                            <span class="inline group-data-active/item:hidden">Подробнее</span>
-                            <span class="hidden group-data-active/item:inline">Скрыть</span>
-                          </button>
+                          <div class="flex items-end justify-between gap-5 group-data-active/item:justify-end">
+                            <div class="flex flex-wrap gap-1.5 group-data-active/item:hidden">
+                              <div
+                                class="border-gray-light inline-flex shrink-0 basis-[62px] items-center justify-center overflow-hidden rounded-lg border p-1"
+                              >
+                                <img
+                                  class="aspect-62/46 h-full w-full object-contain"
+                                  src="assets/img/prod-1.jpg"
+                                  alt="img"
+                                />
+                              </div>
+                              <div
+                                class="border-gray-light inline-flex shrink-0 basis-[62px] items-center justify-center overflow-hidden rounded-lg border p-1"
+                              >
+                                <img
+                                  class="aspect-62/46 h-full w-full object-contain"
+                                  src="assets/img/prod-2.jpg"
+                                  alt="img"
+                                />
+                              </div>
+                            </div>
+                            <button class="text-xs underline" data-spoiler-button>
+                              <span class="inline group-data-active/item:hidden">Подробнее</span>
+                              <span class="hidden group-data-active/item:inline">Скрыть</span>
+                            </button>
+                          </div>
+                          <div class="border-gray-light mt-5 border-t-2 pt-5 group-data-active/item:hidden">
+                            <ul class="text-primary-darker grid gap-1 text-xs">
+                              <li class="flex gap-1">
+                                Тип оплаты: <span class="text-primary-darkest">Перевод по реквизитам</span>
+                              </li>
+                              <li class="flex gap-1">
+                                Доставка: <span class="text-primary-darkest">Пункт выдачи СДЭК</span>
+                              </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
