@@ -17,6 +17,3 @@ npm-debug.log*
 *.psd
 *.rar
 *.zip
-
-dist/lang/*.json
-!dist/lang/en.json
