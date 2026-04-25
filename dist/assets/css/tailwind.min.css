@@ -364,6 +364,9 @@
   .hidden {
     display: none;
   }
+  .inline {
+    display: inline;
+  }
   .inline-block {
     display: inline-block;
   }
@@ -1228,6 +1231,16 @@
   .group-data-abort\:block {
     &:is(:where(.group)[data-abort] *) {
       display: block;
+    }
+  }
+  .group-data-active\/item\:hidden {
+    &:is(:where(.group\/item)[data-active] *) {
+      display: none;
+    }
+  }
+  .group-data-active\/item\:inline {
+    &:is(:where(.group\/item)[data-active] *) {
+      display: inline;
     }
   }
   .group-data-active\/item\:rotate-180 {
