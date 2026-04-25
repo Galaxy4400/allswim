@@ -1,14 +1,16 @@
-const STEP_MS = 300;
+const CYCLE_MS = 2100;
 
 class Preloader {
   #el;
   #paths;
+  #stepMs;
   #timerId = null;
   #running = false;
 
   constructor(el) {
     this.#el = el;
     this.#paths = Array.from(el.querySelectorAll('svg path'));
+    this.#stepMs = Math.round(CYCLE_MS / this.#paths.length);
 
     if (el.hasAttribute('data-active')) {
       this.#startCycle();
@@ -37,14 +39,13 @@ class Preloader {
       index++;
 
       if (index < this.#paths.length) {
-        this.#timerId = setTimeout(step, STEP_MS);
+        this.#timerId = setTimeout(step, this.#stepMs);
       } else {
-        // Wait for the last letter's transition to finish, then restart
-        this.#timerId = setTimeout(() => this.#reset(), STEP_MS);
+        this.#timerId = setTimeout(() => this.#reset(), this.#stepMs);
       }
     };
 
-    this.#timerId = setTimeout(step, STEP_MS);
+    this.#timerId = setTimeout(step, this.#stepMs);
   }
 
   #reset() {
