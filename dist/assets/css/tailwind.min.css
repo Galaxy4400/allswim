@@ -1159,6 +1159,9 @@
   .text-red-600 {
     color: var(--color-red-600);
   }
+  .text-success {
+    color: var(--color-success);
+  }
   .text-warning {
     color: var(--color-warning);
   }
