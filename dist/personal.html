@@ -301,87 +301,47 @@
         <div class="container-base">
           <div class="grid grid-cols-1 gap-5 lg:grid-cols-[305px_1fr]">
             <aside class="sticky top-[130px] hidden self-start lg:block">
-              <!-- aside -->
-              <div class="rounded-[20px] bg-white px-7.5 py-4" data-spoiler="aside-menu">
-                <div class="group/item overflow-hidden transition-all">
-                  <button
-                    class="group/button group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-b-2 border-b-transparent py-4 transition-colors"
-                    data-spoiler-button
-                  >
-                    <span class="text-primary-darker text-left text-base transition-colors">Шапочки для плавания</span>
-                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                      <svg width="8" height="12">
-                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                    <ul>
-                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Силиконовые шапочки</a></li>
-                      <li class="border-t-primary-dark/30 border-t-2 py-4">
-                        <a class="text-primary-darker text-sm" href="#">Стартовые для соревнований</a>
-                      </li>
-                    </ul>
+              <div class="grid gap-7.5 rounded-2xl bg-white px-7.5 py-4">
+                <div class="flex items-center gap-3">
+                  <div class="h-[52px] w-[52px] overflow-hidden rounded-full">
+                    <img class="h-full w-full object-cover" src="assets/img/art-1.jpg" alt="product" />
                   </div>
+                  <p class="text-primary-darker font-bold">Allswim</p>
                 </div>
-                <div class="group/item overflow-hidden transition-all">
-                  <a
-                    class="border-t-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                    href="#"
-                  >
-                    <span class="text-primary-darker text-left text-base transition-colors">
-                      Полотенца из микрофибры
-                    </span>
-                  </a>
-                </div>
-                <div class="group/item overflow-hidden transition-all">
-                  <button
-                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                    data-spoiler-button
-                  >
-                    <span class="text-primary-darker text-left text-base transition-colors"> Товары ФВВСР </span>
-                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                      <svg width="8" height="12">
-                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                    <ul>
-                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Значки ФВВСР</a></li>
-                      <li class="border-t-primary-dark/30 border-t-2 py-4">
-                        <a class="text-primary-darker text-sm" href="#">Шапочки ФВВСР</a>
-                      </li>
-                      <li class="border-t-primary-dark/30 border-t-2 py-4">
-                        <a class="text-primary-darker text-sm" href="#">Одежда ФВВСР</a>
-                      </li>
-                      <li class="border-t-primary-dark/30 border-t-2 py-4">
-                        <a class="text-primary-darker text-sm" href="#">Разное</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="group/item overflow-hidden transition-all">
-                  <button
-                    class="group/button border-t-primary-dark group-data-active/item:border-b-primary-dark flex w-full cursor-pointer items-center justify-between gap-4 border-y-2 border-b-transparent py-4 transition-colors"
-                    data-spoiler-button
-                  >
-                    <span class="text-primary-darker text-left text-base transition-colors"> Подарочные наборы </span>
-                    <span class="shrink-0 transition-transform group-data-active/item:rotate-180">
-                      <svg width="8" height="12">
-                        <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
-                      </svg>
-                    </span>
-                  </button>
-                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
-                    <ul>
-                      <li class="py-4"><a class="text-primary-darker text-sm" href="#">Для пловца</a></li>
-                      <li class="border-t-primary-dark/30 border-t-2 py-4">
-                        <a class="text-primary-darker text-sm" href="#">Для тренера</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+                <nav>
+                  <ul>
+                    <li class="border-gray border-t-2">
+                      <a
+                        class="text-primary-darker data-active:text-primary-darkest block w-full py-2.5 data-active:font-bold"
+                        href="#"
+                        data-active
+                      >
+                        Персональный раздел
+                      </a>
+                    </li>
+                    <li class="border-gray border-t-2">
+                      <a class="text-primary-darker block w-full py-2.5" href="#">Личные данные</a>
+                    </li>
+                    <li class="border-gray border-t-2">
+                      <a class="text-primary-darker block w-full py-2.5" href="#">Текущие заказы</a>
+                    </li>
+                    <li class="border-gray border-t-2">
+                      <a class="text-primary-darker block w-full py-2.5" href="#">История заказов</a>
+                    </li>
+                    <li class="border-gray border-t-2">
+                      <a class="text-primary-darker block w-full py-2.5" href="#">Корзина</a>
+                    </li>
+                    <li class="border-gray border-t-2">
+                      <button
+                        class="text-primary-darker block w-full py-2.5 text-left"
+                        type="button"
+                        data-modal-open="exit"
+                      >
+                        Выход
+                      </button>
+                    </li>
+                  </ul>
+                </nav>
               </div>
             </aside>
             <div>
@@ -390,58 +350,94 @@
                 <a href="#" class="breadcrumb-item"
                   >Шапочки для плавания: печать логотипа, рисунка, изображения, флага</a
                 >
-                <span class="breadcrumb-item">Авторизация</span>
+                <a href="#" class="breadcrumb-item">Персональный раздел</a>
+                <span class="breadcrumb-item">Личные данные</span>
               </nav>
 
-              <!-- authorisation -->
+              <!-- personal -->
               <section class="grid gap-5 py-6 md:py-[50px]">
                 <div class="grid gap-3">
-                  <h2>Авторизация</h2>
+                  <h2>Личные данные</h2>
                 </div>
-                <div>
-                  <form class="grid max-w-[620px] gap-5" action="#">
-                    <ul class="text-base font-bold text-red-600">
-                      <li>Неверный логин или пароль.</li>
-                    </ul>
-                    <div class="grid gap-4">
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold">
-                          <span class="text-[#FFA756]">*</span> Логин (минимум 3 символа)
-                        </span>
-                        <input class="input" name="login" type="text" placeholder="Логин" required />
-                      </label>
-                      <label class="grid gap-2">
-                        <span class="text-sm font-bold"> <span class="text-[#FFA756]">*</span> Пароль </span>
-                        <input
-                          class="input"
-                          name="password"
-                          type="password"
-                          placeholder="Логин"
-                          required
-                          data-novalid
-                        />
-                      </label>
+                <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest text-primary absolute top-5 right-2 inline-flex h-[52px] w-[52px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="24" height="24">
+                        <use href="assets/img/svg/sprite.svg#cabinet-icon-1"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Личные данные</p>
+                    <div class="text-primary-darker grid grow content-start gap-1 text-xs font-medium">
+                      <p class="font-bold">Allswim</p>
+                      <a href="tel:+74998990859">+7 (499) 899-08-59</a>
+                      <a href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
                     </div>
                     <div>
-                      <label class="inline-flex items-center gap-2.5">
-                        <input class="checkbox shrink-0" type="checkbox" name="remember" value="1" required />
-                        <span class="label">Запомнить меня на этом компьютере.</span>
-                      </label>
+                      <a class="text-xs underline" href="#">Подробнее</a>
                     </div>
-                    <p class="text-xs"><span class="text-[#FFA756]">*</span> - Поля для обязательного заполнения.</p>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest text-primary absolute top-5 right-2 inline-flex h-[52px] w-[52px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="24" height="24">
+                        <use href="assets/img/svg/sprite.svg#cabinet-icon-2"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Текущие заказы</p>
+                    <div class="text-primary-darker grid grow content-start gap-1 text-xs font-medium">
+                      <p class="font-bold">Заказ №Q23T678</p>
+                      <p class="text-[#FFA756]">Ожидает оплаты</p>
+                    </div>
                     <div>
-                      <button class="btn btn-secondary w-full max-w-[300px]" type="submit" data-modal-open="get-code">
-                        Войти
-                      </button>
+                      <a class="text-xs underline" href="#">Подробнее</a>
                     </div>
-                    <div class="grid gap-3 text-xs">
-                      <a class="font-bold underline" href="#">Забыли свой пароль?</a>
-                      <p>
-                        Если вы впервые на сайте, заполните, пожалуйста, регистрационную форму. <br />
-                        <a class="font-bold underline" href="#">Зарегистрироваться</a>
-                      </p>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest text-primary absolute top-5 right-2 inline-flex h-[52px] w-[52px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="24" height="24">
+                        <use href="assets/img/svg/sprite.svg#cabinet-icon-3"></use>
+                      </svg>
                     </div>
-                  </form>
+                    <p class="text-base font-bold uppercase">История заказов</p>
+                    <div class="text-primary-darker grid grow content-start gap-1 text-xs font-medium">
+                      <p class="font-bold">Заказ №Y23T898</p>
+                      <p class="text-[#0EA70E]">Успешно завершен</p>
+                      <p class="font-bold">Заказ №L23T230</p>
+                      <p class="text-[#FA4E4E]">Отменен</p>
+                    </div>
+                    <div>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div
+                    class="relative flex h-full min-h-60 flex-col gap-5 rounded-2xl bg-white p-5 pr-[70px]! md:p-7.5"
+                  >
+                    <div
+                      class="bg-primary-lightest text-primary absolute top-5 right-2 inline-flex h-[52px] w-[52px] items-center justify-center rounded-full md:top-7.5 xl:right-7.5"
+                    >
+                      <svg width="24" height="24">
+                        <use href="assets/img/svg/sprite.svg#cabinet-icon-4"></use>
+                      </svg>
+                    </div>
+                    <p class="text-base font-bold uppercase">Корзина</p>
+                    <div class="text-primary-darker grid grow content-start gap-1 text-xs font-medium">
+                      <p>Ваша корзина пуста</p>
+                    </div>
+                    <div>
+                      <a class="text-xs underline" href="#">Подробнее</a>
+                    </div>
+                  </div>
                 </div>
               </section>
             </div>
