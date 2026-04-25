@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Allswim</title>
+    <title>Корзина | Allswim</title>
     <link rel="stylesheet" href="assets/css/tailwind.min.css" />
 
     <script src="https://unpkg.com/embla-carousel@8.6.0/embla-carousel.umd.js" defer></script>
@@ -27,11 +27,11 @@
 
     <link
       rel="preload"
-      href="/assets/css/tailwind.min.css"
+      href="assets/css/tailwind.min.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="/assets/css/tailwind.min.css" /></noscript>
+    <noscript><link rel="stylesheet" href="assets/css/tailwind.min.css" /></noscript>
   </head>
 
   <body class="data-modal-lock:overflow-hidden">
@@ -50,22 +50,23 @@
                   class="border-primary-darkest h-11 w-full rounded-[20px] border-2 py-1 pr-[100px] pl-10 text-xl lg:h-12"
                   type="text"
                   placeholder="Поиск"
+                  aria-label="Поиск"
                   data-search-input
                 />
                 <div class="absolute top-1/2 right-10 flex -translate-y-1/2 items-center gap-5">
-                  <button class="text-primary-darker cursor-pointer" data-search-clear>
+                  <button class="text-primary-darker cursor-pointer" data-search-clear aria-label="Очистить поиск">
                     <svg width="10" height="10">
                       <use href="assets/img/svg/sprite.svg#cross"></use>
                     </svg>
                   </button>
-                  <button class="cursor-pointer" data-search-action>
+                  <button class="cursor-pointer" data-search-action aria-label="Найти">
                     <svg width="20" height="20">
                       <use href="assets/img/svg/sprite.svg#search"></use>
                     </svg>
                   </button>
                 </div>
               </div>
-              <button class="cursor-pointer" data-search-close>
+              <button class="cursor-pointer" data-search-close aria-label="Закрыть поиск">
                 <svg width="22" height="22">
                   <use href="assets/img/svg/sprite.svg#cross"></use>
                 </svg>
@@ -73,14 +74,14 @@
             </div>
           </div>
           <div class="-mx-10 grid max-h-[calc(100vh-105px)] gap-10 overflow-y-auto p-10">
-            <div class="border-primary-lighter grid grid-cols-4 gap-5 border-b-2 pb-10 xl:gap-10">
-              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+            <div class="border-primary-lighter grid grid-cols-1 gap-5 border-b-2 pb-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="caps.html">
                 <p class="text-base font-bold">Шапочки для плавания</p>
                 <div class="overflow-hidden rounded-[20px]">
                   <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
                 </div>
               </a>
-              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+              <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="products.html">
                 <p class="text-base font-bold">Полотенца</p>
                 <div class="overflow-hidden rounded-[20px]">
                   <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
@@ -123,7 +124,7 @@
           <div class="flex h-full w-full flex-col pb-16">
             <div class="after-line flex h-[60px] items-center justify-between gap-5">
               <span class="text-xs underline">Дубна</span>
-              <button class="cursor-pointer" data-menu-close>
+              <button class="cursor-pointer" data-menu-close aria-label="Закрыть меню">
                 <svg width="22" height="22">
                   <use href="assets/img/svg/sprite.svg#cross"></use>
                 </svg>
@@ -132,24 +133,24 @@
             <nav class="grow">
               <ul class="after-line grid gap-6 py-6">
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="caps.html">Шапочки</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="souvenirs.html">Товары фввср</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="products.html">полотенца</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Подарочные наборы</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="presents.html">Подарочные наборы</a>
                 </li>
               </ul>
               <ul class="after-line grid gap-6 py-6">
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Помощь</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="help.html">Помощь</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Контакты</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="contacts.html">Контакты</a>
                 </li>
               </ul>
             </nav>
@@ -159,12 +160,12 @@
                 <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
               </div>
               <div class="flex gap-2.5">
-                <a class="w-6" href="#">
+                <a class="w-6" href="#" aria-label="Telegram">
                   <svg width="20" height="20">
                     <use href="assets/img/svg/sprite.svg#social-tg"></use>
                   </svg>
                 </a>
-                <a class="w-6" href="#">
+                <a class="w-6" href="#" aria-label="ВКонтакте">
                   <svg width="20" height="20">
                     <use href="assets/img/svg/sprite.svg#social-vk"></use>
                   </svg>
@@ -178,28 +179,28 @@
       <!-- header line -->
       <div class="container-base">
         <div class="relative flex min-h-[60px] items-center justify-between gap-10 lg:min-h-[105px]">
-          <button class="basis-[300px] cursor-pointer lg:hidden lg:basis-1/2" data-menu-icon>
+          <button class="basis-[300px] cursor-pointer lg:hidden lg:basis-1/2" data-menu-icon aria-label="Открыть меню">
             <svg width="26" height="20">
               <use href="assets/img/svg/sprite.svg#menu-icon"></use>
             </svg>
           </button>
           <div class="flex items-center gap-10">
-            <a class="w-[55px] shrink-0 lg:w-[100px]" href="#">
-              <img src="assets/img/svg/logo.svg" alt="logo" />
+            <a class="w-[55px] shrink-0 lg:w-[100px]" href="index.html">
+              <img src="assets/img/svg/logo.svg" alt="Allswim" />
             </a>
             <nav class="max-lg:hidden">
               <ul class="flex flex-wrap justify-center gap-x-6 gap-y-1">
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Шапочки</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="caps.html">Шапочки</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">Товары фввср</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="souvenirs.html">Товары фввср</a>
                 </li>
                 <li>
-                  <a class="font-bold whitespace-nowrap uppercase" href="#">полотенца</a>
+                  <a class="font-bold whitespace-nowrap uppercase" href="products.html">полотенца</a>
                 </li>
                 <li class="group">
-                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase" href="catalog.html">
                     каталог
                     <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
                       <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
@@ -209,25 +210,25 @@
                     class="invisible absolute top-full left-0 w-full rounded-b-3xl bg-white p-14 group-hover:visible before:absolute before:-top-10 before:left-0 before:h-10 before:w-full"
                   >
                     <div class="grid grid-cols-4 gap-5 xl:gap-10">
-                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="caps.html">
                         <p class="text-base font-bold">Шапочки для плавания</p>
                         <div class="overflow-hidden rounded-[20px]">
                           <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
                         </div>
                       </a>
-                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="products.html">
                         <p class="text-base font-bold">Полотенца</p>
                         <div class="overflow-hidden rounded-[20px]">
                           <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
                         </div>
                       </a>
-                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="souvenirs.html">
                         <p class="text-base font-bold">Товары ВФП</p>
                         <div class="overflow-hidden rounded-[20px]">
                           <img class="aspect-212/161 w-full object-cover" src="assets/img/souv-1.jpg" alt="img" />
                         </div>
                       </a>
-                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="#">
+                      <a class="grid gap-5 rounded-[20px] bg-white p-5 shadow-xl" href="presents.html">
                         <p class="text-base font-bold">Подарочные наборы</p>
                         <div class="overflow-hidden rounded-[20px]">
                           <img class="aspect-212/161 w-full object-cover" src="assets/img/cat-2.jpg" alt="img" />
@@ -237,18 +238,18 @@
                   </div>
                 </li>
                 <li class="group relative">
-                  <a class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
+                  <button type="button" class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase">
                     еще
                     <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
                       <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
                     </svg>
-                  </a>
+                  </button>
                   <div
                     class="invisible absolute top-full left-0 w-[150px] rounded-b-2xl bg-white p-4 group-hover:visible"
                   >
                     <ul>
-                      <li class="border-primary-light border-b py-2"><a href="#">Помощь</a></li>
-                      <li class="py-2"><a href="#">Контакты</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="help.html">Помощь</a></li>
+                      <li class="py-2"><a href="contacts.html">Контакты</a></li>
                     </ul>
                   </div>
                 </li>
@@ -257,12 +258,12 @@
           </div>
           <div class="flex items-center justify-end gap-7.5 max-lg:basis-1/2">
             <div class="flex gap-2.5 max-lg:hidden">
-              <a class="w-5" href="#">
+              <a class="w-5" href="#" aria-label="Telegram">
                 <svg width="20" height="20">
                   <use href="assets/img/svg/sprite.svg#social-tg"></use>
                 </svg>
               </a>
-              <a class="w-5" href="#">
+              <a class="w-5" href="#" aria-label="ВКонтакте">
                 <svg width="20" height="20">
                   <use href="assets/img/svg/sprite.svg#social-vk"></use>
                 </svg>
@@ -273,18 +274,18 @@
               <a class="font-bold whitespace-nowrap" href="mailto:zakaz@allswim.ru">zakaz@allswim.ru</a>
             </div>
             <div class="relative flex gap-5">
-              <button class="w-5 cursor-pointer" data-search-open>
+              <button class="w-5 cursor-pointer" data-search-open aria-label="Открыть поиск">
                 <svg width="20" height="20">
                   <use href="assets/img/svg/sprite.svg#search"></use>
                 </svg>
               </button>
-              <a class="relative w-5" href="#">
+              <a class="relative w-5" href="cart.html" aria-label="Корзина">
                 <svg width="20" height="20">
                   <use href="assets/img/svg/sprite.svg#cart"></use>
                 </svg>
                 <span class="num-label">2</span>
               </a>
-              <a class="relative w-5" href="#">
+              <a class="relative w-5" href="cabinet.html" aria-label="Личный кабинет">
                 <svg width="20" height="20">
                   <use href="assets/img/svg/sprite.svg#persone"></use>
                 </svg>
@@ -301,11 +302,11 @@
       <div class="pt-6 pb-6 md:pt-10 md:pb-[50px]">
         <div class="container-base">
           <nav class="-ml-2 flex w-full flex-wrap items-center" aria-label="breadcrumbs">
-            <a href="#" class="breadcrumb-item">Шапочки для плавания: печать логотипа, рисунка, изображения, флага</a>
+            <a href="index.html" class="breadcrumb-item">Главная</a>
             <span class="breadcrumb-item">Корзина</span>
           </nav>
           <div class="grid gap-5 py-6 md:py-10">
-            <h2>Моя корзина</h2>
+            <h1 class="h2">Моя корзина</h1>
             <div class="flex flex-wrap gap-2.5">
               <a
                 class="border-gray bg-gray-lightest inline-flex h-11 min-w-[250px] items-center justify-center rounded-full border-2 p-10 px-2 py-1 text-center text-base"
@@ -506,22 +507,22 @@
         <div class="container-base flex justify-between gap-6 max-lg:flex-col">
           <div class="flex lg:flex-col">
             <div class="grow">
-              <a class="block w-[55px] lg:w-[100px]" href="#">
-                <img src="assets/img/svg/logo.svg" alt="logo" />
+              <a class="block w-[55px] lg:w-[100px]" href="index.html">
+                <img src="assets/img/svg/logo.svg" alt="Allswim" />
               </a>
             </div>
             <div class="flex gap-3">
-              <a href="#">
+              <a href="#" aria-label="WhatsApp">
                 <svg width="32" height="32">
                   <use href="assets/img/svg/sprite.svg#whatsup"></use>
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" aria-label="Telegram">
                 <svg width="32" height="32">
                   <use href="assets/img/svg/sprite.svg#telegram"></use>
                 </svg>
               </a>
-              <a href="#">
+              <a href="#" aria-label="ВКонтакте">
                 <svg width="32" height="32">
                   <use href="assets/img/svg/sprite.svg#vkontakte"></use>
                 </svg>
@@ -547,12 +548,12 @@
                   data-spoiler-content
                 >
                   <ul class="grid content-start gap-2">
-                    <li><a class="text-primary-darker block text-xs" href="#">О компании</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Доставка и оплата</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Вопросы и ответы</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Обмен и возврат</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Юридическая информация</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Статьи</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="about.html">О компании</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="delivery.html">Доставка и оплата</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="faq.html">Вопросы и ответы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="exchange.html">Обмен и возврат</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="info.html">Юридическая информация</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="articles.html">Статьи</a></li>
                   </ul>
                 </div>
               </div>
@@ -575,10 +576,10 @@
                   data-spoiler-content
                 >
                   <ul class="grid content-start gap-2">
-                    <li><a class="text-primary-darker block text-xs" href="#">Шапочки для плавания</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Полотенца из микрофибры</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Подарочные наборы</a></li>
-                    <li><a class="text-primary-darker block text-xs" href="#">Сувениры ФВВСР</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="caps.html">Шапочки для плавания</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="products.html">Полотенца из микрофибры</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="presents.html">Подарочные наборы</a></li>
+                    <li><a class="text-primary-darker block text-xs" href="souvenirs.html">Сувениры ФВВСР</a></li>
                   </ul>
                 </div>
               </div>
@@ -631,8 +632,8 @@
         <div class="container-base flex justify-between gap-3 max-md:flex-col">
           <p class="text-xs">© 2017—2025, Шапочки для спортивного плавания с вашим логотипом</p>
           <ul>
-            <li><a class="text-xs underline" href="#">Согласие на обработку персональных данных</a></li>
-            <li><a class="text-xs underline" href="#">Политика конфиденциальности</a></li>
+            <li><a class="text-xs underline" href="info.html">Согласие на обработку персональных данных</a></li>
+            <li><a class="text-xs underline" href="info.html">Политика конфиденциальности</a></li>
           </ul>
         </div>
       </div>
@@ -643,7 +644,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[350px] overflow-y-auto rounded-2xl bg-white p-12 shadow-lg"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -803,7 +804,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[560px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -820,7 +821,7 @@
               В ближайшее время менеджер свяжется с вами по указанной электронной почте, чтобы уточнить детали заказа.
               Ждем вас снова!
             </p>
-            <a class="btn btn-primary" href="#">Вернуться на главную</a>
+            <a class="btn btn-primary" href="index.html">Вернуться на главную</a>
           </div>
         </div>
       </div>
@@ -832,7 +833,7 @@
           <div
             class="relative mx-auto max-h-[90vh] w-full max-w-[480px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
           >
-            <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+            <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
               <svg width="13" height="13">
                 <use href="assets/img/svg/sprite.svg#cross"></use>
               </svg>
@@ -846,7 +847,7 @@
               <p class="h1 mb-2 font-bold">Спасибо!</p>
               <p class="mb-4 text-base font-bold md:text-xl">Запрос в обработке.</p>
               <p class="mb-10 text-xs">В ближайшее время менеджер свяжется с вами по указанной электронной почте.</p>
-              <a class="btn btn-primary" href="#">Вернуться на главную</a>
+              <a class="btn btn-primary" href="index.html">Вернуться на главную</a>
             </div>
           </div>
         </div>
@@ -858,7 +859,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -883,7 +884,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[430px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -904,7 +905,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -933,7 +934,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[500px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -961,7 +962,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -998,8 +999,8 @@
                 <label class="inline-flex items-center gap-2.5">
                   <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
                   <span class="label">
-                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
-                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                    Даю <a class="underline" href="info.html">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="info.html">Политике обработки персональных данных</a>.
                   </span>
                 </label>
               </div>
@@ -1022,7 +1023,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[700px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -1059,8 +1060,8 @@
                 <label class="inline-flex items-center gap-2.5">
                   <input class="checkbox shrink-0" type="checkbox" name="aggreement" value="1" required />
                   <span class="label">
-                    Даю <a class="underline" href="#">Согласие на обработку</a> моих персональных данных в порядке и на
-                    условиях, указанных в <a class="underline" href="#">Политике обработки персональных данных</a>.
+                    Даю <a class="underline" href="info.html">Согласие на обработку</a> моих персональных данных в порядке и на
+                    условиях, указанных в <a class="underline" href="info.html">Политике обработки персональных данных</a>.
                   </span>
                 </label>
               </div>
@@ -1083,7 +1084,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
@@ -1205,7 +1206,7 @@
         <div
           class="relative mx-auto max-h-[90vh] w-full max-w-[640px] overflow-y-auto rounded-2xl bg-white p-5 shadow-lg md:p-10"
         >
-          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close>
+          <button class="absolute top-7.5 right-7.5 z-50 cursor-pointer" data-modal-close aria-label="Закрыть">
             <svg width="13" height="13">
               <use href="assets/img/svg/sprite.svg#cross"></use>
             </svg>
