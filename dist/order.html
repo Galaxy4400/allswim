@@ -313,220 +313,230 @@
           <div class="grid gap-5 py-6 md:py-10">
             <h1 class="h2">Оформление заказа</h1>
             <form class="grid grid-cols-1 items-start gap-5 lg:grid-cols-[1fr_305px]" action="#">
-              <div class="rounded-2xl bg-white p-5 md:p-7.5">
-                <div class="border-gray border-b-2">
+              <div class="rounded-2xl bg-white px-5 md:px-7.5" data-spoiler="order">
+                <div class="border-gray border-b-2 pt-6 md:pt-7.5">
                   <div class="flex flex-wrap items-end justify-between gap-4">
                     <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">1</span> Товары
                     </p>
-                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                    <button class="text-xs font-bold underline" type="button" data-spoiler-button>Изменить</button>
                   </div>
-                  <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5 max-lg:flex-wrap">
-                    <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
-                      <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
-                        <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                  <div class="max-h-0 overflow-hidden pt-5 transition-all" data-spoiler-content>
+                    <div class="border-gray-light flex justify-between gap-3 border-b-2 py-5 max-lg:flex-wrap">
+                      <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
+                        <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
+                          <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                        </div>
+                        <div class="grid content-start xl:w-[356px]">
+                          <a class="text-base font-bold" href="#">
+                            Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                          </a>
+                          <ul class="grid gap-1 text-xs max-lg:mb-3">
+                            <li>Имя на шапочке: <span>ALLSWIM</span></li>
+                            <li>Цвет: <span>Черный</span></li>
+                            <li>Размер: <span>Универсальный</span></li>
+                          </ul>
+                          <div class="lg:hidden">
+                            <span class="text-xl font-bold">5390₽</span>
+                          </div>
+                        </div>
                       </div>
-                      <div class="grid content-start xl:w-[356px]">
-                        <a class="text-base font-bold" href="#">
-                          Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
-                        </a>
-                        <ul class="grid gap-1 text-xs max-lg:mb-3">
-                          <li>Имя на шапочке: <span>ALLSWIM</span></li>
-                          <li>Цвет: <span>Черный</span></li>
-                          <li>Размер: <span>Универсальный</span></li>
-                        </ul>
-                        <div class="lg:hidden">
+                      <div class="flex flex-col items-end justify-center gap-4">
+                        <div class="grow max-lg:hidden">
                           <span class="text-xl font-bold">5390₽</span>
                         </div>
                       </div>
                     </div>
-                    <div class="flex flex-col items-end justify-center gap-4">
-                      <div class="grow max-lg:hidden">
-                        <span class="text-xl font-bold">5390₽</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="flex justify-between gap-3 py-5 max-lg:flex-wrap">
-                    <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
-                      <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
-                        <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
-                      </div>
-                      <div class="grid content-start xl:w-[356px]">
-                        <a class="text-base font-bold" href="#">
-                          Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
-                        </a>
-                        <ul class="grid gap-1 text-xs max-lg:mb-3">
-                          <li>Имя на шапочке: <span>ALLSWIM</span></li>
-                          <li>Цвет: <span>Черный</span></li>
-                          <li>Размер: <span>Универсальный</span></li>
-                        </ul>
-                        <div class="lg:hidden">
-                          <span class="text-xl font-bold">5390₽</span>
+                    <div class="flex justify-between gap-3 py-5 max-lg:flex-wrap">
+                      <div class="flex gap-3 max-[430px]:flex-wrap max-lg:basis-full md:gap-7.5">
+                        <div class="overflow-hidden min-[430px]:shrink-0 min-[430px]:basis-40">
+                          <img class="aspect-4/3 w-full object-contain" src="assets/img/prod-1.jpg" alt="product" />
+                        </div>
+                        <div class="grid content-start xl:w-[356px]">
+                          <a class="text-base font-bold" href="#">
+                            Стартовая шапочка Arena Moulded Pro II с флагом России и фамилией
+                          </a>
+                          <ul class="grid gap-1 text-xs max-lg:mb-3">
+                            <li>Имя на шапочке: <span>ALLSWIM</span></li>
+                            <li>Цвет: <span>Черный</span></li>
+                            <li>Размер: <span>Универсальный</span></li>
+                          </ul>
+                          <div class="lg:hidden">
+                            <span class="text-xl font-bold">5390₽</span>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="flex flex-col items-end justify-center gap-4">
-                      <div class="grow max-lg:hidden">
-                        <span class="text-xl font-bold">5390₽</span>
+                      <div class="flex flex-col items-end justify-center gap-4">
+                        <div class="grow max-lg:hidden">
+                          <span class="text-xl font-bold">5390₽</span>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
+                <div class="border-gray border-b-2 py-6 md:py-7.5">
                   <div class="flex flex-wrap items-end justify-between gap-4">
                     <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">2</span> Ваш город: <span>Дубна</span>
                     </p>
-                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                    <button class="text-xs font-bold underline" type="button" data-spoiler-button>Изменить</button>
                   </div>
-                  <div class="grid gap-4">
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold">Укажите город</span>
-                      <input class="input" type="text" placeholder="Ваш город" />
-                    </label>
-                    <div>
-                      <button class="btn btn-primary min-w-[200px]" type="button">Выбрать</button>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="grid gap-4 pt-5">
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold">Укажите город</span>
+                        <input class="input" type="text" placeholder="Ваш город" />
+                      </label>
+                      <div>
+                        <button class="btn btn-primary min-w-[200px]" type="button">Выбрать</button>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
+                <div class="border-gray border-b-2 py-6 md:py-7.5">
                   <div class="flex flex-wrap items-end justify-between gap-4">
                     <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">3</span> Доставка
                     </p>
-                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                    <button class="text-xs font-bold underline" type="button" data-spoiler-button>Изменить</button>
                   </div>
-                  <div class="grid gap-7.5 md:grid-cols-[auto_34%]">
-                    <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
-                      <label class="order-radio-custom">
-                        <input type="radio" name="delivery" value="sdek-pickup" class="sr-only" checked />
-                        <div class="text-primary mb-2">
-                          <svg width="24" height="20">
-                            <use href="assets/img/svg/sprite.svg#order-icon-1"></use>
-                          </svg>
-                        </div>
-                        <p class="mb-2.5 grow text-base font-bold">
-                          Пункт выдачи заказов <br />
-                          СДЭК
-                        </p>
-                        <p class="text-xl font-bold">450₽</p>
-                      </label>
-                      <label class="order-radio-custom">
-                        <input type="radio" name="delivery" value="sdek-courier" class="sr-only" />
-                        <div class="text-primary mb-2">
-                          <svg width="24" height="20">
-                            <use href="assets/img/svg/sprite.svg#order-icon-2"></use>
-                          </svg>
-                        </div>
-                        <p class="mb-2.5 grow text-base font-bold">
-                          Курьер <br />
-                          СДЭК
-                        </p>
-                        <p class="text-xl font-bold">850₽</p>
-                      </label>
-                    </div>
-                    <div class="flex gap-2">
-                      <div class="shrink-0">
-                        <svg width="20" height="20">
-                          <use href="assets/img/svg/sprite.svg#warning"></use>
-                        </svg>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="grid gap-7.5 pt-5 md:grid-cols-[auto_34%]">
+                      <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
+                        <label class="order-radio-custom">
+                          <input type="radio" name="delivery" value="sdek-pickup" class="sr-only" checked />
+                          <div class="text-primary mb-2">
+                            <svg width="24" height="20">
+                              <use href="assets/img/svg/sprite.svg#order-icon-1"></use>
+                            </svg>
+                          </div>
+                          <p class="mb-2.5 grow text-base font-bold">
+                            Пункт выдачи заказов <br />
+                            СДЭК
+                          </p>
+                          <p class="text-xl font-bold">450₽</p>
+                        </label>
+                        <label class="order-radio-custom">
+                          <input type="radio" name="delivery" value="sdek-courier" class="sr-only" />
+                          <div class="text-primary mb-2">
+                            <svg width="24" height="20">
+                              <use href="assets/img/svg/sprite.svg#order-icon-2"></use>
+                            </svg>
+                          </div>
+                          <p class="mb-2.5 grow text-base font-bold">
+                            Курьер <br />
+                            СДЭК
+                          </p>
+                          <p class="text-xl font-bold">850₽</p>
+                        </label>
                       </div>
-                      <div class="grid flex-auto content-start gap-2.5">
-                        <p class="text-xs">
-                          Доставляем до ближайшего к вам пункту выдачи “СДЭК”. Подробную информацию о доставке уточняем
-                          после оформления заказа. Сроки доставки зависят от вашего города.
-                        </p>
-                        <svg width="71" height="20">
-                          <use href="assets/img/svg/sprite.svg#cdek"></use>
-                        </svg>
+                      <div class="flex gap-2">
+                        <div class="shrink-0">
+                          <svg width="20" height="20">
+                            <use href="assets/img/svg/sprite.svg#warning"></use>
+                          </svg>
+                        </div>
+                        <div class="grid flex-auto content-start gap-2.5">
+                          <p class="text-xs">
+                            Доставляем до ближайшего к вам пункту выдачи “СДЭК”. Подробную информацию о доставке
+                            уточняем после оформления заказа. Сроки доставки зависят от вашего города.
+                          </p>
+                          <svg width="71" height="20">
+                            <use href="assets/img/svg/sprite.svg#cdek"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="border-gray grid gap-5 border-b-2 py-6 md:py-7.5">
+                <div class="border-gray border-b-2 py-6 md:py-7.5">
                   <div class="flex flex-wrap items-end justify-between gap-4">
                     <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">4</span> Оплата
                     </p>
-                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                    <button class="text-xs font-bold underline" type="button" data-spoiler-button>Изменить</button>
                   </div>
-                  <div class="grid gap-7.5 md:grid-cols-[auto_34%]">
-                    <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
-                      <label class="order-radio-custom">
-                        <input type="radio" name="payment" value="now" class="sr-only" checked />
-                        <div class="text-primary mb-2">
-                          <svg width="27" height="21">
-                            <use href="assets/img/svg/sprite.svg#order-icon-3"></use>
-                          </svg>
-                        </div>
-                        <p class="mb-2.5 text-base font-bold">Оплатить сейчас</p>
-                        <p class="grow text-xs">МИР, SberPay, Visa, MasterCard</p>
-                      </label>
-                      <label class="order-radio-custom">
-                        <input type="radio" name="payment" value="later" class="sr-only" />
-                        <div class="text-primary mb-2">
-                          <svg width="25" height="21">
-                            <use href="assets/img/svg/sprite.svg#order-icon-4"></use>
-                          </svg>
-                        </div>
-                        <p class="mb-2.5 text-base font-bold">Оплатить позже</p>
-                        <p class="grow text-xs">Оплата после согласованияс менеджером₽</p>
-                      </label>
-                    </div>
-                    <div class="flex gap-2">
-                      <div class="shrink-0">
-                        <svg width="20" height="20">
-                          <use href="assets/img/svg/sprite.svg#warning"></use>
-                        </svg>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="grid gap-7.5 pt-5 md:grid-cols-[auto_34%]">
+                      <div class="grid gap-3 sm:grid-cols-2 sm:gap-5">
+                        <label class="order-radio-custom">
+                          <input type="radio" name="payment" value="now" class="sr-only" checked />
+                          <div class="text-primary mb-2">
+                            <svg width="27" height="21">
+                              <use href="assets/img/svg/sprite.svg#order-icon-3"></use>
+                            </svg>
+                          </div>
+                          <p class="mb-2.5 text-base font-bold">Оплатить сейчас</p>
+                          <p class="grow text-xs">МИР, SberPay, Visa, MasterCard</p>
+                        </label>
+                        <label class="order-radio-custom">
+                          <input type="radio" name="payment" value="later" class="sr-only" />
+                          <div class="text-primary mb-2">
+                            <svg width="25" height="21">
+                              <use href="assets/img/svg/sprite.svg#order-icon-4"></use>
+                            </svg>
+                          </div>
+                          <p class="mb-2.5 text-base font-bold">Оплатить позже</p>
+                          <p class="grow text-xs">Оплата после согласованияс менеджером₽</p>
+                        </label>
                       </div>
-                      <div class="grid flex-auto content-start gap-2.5">
-                        <p class="text-xs">
-                          Мы проверим товар на складе. Если всё в порядке, менеджер пришлет вам ссылку на оплату. Резерв
-                          товара сохраняется на 24 часа.
-                        </p>
+                      <div class="flex gap-2">
+                        <div class="shrink-0">
+                          <svg width="20" height="20">
+                            <use href="assets/img/svg/sprite.svg#warning"></use>
+                          </svg>
+                        </div>
+                        <div class="grid flex-auto content-start gap-2.5">
+                          <p class="text-xs">
+                            Мы проверим товар на складе. Если всё в порядке, менеджер пришлет вам ссылку на оплату.
+                            Резерв товара сохраняется на 24 часа.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="border-gray grid gap-5 py-6 md:py-7.5">
+                <div class="border-gray py-6 md:py-7.5">
                   <div class="flex flex-wrap items-end justify-between gap-4">
                     <p class="inline-flex gap-3 text-base font-bold md:text-2xl">
                       <span class="num-circle">5</span> Покупатель
                     </p>
-                    <a class="text-xs font-bold underline" href="#">Изменить</a>
+                    <button class="text-xs font-bold underline" type="button" data-spoiler-button>Изменить</button>
                   </div>
-                  <div class="grid gap-4">
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> ФИО</span>
-                      <input class="input" name="fio" type="text" placeholder="ФИО" required />
-                    </label>
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> E-mail</span>
-                      <input class="input" name="email" type="email" placeholder="E-mail" required />
-                    </label>
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Телефон</span>
-                      <input class="input" name="phone" type="tel" placeholder="Телефон" required />
-                    </label>
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Адрес доставки</span>
-                      <textarea
-                        class="input min-h-22"
-                        name="address"
-                        placeholder="Адрес доставки"
-                        name="address"
-                        required
-                      ></textarea>
-                    </label>
-                    <label class="grid gap-2">
-                      <span class="text-sm font-bold">Комментарий к заказу</span>
-                      <textarea
-                        class="input min-h-22"
-                        placeholder="Комментарий к заказу"
-                        name="message"
-                        required
-                      ></textarea>
-                    </label>
+                  <div class="max-h-0 overflow-hidden transition-all" data-spoiler-content>
+                    <div class="grid gap-4 pt-5">
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> ФИО</span>
+                        <input class="input" name="fio" type="text" placeholder="ФИО" required />
+                      </label>
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> E-mail</span>
+                        <input class="input" name="email" type="email" placeholder="E-mail" required />
+                      </label>
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Телефон</span>
+                        <input class="input" name="phone" type="tel" placeholder="Телефон" required />
+                      </label>
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold"><span class="text-[#FFA756]">*</span> Адрес доставки</span>
+                        <textarea
+                          class="input min-h-22"
+                          name="address"
+                          placeholder="Адрес доставки"
+                          name="address"
+                          required
+                        ></textarea>
+                      </label>
+                      <label class="grid gap-2">
+                        <span class="text-sm font-bold">Комментарий к заказу</span>
+                        <textarea
+                          class="input min-h-22"
+                          placeholder="Комментарий к заказу"
+                          name="message"
+                          required
+                        ></textarea>
+                      </label>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -2080,6 +2080,11 @@
       padding-block: 100px;
     }
   }
+  .md\:pt-7\.5 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 7.5);
+    }
+  }
   .md\:pt-10 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 10);
