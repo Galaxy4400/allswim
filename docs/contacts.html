@@ -242,17 +242,22 @@
                     type="button"
                     class="inline-flex cursor-pointer items-center gap-1 font-bold whitespace-nowrap uppercase"
                   >
-                    еще
+                    Помощь
                     <svg class="transition-transform duration-300 group-hover:rotate-180" width="8" height="7">
                       <use href="assets/img/svg/sprite.svg#sub-menu-arrow"></use>
                     </svg>
                   </button>
                   <div
-                    class="invisible absolute top-full left-0 w-[150px] rounded-b-2xl bg-white p-4 group-hover:visible"
+                    class="invisible absolute top-full left-0 w-[250px] rounded-b-2xl bg-white p-4 group-hover:visible"
                   >
                     <ul>
-                      <li class="border-primary-light border-b py-2"><a href="help.html">Помощь</a></li>
-                      <li class="py-2"><a href="contacts.html">Контакты</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="about.html">О компании</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="contacts.html">Контакты</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="delivery.html">Доставка и оплата</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="faq.html">Вопросы и ответы</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="exchange.html">Обмен и возврат</a></li>
+                      <li class="border-primary-light border-b py-2"><a href="help.html">Юридическое</a></li>
+                      <li class="py-2"><a href="articles.html">Статьи</a></li>
                     </ul>
                   </div>
                 </li>
@@ -806,11 +811,11 @@
           </button>
           <div class="grid">
             <p class="h2 mb-5 font-bold">Вход и регистрация</p>
-            <p class="mb-4 text-sm">На указанный номер телефона поступит СМС с кодом</p>
+            <p class="mb-4 text-sm">На указанный email поступит сообщение с кодом</p>
             <form name="form" method="post" class="group relative grid gap-5" action="#" data-form>
               <label class="grid gap-2">
-                <span class="text-xs">Телефон</span>
-                <input class="input" type="tel" name="phone" placeholder="Телефон" required />
+                <span class="text-xs">Email</span>
+                <input class="input" type="email" name="email" placeholder="Email" required />
               </label>
               <button class="btn btn-secondary w-full" type="submit">Получить код</button>
             </form>
