@@ -1554,6 +1554,13 @@
       }
     }
   }
+  .hover\:bg-primary-lighter {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-lighter);
+      }
+    }
+  }
   .hover\:text-red-700 {
     &:hover {
       @media (hover: hover) {
