@@ -45,11 +45,17 @@ const initSpoilers = () => {
   const sliders = document.querySelectorAll('[data-spoiler]');
 
   sliders.forEach((slider) => {
+    const openByDefault = slider.hasAttribute('data-spoiler-open');
     const items = Array.from(slider.children);
 
     items.forEach((item) => {
       const button = item.querySelector('[data-spoiler-button]');
       const content = item.querySelector('[data-spoiler-content]');
+
+      if (openByDefault && content) {
+        item.setAttribute('data-active', '');
+        content.style.maxHeight = (content.scrollHeight + 2) + 'px';
+      }
 
       button?.addEventListener('click', () => {
         const isActive = item.hasAttribute('data-active');
