@@ -29,5 +29,5 @@
 | History       | [history.html](https://galaxy4400.github.io/allswim/history.html)             |
 | Preloader     | [preloader.html](https://galaxy4400.github.io/allswim/preloader.html)         |
 | Preloader 2   | [preloader-2.html](https://galaxy4400.github.io/allswim/preloader-2.html)     |
-| Modals        | [preloader-2.html](https://galaxy4400.github.io/allswim/modals.html)          |
+| Modals        | [modals.html](https://galaxy4400.github.io/allswim/modals.html)               |
 | 404           | [404.html](https://galaxy4400.github.io/allswim/404.html)                     |
