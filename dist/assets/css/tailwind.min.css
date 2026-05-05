@@ -986,6 +986,9 @@
   .py-7\.5 {
     padding-block: calc(var(--spacing) * 7.5);
   }
+  .py-30 {
+    padding-block: calc(var(--spacing) * 30);
+  }
   .py-\[30px\] {
     padding-block: 30px;
   }
@@ -2137,6 +2140,11 @@
   .md\:text-\[28px\] {
     @media (width >= 48rem) {
       font-size: 28px;
+    }
+  }
+  .md\:text-\[58px\] {
+    @media (width >= 48rem) {
+      font-size: 58px;
     }
   }
   .md\:text-\[64px\] {
