@@ -986,6 +986,9 @@
   .py-7\.5 {
     padding-block: calc(var(--spacing) * 7.5);
   }
+  .py-30 {
+    padding-block: calc(var(--spacing) * 30);
+  }
   .py-\[30px\] {
     padding-block: 30px;
   }
@@ -2139,6 +2142,11 @@
       font-size: 28px;
     }
   }
+  .md\:text-\[58px\] {
+    @media (width >= 48rem) {
+      font-size: 58px;
+    }
+  }
   .md\:text-\[64px\] {
     @media (width >= 48rem) {
       font-size: 64px;
@@ -2944,6 +2952,46 @@
       padding-inline: calc(var(--spacing) * 7.5);
     }
   }
+  .input-file {
+    display: block;
+    width: 100%;
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+    color: var(--color-gray-500);
+    &::file-selector-button {
+      margin-right: calc(var(--spacing) * 4);
+    }
+    &::file-selector-button {
+      cursor: pointer;
+    }
+    &::file-selector-button {
+      border-radius: calc(infinity * 1px);
+    }
+    &::file-selector-button {
+      border-style: var(--tw-border-style);
+      border-width: 0px;
+    }
+    &::file-selector-button {
+      background-color: var(--color-primary-darkest);
+    }
+    &::file-selector-button {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+    &::file-selector-button {
+      padding-block: calc(var(--spacing) * 2);
+    }
+    &::file-selector-button {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+    &::file-selector-button {
+      --tw-font-weight: var(--font-weight-semibold);
+      font-weight: var(--font-weight-semibold);
+    }
+    &::file-selector-button {
+      color: var(--color-white);
+    }
+  }
   .checkbox {
     height: calc(var(--spacing) * 5);
     width: calc(var(--spacing) * 5);
@@ -3110,11 +3158,11 @@
   }
   .num-label {
     position: absolute;
-    right: calc(var(--spacing) * 0);
-    bottom: calc(var(--spacing) * 0);
+    right: calc(var(--spacing) * -1);
+    bottom: calc(var(--spacing) * -1);
     display: inline-flex;
-    height: calc(var(--spacing) * 3);
-    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 4);
+    width: calc(var(--spacing) * 4);
     --tw-translate-x: calc(1/4 * 100%);
     --tw-translate-y: calc(1/4 * 100%);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -3122,7 +3170,7 @@
     justify-content: center;
     border-radius: calc(infinity * 1px);
     background-color: var(--color-primary-light);
-    font-size: 6px;
+    font-size: 10px;
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
