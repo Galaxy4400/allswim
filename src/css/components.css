@@ -122,6 +122,10 @@
     @apply border-primary-lighter px-5 md:px-7.5;
   }
 
+  .input-file {
+    @apply file:bg-primary-darkest block w-full text-sm text-gray-500 file:mr-4 file:cursor-pointer file:rounded-full file:border-0 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-white;
+  }
+
   .checkbox {
     @apply checked:bg-check checked:bg-primary-darkest border-primary-darkest h-5 w-5 appearance-none rounded-lg border checked:bg-center checked:bg-no-repeat;
   }
