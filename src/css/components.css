@@ -188,7 +188,7 @@
   }
 
   .num-label {
-    @apply bg-primary-light absolute right-0 bottom-0 inline-flex h-3 w-3 translate-1/4 items-center justify-center rounded-full text-[6px] font-bold;
+    @apply bg-primary-light absolute -right-1 -bottom-1 inline-flex h-4 w-4 translate-1/4 items-center justify-center rounded-full text-[10px] font-bold;
   }
 
   .color-checkbox {
